@@ -1,0 +1,66 @@
+@prefix oa: <http://openactive.org/ns#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfa: <http://www.w3.org/ns/rdfa#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# CSVM Ontology definition
+oa: a owl:Ontology;
+  dc:title "OpenActive Namespace Vocabulary Terms"@en;
+  dc:description """This document describes the vocabulary used in the Modelling Opportunity Data specification."""@en;
+  dc:date "2017-03-27"^^xsd:date;
+  owl:versionInfo <https://github.com/openactive/ns/commit/39085da778cbc9d124b502517d238f2994f2abd5>;
+  .
+
+
+# Class definitions
+oa:ActivityOpportunity a rdfs:Class;
+  rdfs:label "ActivityOpportunity"@en;
+  rdfs:comment """An opportunity to carry out an activity at a location, at a time of the participants choosing."""@en;
+  rdfs:subClassOf http://schema.org/Thing;
+  rdfs:isDefinedBy oa: .
+
+# Property definitions
+oa:activity a rdf:Property;
+  rdfs:label "activity"@en;
+  rdfs:comment """Specifies the physical activity or activities that will take place during an event"""@en;
+  rdfs:domain http://schema.org/Event;
+  rdfs:isDefinedBy oa: .
+oa:category a rdf:Property;
+  rdfs:label "category"@en;
+  rdfs:comment """Provides a set of tags that help categorise and describe an event, e.g. its intensity, purpose, etc."""@en;
+  rdfs:domain http://schema.org/Event;
+  rdfs:isDefinedBy oa: .
+oa:ageRange a rdf:Property;
+  rdfs:label "ageRange"@en;
+  rdfs:comment """Indicates that an event is suitable for a specific age range. If only a single age is specified then this is assumed to be a minimum age. Age ranges can be specified as follows: 18-30"""@en;
+  rdfs:domain http://schema.org/Event;
+  rdfs:isDefinedBy oa: .
+oa:heightRange a rdf:Property;
+  rdfs:label "heightRange"@en;
+  rdfs:comment """Indicates that an event is suitable for a people within a specific range of heights. Heights are specified in metres. If only a single height is specified, this is assumed to be a minimum height. Height ranges can be specified as follows: 1-1.4"""@en;
+  rdfs:domain http://schema.org/Event;
+  rdfs:isDefinedBy oa: .
+oa:weightRange a rdf:Property;
+  rdfs:label "weightRange"@en;
+  rdfs:comment """Indicates that an event is suitable for a people within a specific range of weights. Weights are specified in kilograms. If only a single weight is specified, this is assumed to be a minimum weight. Weight ranges can be specified as follows: 45-125"""@en;
+  rdfs:domain http://schema.org/Event;
+  rdfs:isDefinedBy oa: .
+oa:genderRestriction a rdf:Property;
+  rdfs:label "genderRestriction"@en;
+  rdfs:comment """Indicates that an event is restricted to male, female or a mixed audience. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience"""@en;
+  rdfs:domain http://schema.org/Event;
+  rdfs:isDefinedBy oa: .
+oa:programme a rdf:Property;
+  rdfs:label "programme"@en;
+  rdfs:comment """Indicates that an event will be organised according to a specific Programme"""@en;
+  rdfs:domain http://schema.org/Event;
+  rdfs:isDefinedBy oa: .
+
+# Datatype definitions
+
+# Instance definitions

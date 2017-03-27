@@ -1,0 +1,228 @@
+{
+  "@context": {
+    "concepts": {
+      "@reverse": "skos:inScheme"
+    },
+    "@vocab": "http://schema.org/",
+    "oa": "http://openactive.org/ns#",
+    "dc": "http://purl.org/dc/terms/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfa": "http://www.w3.org/ns/rdfa#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "title": "dc:title",
+    "license": "dc:license",
+    "prefLabel": "skos:prefLabel",
+    "altLabel": "skos:altLabel",
+    "inScheme": "skos:inScheme",
+    "broader": "skos:broader",
+    "narrower": "skos:narrower",
+    "notation": "skos:notation",
+    "topConceptOf": "skos:topConceptOf",
+    "ActivityOpportunity": "oa:ActivityOpportunity",
+    "activity": {
+      "@id": "oa:activity"
+    },
+    "category": {
+      "@id": "oa:category"
+    },
+    "ageRange": {
+      "@id": "oa:ageRange"
+    },
+    "heightRange": {
+      "@id": "oa:heightRange"
+    },
+    "weightRange": {
+      "@id": "oa:weightRange"
+    },
+    "genderRestriction": {
+      "@id": "oa:genderRestriction"
+    },
+    "programme": {
+      "@id": "oa:programme"
+    }
+  },
+  "@graph": {
+    "@context": {
+      "id": "@id",
+      "type": "@type",
+      "dc:title": {
+        "@container": "@language"
+      },
+      "dc:description": {
+        "@container": "@language"
+      },
+      "dc:date": {
+        "@type": "xsd:date"
+      },
+      "rdfs:comment": {
+        "@container": "@language"
+      },
+      "rdfs:domain": {
+        "@type": "@id"
+      },
+      "rdfs:label": {
+        "@container": "@language"
+      },
+      "rdfs:range": {
+        "@type": "@id"
+      },
+      "rdfs:seeAlso": {
+        "@type": "@id"
+      },
+      "rdfs:subClassOf": {
+        "@type": "@id"
+      },
+      "rdfs:subPropertyOf": {
+        "@type": "@id"
+      },
+      "owl:equivalentClass": {
+        "@type": "@vocab"
+      },
+      "owl:equivalentProperty": {
+        "@type": "@vocab"
+      },
+      "owl:oneOf": {
+        "@container": "@list",
+        "@type": "@vocab"
+      },
+      "owl:imports": {
+        "@type": "@id"
+      },
+      "owl:versionInfo": {
+        "@type": "@id"
+      },
+      "owl:inverseOf": {
+        "@type": "@vocab"
+      },
+      "owl:unionOf": {
+        "@type": "@vocab",
+        "@container": "@list"
+      },
+      "rdfs_classes": {
+        "@reverse": "rdfs:isDefinedBy",
+        "@type": "@id"
+      },
+      "rdfs_properties": {
+        "@reverse": "rdfs:isDefinedBy",
+        "@type": "@id"
+      },
+      "rdfs_datatypes": {
+        "@reverse": "rdfs:isDefinedBy",
+        "@type": "@id"
+      },
+      "rdfs_instances": {
+        "@reverse": "rdfs:isDefinedBy",
+        "@type": "@id"
+      },
+      "concepts": {
+        "@reverse": "skos:inScheme"
+      }
+    },
+    "@id": "http://openactive.org/ns#",
+    "@type": "owl:Ontology",
+    "dc:title": {
+      "en": "OpenActive Namespace Vocabulary Terms"
+    },
+    "dc:description": {
+      "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
+    },
+    "dc:date": "2017-03-27",
+    "owl:versionInfo": "https://github.com/openactive/ns/commit/39085da778cbc9d124b502517d238f2994f2abd5",
+    "rdfs_classes": [
+      {
+        "@id": "oa:ActivityOpportunity",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "ActivityOpportunity"
+        },
+        "rdfs:comment": {
+          "en": "An opportunity to carry out an activity at a location, at a time of the participants choosing."
+        },
+        "rdfs:subClassOf": "http://schema.org/Thing"
+      }
+    ],
+    "rdfs_properties": [
+      {
+        "@id": "oa:activity",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "activity"
+        },
+        "rdfs:comment": {
+          "en": "Specifies the physical activity or activities that will take place during an event"
+        },
+        "rdfs:domain": "http://schema.org/Event"
+      },
+      {
+        "@id": "oa:category",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "category"
+        },
+        "rdfs:comment": {
+          "en": "Provides a set of tags that help categorise and describe an event, e.g. its intensity, purpose, etc."
+        },
+        "rdfs:domain": "http://schema.org/Event"
+      },
+      {
+        "@id": "oa:ageRange",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "ageRange"
+        },
+        "rdfs:comment": {
+          "en": "Indicates that an event is suitable for a specific age range. If only a single age is specified then this is assumed to be a minimum age. Age ranges can be specified as follows: 18-30"
+        },
+        "rdfs:domain": "http://schema.org/Event"
+      },
+      {
+        "@id": "oa:heightRange",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "heightRange"
+        },
+        "rdfs:comment": {
+          "en": "Indicates that an event is suitable for a people within a specific range of heights. Heights are specified in metres. If only a single height is specified, this is assumed to be a minimum height. Height ranges can be specified as follows: 1-1.4"
+        },
+        "rdfs:domain": "http://schema.org/Event"
+      },
+      {
+        "@id": "oa:weightRange",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "weightRange"
+        },
+        "rdfs:comment": {
+          "en": "Indicates that an event is suitable for a people within a specific range of weights. Weights are specified in kilograms. If only a single weight is specified, this is assumed to be a minimum weight. Weight ranges can be specified as follows: 45-125"
+        },
+        "rdfs:domain": "http://schema.org/Event"
+      },
+      {
+        "@id": "oa:genderRestriction",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "genderRestriction"
+        },
+        "rdfs:comment": {
+          "en": "Indicates that an event is restricted to male, female or a mixed audience. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience"
+        },
+        "rdfs:domain": "http://schema.org/Event"
+      },
+      {
+        "@id": "oa:programme",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "programme"
+        },
+        "rdfs:comment": {
+          "en": "Indicates that an event will be organised according to a specific Programme"
+        },
+        "rdfs:domain": "http://schema.org/Event"
+      }
+    ]
+  }
+}

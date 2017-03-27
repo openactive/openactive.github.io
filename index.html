@@ -1,0 +1,438 @@
+<html lang="en">
+  <head>
+    <meta charset='utf-8'/>
+    <title>OpenActive Namespace Vocabulary Terms</title>
+    <script class="remove">
+        var respecConfig = {
+          // specification status (e.g. WD, LCWD, NOTE, etc.). If in doubt use ED.
+          specStatus:           "CG-DRAFT",
+
+          // the specification's short name, as in http://www.w3.org/TR/short-name/
+          shortName:            "vocabulary",
+
+          // if you wish the publication date to be other than today, set this
+          // publishDate:  "2009-08-06",
+
+          // if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
+          // and its maturity status
+          // previousPublishDate:  "1977-03-15",
+          // previousMaturity:  "WD",
+
+          // if there a publicly available Editor's Draft, this is the link
+          edDraftURI:           "https://www.openactive.io/vocabulary",
+          //prevED:  "https://www.openactive.io/spec-template/",
+          //previousURI:  "https://www.openactive.io/realtime-paged-data-exchange/0.2.3/",
+          //testSuiteURI: "https://www.openactive.io/endpoint-validator/",
+          copyrightStart: 2017,
+
+          // if this is a LCWD, uncomment and set the end of its review period
+          // lcEnd: "2009-08-05",
+
+          // editors, add as many as you like
+          // only "name" is required
+          editors: [
+              { name: "Leigh Dodds", url: "http://ldodds.com",
+                company: "Open Data Institute", companyURL: "http://opendata.institute/",
+                w3cid: "55359" },
+          ],
+
+          // authors, add as many as you like.
+          // This is optional, uncomment if you have authors as well as editors.
+          // only "name" is required. Same format as editors.
+
+          authors: [
+          ],
+
+          otherLinks: [{
+                key: "Repo",
+                value: "We are on Github",
+                href: "https://github.com/openactive/modelling-opportunity-data/",
+                class: "repo"
+            }, {
+                key: "Issues",
+                href: "https://github.com/openactive/modelling-opportunity-data/issues/"
+            }, {
+                key: "Version",
+                value: "Editor's Draft"
+            }
+          ],
+
+          logos: [
+            {
+              src: 'https://www.openactive.io/assets/openactive-logo-large.png',
+              href: "https://www.openactive.io",
+              alt: "openactive.io",
+              width: 255, //170
+              height: 33, //22
+              id: 'logo'
+            }
+          ],
+
+          // extend the bibliography entries
+          //localBiblio: {},
+
+          // name of the WG
+          wg:           "Openactive Community Group",
+
+          // URI of the public WG page
+          wgURI:        "http://www.w3.org/community/openactive/",
+
+          // name (with the @w3c.org) of the public mailing to which comments are due
+          wgPublicList: "public-openactive",
+
+          // URI of the patent status for this WG, for Rec-track documents
+          // !!!! IMPORTANT !!!!
+          // This is important for Rec-track documents, do not copy a patent URI from a random
+          // document unless you know what you're doing. If in doubt ask your friendly neighbourhood
+          // Team Contact.
+          wgPatentURI:  "",
+          maxTocLevel: 4,
+          preProcess: [ ] ,
+          alternateFormats: [ {uri: "diff-previous.html", label: "diff to previous version"} ],
+          isRecTrack:   true,
+          isNoTrack:    true,
+          issueBase:    "https://github.com/openactive/modelling-opportunity-data/issues/",
+          localBiblio: {
+            "JSON-LD": {
+                "href": "https://www.w3.org/TR/json-ld/",
+                "title": "JSON-LD 1.0",
+                "status": "REC",
+                "publisher": "W3C",
+            },
+            "SCHEMA-ORG": {
+                "href": "http://schema.org/",
+                "title": "Schema.org"
+                
+            },
+            "SKOS": {
+                "href": "https://www.w3.org/TR/skos-primer",
+                "title": "SKOS Simple Knowledge Organization System Primer",
+                "status": "NOTE",
+                "publisher": "W3C",            
+            },
+            "Modelling-Opportunity-Data": {
+                "href": "https://www.openactive.io/modelling-opportunity-data/",
+                "title": "Modelling Opportunity Data",
+                "status": "C",
+                "publisher": "Open Active Community Group",            
+            }            
+          }
+        };
+    </script>
+    <script src='https://www.openactive.io/respec/builds/respec-w3c-common.js' class='remove'></script>
+
+    <style>
+      dl.terms dt {
+        float: left;
+        clear: left;
+        width: 17vw;
+      }
+      dl.terms dd:after {
+          content: '';
+          display: block;
+          clear: both;
+          margin-bottom: 5px;
+      }
+      table.rdfs-definition td {vertical-align: top;}
+      .bold {font-weight: bold;}
+    </style>
+
+  </head>
+  <body resource="http://www.w3.org/ns/csvw#" typeof="owl:Ontology" prefix="csvw: http://www.w3.org/ns/csvw#">
+    <style>
+    html {
+      background-image: none !important;
+    }
+    body {
+      background: white top left fixed no-repeat !important;
+      background-size: 25px auto !important;
+      background-image: url('https://www.openactive.io/assets/openactive-label-editorsdraft.png') !important;
+    }
+    body.toc-sidebar #toc {
+      background-attachment: fixed !important;
+    }
+    h1 {
+      font-family: 'Open Sans',sans-serif !important;
+      font-weight: 300 !important;
+      color: #69b9ff !important;
+      font-size: 220%;
+    }
+    #toc {
+      padding-top: 0px !important;
+    }
+    .remove {
+      background-colour: yellow;
+    }
+    code {
+        color: #C83500;
+    }
+    </style>
+  
+    <section id="abstract">
+      <p>The <span property="dc:title">OpenActive Namespace Vocabulary Terms</span> provides both the RDFS [[RDF-SCHEMA]] vocabulary definitions for 
+        terms defined in [[Modelling-Opportunity-Data]] and a description of the JSON-LD context definition for use when publishing opportunity data.</p>
+      <p>Alternate versions of the vocabulary definition exist in
+        <a rel="alternate" href="oa.ttl">Turtle</a> and
+        <a rel="alternate" href="oa.jsonld">JSON-LD</a>,
+        which also includes the <code>@context</code> required for metadata descriptions.
+      </p>
+    </section>
+    <section id="sotd">
+      <p>
+      This document is an output of the [Openactive Community Group](http://www.w3.org/community/openactive/). The community group was established with the objective of facilitating the sharing and use of physical activity data. 
+      </p>
+      <p>
+      The [Openactive Community Group](http://www.w3.org/community/openactive/) has produced a specification ([[Modelling-Opportunity-Data]]) that describes how to publish open data about opportunities to take part in physical activities. That specification introduces a number of new types and properties which are described in this document.
+      </p>
+    </section>
+    <section>
+      <h2>Introduction</h2>
+      <p property="dc:description">This document describes the vocabulary used in the Modelling Opportunity Data specification.</p>
+      <p>This specification makes use of the following namespaces:</p>
+      <dl class="terms">
+        <dt><code>dc</code>:</dt>
+        <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt><code>rdf</code>:</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt><code>rdfs</code>:</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt><code>schema</code>:</dt>
+        <dd><code>http://schema.org/</code></dd>
+        <dt><code>skos</code>:</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt><code>xsd</code>:</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+      </dl>
+    </section>
+    <section>
+      <h2>Class Definitions</h2>
+      <p>The following are class definitions in the <code>oa</code> namespace:</p>
+      <table class="rdfs-definition">
+        
+        <tr><td class="bold">ActivityOpportunity</td>
+          <td resource="oa:ActivityOpportunity" typeof="rdfs:Class">
+            <em property="rdfs:label">ActivityOpportunity</em>
+            <p property="rdfs:comment">An opportunity to carry out an activity at a location, at a time of the participants choosing.</p>
+            <span property="rdfs:isDefinedBy" resource="csvw:"></span>
+              <dl class="terms">
+                  <dt>rdfs:subClassOf</dt>
+                      <dd property="rdfs:subClassOf" resource="http://schema.org/Thing">http://schema.org/Thing</dd>
+              </dl>
+          </td>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <h2>Property Definitions</h2>
+      <p>The following are property definitions in the <code>oa</code> namespace:</p>
+      <table class="rdfs-definition">
+        
+        <tr><td class="bold">activity</td>
+          <td resource="oa:activity" typeof="rdf:Property">
+            <em property="rdfs:label">activity</em>
+            <p property="rdfs:comment">Specifies the physical activity or activities that will take place during an event</p>
+            <span property="rdfs:isDefinedBy" resource="csvw:"></span>
+              <dl class="terms">
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr><td class="bold">category</td>
+          <td resource="oa:category" typeof="rdf:Property">
+            <em property="rdfs:label">category</em>
+            <p property="rdfs:comment">Provides a set of tags that help categorise and describe an event, e.g. its intensity, purpose, etc.</p>
+            <span property="rdfs:isDefinedBy" resource="csvw:"></span>
+              <dl class="terms">
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr><td class="bold">ageRange</td>
+          <td resource="oa:ageRange" typeof="rdf:Property">
+            <em property="rdfs:label">ageRange</em>
+            <p property="rdfs:comment">Indicates that an event is suitable for a specific age range. If only a single age is specified then this is assumed to be a minimum age. Age ranges can be specified as follows: 18-30</p>
+            <span property="rdfs:isDefinedBy" resource="csvw:"></span>
+              <dl class="terms">
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr><td class="bold">heightRange</td>
+          <td resource="oa:heightRange" typeof="rdf:Property">
+            <em property="rdfs:label">heightRange</em>
+            <p property="rdfs:comment">Indicates that an event is suitable for a people within a specific range of heights. Heights are specified in metres. If only a single height is specified, this is assumed to be a minimum height. Height ranges can be specified as follows: 1-1.4</p>
+            <span property="rdfs:isDefinedBy" resource="csvw:"></span>
+              <dl class="terms">
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr><td class="bold">weightRange</td>
+          <td resource="oa:weightRange" typeof="rdf:Property">
+            <em property="rdfs:label">weightRange</em>
+            <p property="rdfs:comment">Indicates that an event is suitable for a people within a specific range of weights. Weights are specified in kilograms. If only a single weight is specified, this is assumed to be a minimum weight. Weight ranges can be specified as follows: 45-125</p>
+            <span property="rdfs:isDefinedBy" resource="csvw:"></span>
+              <dl class="terms">
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr><td class="bold">genderRestriction</td>
+          <td resource="oa:genderRestriction" typeof="rdf:Property">
+            <em property="rdfs:label">genderRestriction</em>
+            <p property="rdfs:comment">Indicates that an event is restricted to male, female or a mixed audience. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience</p>
+            <span property="rdfs:isDefinedBy" resource="csvw:"></span>
+              <dl class="terms">
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr><td class="bold">programme</td>
+          <td resource="oa:programme" typeof="rdf:Property">
+            <em property="rdfs:label">programme</em>
+            <p property="rdfs:comment">Indicates that an event will be organised according to a specific Programme</p>
+            <span property="rdfs:isDefinedBy" resource="csvw:"></span>
+              <dl class="terms">
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
+              </dl>
+          </td>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <h2>Term Definitions</h2>
+      <p>
+      The following terms are all defined in the <a rel="alternate" href="oa.jsonld">OpenActive Vocabulary JSON-LD Context</a>.
+      </p>
+      <dl class="terms">
+        <dt>@vocab</dt>
+        <dd>
+            http://schema.org/
+        </dd>
+        <dt>ActivityOpportunity</dt>
+        <dd>
+            oa:ActivityOpportunity
+        </dd>
+        <dt>activity</dt>
+        <dd>
+            oa:activity
+        </dd>
+        <dt>ageRange</dt>
+        <dd>
+            oa:ageRange
+        </dd>
+        <dt>altLabel</dt>
+        <dd>
+            skos:altLabel
+        </dd>
+        <dt>broader</dt>
+        <dd>
+            skos:broader
+        </dd>
+        <dt>category</dt>
+        <dd>
+            oa:category
+        </dd>
+        <dt>concepts</dt>
+        <dd>
+            reverse of skos:inScheme
+        </dd>
+        <dt>dc</dt>
+        <dd>
+            http://purl.org/dc/terms/
+        </dd>
+        <dt>genderRestriction</dt>
+        <dd>
+            oa:genderRestriction
+        </dd>
+        <dt>heightRange</dt>
+        <dd>
+            oa:heightRange
+        </dd>
+        <dt>inScheme</dt>
+        <dd>
+            skos:inScheme
+        </dd>
+        <dt>license</dt>
+        <dd>
+            dc:license
+        </dd>
+        <dt>narrower</dt>
+        <dd>
+            skos:narrower
+        </dd>
+        <dt>notation</dt>
+        <dd>
+            skos:notation
+        </dd>
+        <dt>oa</dt>
+        <dd>
+            http://openactive.org/ns#
+        </dd>
+        <dt>owl</dt>
+        <dd>
+            http://www.w3.org/2002/07/owl#
+        </dd>
+        <dt>prefLabel</dt>
+        <dd>
+            skos:prefLabel
+        </dd>
+        <dt>programme</dt>
+        <dd>
+            oa:programme
+        </dd>
+        <dt>rdf</dt>
+        <dd>
+            http://www.w3.org/1999/02/22-rdf-syntax-ns#
+        </dd>
+        <dt>rdfa</dt>
+        <dd>
+            http://www.w3.org/ns/rdfa#
+        </dd>
+        <dt>rdfs</dt>
+        <dd>
+            http://www.w3.org/2000/01/rdf-schema#
+        </dd>
+        <dt>schema</dt>
+        <dd>
+            http://schema.org/
+        </dd>
+        <dt>skos</dt>
+        <dd>
+            http://www.w3.org/2004/02/skos/core#
+        </dd>
+        <dt>title</dt>
+        <dd>
+            dc:title
+        </dd>
+        <dt>topConceptOf</dt>
+        <dd>
+            skos:topConceptOf
+        </dd>
+        <dt>weightRange</dt>
+        <dd>
+            oa:weightRange
+        </dd>
+        <dt>xsd</dt>
+        <dd>
+            http://www.w3.org/2001/XMLSchema#
+        </dd>
+      </dl>
+    </section>
+    <section class='appendix informative'>   
+    <h2>Acknowledgements</h2>
+     
+    <p>The editors would like to thank <a href="http://www.w3.org/community/openactive/participants">all members</a> of the Openactive Community Group for 
+    their support and contributions.
+    </p>
+    </section>
+    
+  </body>
+</html>
