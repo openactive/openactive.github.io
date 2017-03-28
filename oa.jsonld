@@ -4,6 +4,8 @@
       "@reverse": "skos:inScheme"
     },
     "@vocab": "http://schema.org/",
+    "type": "@type",
+    "id": "@id",
     "oa": "http://openactive.org/ns#",
     "dc": "http://purl.org/dc/terms/",
     "owl": "http://www.w3.org/2002/07/owl#",

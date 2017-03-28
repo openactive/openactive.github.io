@@ -60,7 +60,9 @@ class Vocab
     #default context. TODO these should be defined in the CSV file
     context = {
     "concepts": {"@reverse": "skos:inScheme"},
-    "@vocab": "http://schema.org/"
+    "@vocab": "http://schema.org/",
+    "type": "@type",
+    "id": "@id"
     }
     #context used when including the machine-readable schema as JSON-LD
     rdfs_context = ::JSON.parse %({
