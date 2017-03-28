@@ -219,7 +219,7 @@
       <table class="rdfs-definition">
         
         <% ont[sect[:key]].each do |defn| -%>
-        <tr><td class="bold"><%= defn['@id'][3..-1] %></td>
+        <tr id="<%= defn['@id'][3..-1] %>"><td class="bold"><%= defn['@id'][3..-1] %></td>
           <td resource="<%= defn['@id'] %>" typeof="<%= Array(defn['@type']).join(" ") %>">
             <em property="rdfs:label"><%= defn['rdfs:label']['en'] %></em>
             <p property="rdfs:comment"><%= defn['rdfs:comment']['en'] %></p>

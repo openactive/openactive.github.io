@@ -13,7 +13,7 @@ oa: a owl:Ontology;
   dc:title "OpenActive Namespace Vocabulary Terms"@en;
   dc:description """This document describes the vocabulary used in the Modelling Opportunity Data specification."""@en;
   dc:date "2017-03-27"^^xsd:date;
-  owl:versionInfo <https://github.com/openactive/ns/commit/39085da778cbc9d124b502517d238f2994f2abd5>;
+  owl:versionInfo <https://github.com/openactive/ns/commit/ad2853f25592ddeaa40dc51ebadfe0d201ec089c>;
   .
 
 
