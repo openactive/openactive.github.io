@@ -304,6 +304,17 @@
               </dl>
           </td>
         </tr>
+        <tr id="attendeeInstructions"><td class="bold">attendeeInstructions</td>
+          <td resource="oa:attendeeInstructions" typeof="rdf:Property">
+            <em property="rdfs:label"></em>
+            <p property="rdfs:comment">Provides additional notes and instructions for event attendees. E.g. more information on how to find the event, what to bring, etc.</p>
+            <span property="rdfs:isDefinedBy" resource="csvw:"></span>
+              <dl class="terms">
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
+              </dl>
+          </td>
+        </tr>
       </table>
     </section>
     <section>
@@ -331,6 +342,10 @@
         <dt>altLabel</dt>
         <dd>
             skos:altLabel
+        </dd>
+        <dt>attendeeInstructions</dt>
+        <dd>
+            oa:attendeeInstructions
         </dd>
         <dt>broader</dt>
         <dd>

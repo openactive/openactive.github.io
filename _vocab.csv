@@ -25,3 +25,5 @@ broader,term,,skos:broader,,,,,,,,
 narrower,term,,skos:narrower,,,,,,,,
 notation,term,,skos:notation,,,,,,,,
 topConceptOf,term,,skos:topConceptOf,,,,,,,,
+type,term,,@type,,,,,,,,
+attendeeInstructions,rdf:Property,,,http://schema.org/Event,,,,,,,"Provides additional notes and instructions for event attendees. E.g. more information on how to find the event, what to bring, etc."

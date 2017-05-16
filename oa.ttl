@@ -60,6 +60,11 @@ oa:programme a rdf:Property;
   rdfs:comment """Indicates that an event will be organised according to a specific Programme"""@en;
   rdfs:domain http://schema.org/Event;
   rdfs:isDefinedBy oa: .
+oa:attendeeInstructions a rdf:Property;
+  rdfs:label ""@en;
+  rdfs:comment """Provides additional notes and instructions for event attendees. E.g. more information on how to find the event, what to bring, etc."""@en;
+  rdfs:domain http://schema.org/Event;
+  rdfs:isDefinedBy oa: .
 
 # Datatype definitions
 

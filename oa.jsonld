@@ -24,6 +24,7 @@
     "narrower": "skos:narrower",
     "notation": "skos:notation",
     "topConceptOf": "skos:topConceptOf",
+    "type": "@type",
     "ActivityOpportunity": "oa:ActivityOpportunity",
     "activity": {
       "@id": "oa:activity"
@@ -45,6 +46,9 @@
     },
     "programme": {
       "@id": "oa:programme"
+    },
+    "attendeeInstructions": {
+      "@id": "oa:attendeeInstructions"
     }
   },
   "@graph": {
@@ -222,6 +226,17 @@
         },
         "rdfs:comment": {
           "en": "Indicates that an event will be organised according to a specific Programme"
+        },
+        "rdfs:domain": "http://schema.org/Event"
+      },
+      {
+        "@id": "oa:attendeeInstructions",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": ""
+        },
+        "rdfs:comment": {
+          "en": "Provides additional notes and instructions for event attendees. E.g. more information on how to find the event, what to bring, etc."
         },
         "rdfs:domain": "http://schema.org/Event"
       }
