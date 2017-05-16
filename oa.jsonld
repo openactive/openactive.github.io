@@ -140,7 +140,7 @@
       "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
     },
     "dc:date": "2017-05-16",
-    "owl:versionInfo": "https://github.com/openactive/ns/commit/c3755fe53ecbeb14440064ad6bd3d68363b9696a",
+    "owl:versionInfo": "https://github.com/openactive/ns/commit/80ae984f3c3004e69d3bd834893b188a5cf79f3d",
     "rdfs_classes": [
       {
         "@id": "oa:ActivityOpportunity",
