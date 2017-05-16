@@ -27,3 +27,4 @@ notation,term,,skos:notation,,,,,,,,
 topConceptOf,term,,skos:topConceptOf,,,,,,,,
 type,term,,@type,,,,,,,,
 attendeeInstructions,rdf:Property,,,http://schema.org/Event,,,,,,,"Provides additional notes and instructions for event attendees. E.g. more information on how to find the event, what to bring, etc."
+leader,rdf:Property,,,http://schema.org/Event,,,,,,,The person who will be leading an event. E.g. a coach. This is a more specific role than an organiser or a contributor

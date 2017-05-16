@@ -49,6 +49,9 @@
     },
     "attendeeInstructions": {
       "@id": "oa:attendeeInstructions"
+    },
+    "leader": {
+      "@id": "oa:leader"
     }
   },
   "@graph": {
@@ -136,8 +139,8 @@
     "dc:description": {
       "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
     },
-    "dc:date": "2017-03-27",
-    "owl:versionInfo": "https://github.com/openactive/ns/commit/ad2853f25592ddeaa40dc51ebadfe0d201ec089c",
+    "dc:date": "2017-05-16",
+    "owl:versionInfo": "https://github.com/openactive/ns/commit/c3755fe53ecbeb14440064ad6bd3d68363b9696a",
     "rdfs_classes": [
       {
         "@id": "oa:ActivityOpportunity",
@@ -237,6 +240,17 @@
         },
         "rdfs:comment": {
           "en": "Provides additional notes and instructions for event attendees. E.g. more information on how to find the event, what to bring, etc."
+        },
+        "rdfs:domain": "http://schema.org/Event"
+      },
+      {
+        "@id": "oa:leader",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": ""
+        },
+        "rdfs:comment": {
+          "en": "The person who will be leading an event. E.g. a coach. This is a more specific role than an organiser or a contributor"
         },
         "rdfs:domain": "http://schema.org/Event"
       }

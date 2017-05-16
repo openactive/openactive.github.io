@@ -315,6 +315,17 @@
               </dl>
           </td>
         </tr>
+        <tr id="leader"><td class="bold">leader</td>
+          <td resource="oa:leader" typeof="rdf:Property">
+            <em property="rdfs:label"></em>
+            <p property="rdfs:comment">The person who will be leading an event. E.g. a coach. This is a more specific role than an organiser or a contributor</p>
+            <span property="rdfs:isDefinedBy" resource="csvw:"></span>
+              <dl class="terms">
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
+              </dl>
+          </td>
+        </tr>
       </table>
     </section>
     <section>
@@ -378,6 +389,10 @@
         <dt>inScheme</dt>
         <dd>
             skos:inScheme
+        </dd>
+        <dt>leader</dt>
+        <dd>
+            oa:leader
         </dd>
         <dt>license</dt>
         <dd>
