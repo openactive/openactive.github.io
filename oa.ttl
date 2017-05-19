@@ -70,6 +70,16 @@ oa:leader a rdf:Property;
   rdfs:comment """The person who will be leading an event. E.g. a coach. This is a more specific role than an organiser or a contributor"""@en;
   rdfs:domain http://schema.org/Event;
   rdfs:isDefinedBy oa: .
+oa:accessibilityInformation a rdf:Property;
+  rdfs:label ""@en;
+  rdfs:comment """Intended to capture further notes for attendees about support for disabilities or other conditions at the event"""@en;
+  rdfs:domain http://schema.org/Event;
+  rdfs:isDefinedBy oa: .
+oa:accessibilitySupport a rdf:Property;
+  rdfs:label ""@en;
+  rdfs:comment """What types of disabilities or conditions are accommodated at the event"""@en;
+  rdfs:domain http://schema.org/Event;
+  rdfs:isDefinedBy oa: .
 
 # Datatype definitions
 

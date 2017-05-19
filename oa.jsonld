@@ -52,6 +52,12 @@
     },
     "leader": {
       "@id": "oa:leader"
+    },
+    "accessibilityInformation": {
+      "@id": "oa:accessibilityInformation"
+    },
+    "accessibilitySupport": {
+      "@id": "oa:accessibilitySupport"
     }
   },
   "@graph": {
@@ -251,6 +257,28 @@
         },
         "rdfs:comment": {
           "en": "The person who will be leading an event. E.g. a coach. This is a more specific role than an organiser or a contributor"
+        },
+        "rdfs:domain": "http://schema.org/Event"
+      },
+      {
+        "@id": "oa:accessibilityInformation",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": ""
+        },
+        "rdfs:comment": {
+          "en": "Intended to capture further notes for attendees about support for disabilities or other conditions at the event"
+        },
+        "rdfs:domain": "http://schema.org/Event"
+      },
+      {
+        "@id": "oa:accessibilitySupport",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": ""
+        },
+        "rdfs:comment": {
+          "en": "What types of disabilities or conditions are accommodated at the event"
         },
         "rdfs:domain": "http://schema.org/Event"
       }
