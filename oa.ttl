@@ -13,7 +13,7 @@ oa: a owl:Ontology;
   dc:title "OpenActive Namespace Vocabulary Terms"@en;
   dc:description """This document describes the vocabulary used in the Modelling Opportunity Data specification."""@en;
   dc:date "2017-06-20"^^xsd:date;
-  owl:versionInfo <https://github.com/openactive/ns/commit/cb4b37f51e70cc5576f8d51246f3cada207f6b05>;
+  owl:versionInfo <https://github.com/openactive/ns/commit/47caeae0fb7f7471649c8649b799a5cd1d02c11b>;
   .
 
 
@@ -38,6 +38,7 @@ oa:category a rdf:Property;
 oa:ageRange a rdf:Property;
   rdfs:label "ageRange"@en;
   rdfs:comment """Indicates that an event is suitable for a specific age range. If only a single age is specified then this is assumed to be a minimum age. Age ranges can be specified as follows: 18-30"""@en;
+  rdfs:subPropertyOf http://schema.org/typicalAgeRange;
   rdfs:domain http://schema.org/Event;
   rdfs:isDefinedBy oa: .
 oa:heightRange a rdf:Property;

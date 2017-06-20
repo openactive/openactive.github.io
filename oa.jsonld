@@ -156,7 +156,7 @@
       "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
     },
     "dc:date": "2017-06-20",
-    "owl:versionInfo": "https://github.com/openactive/ns/commit/cb4b37f51e70cc5576f8d51246f3cada207f6b05",
+    "owl:versionInfo": "https://github.com/openactive/ns/commit/47caeae0fb7f7471649c8649b799a5cd1d02c11b",
     "rdfs_classes": [
       {
         "@id": "oa:ActivityOpportunity",
@@ -202,6 +202,7 @@
         "rdfs:comment": {
           "en": "Indicates that an event is suitable for a specific age range. If only a single age is specified then this is assumed to be a minimum age. Age ranges can be specified as follows: 18-30"
         },
+        "rdfs:subPropertyOf": "http://schema.org/typicalAgeRange",
         "rdfs:domain": "http://schema.org/Event"
       },
       {
