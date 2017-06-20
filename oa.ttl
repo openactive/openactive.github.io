@@ -8,12 +8,12 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-# CSVM Ontology definition
+# OpenActive Ontology definition
 oa: a owl:Ontology;
   dc:title "OpenActive Namespace Vocabulary Terms"@en;
   dc:description """This document describes the vocabulary used in the Modelling Opportunity Data specification."""@en;
-  dc:date "2017-05-16"^^xsd:date;
-  owl:versionInfo <https://github.com/openactive/ns/commit/80ae984f3c3004e69d3bd834893b188a5cf79f3d>;
+  dc:date "2017-06-20"^^xsd:date;
+  owl:versionInfo <https://github.com/openactive/ns/commit/cb4b37f51e70cc5576f8d51246f3cada207f6b05>;
   .
 
 
@@ -32,7 +32,7 @@ oa:activity a rdf:Property;
   rdfs:isDefinedBy oa: .
 oa:category a rdf:Property;
   rdfs:label "category"@en;
-  rdfs:comment """Provides a set of tags that help categorise and describe an event, e.g. its intensity, purpose, etc."""@en;
+  rdfs:comment """Associate one or more tags to an Event to further categorise and describe it event, e.g. its intensity, purpose, setting, membership requirements, etc."""@en;
   rdfs:domain http://schema.org/Event;
   rdfs:isDefinedBy oa: .
 oa:ageRange a rdf:Property;
@@ -62,13 +62,14 @@ oa:programme a rdf:Property;
   rdfs:isDefinedBy oa: .
 oa:attendeeInstructions a rdf:Property;
   rdfs:label ""@en;
-  rdfs:comment """Provides additional notes and instructions for event attendees. E.g. more information on how to find the event, what to bring, etc."""@en;
+  rdfs:comment """Provides additional notes and instructions for event attendees. This information is targetted at attendees rather than potential participants. The instructions might include information on what to bring, what to wear, how to find the event, etc."""@en;
   rdfs:domain http://schema.org/Event;
   rdfs:isDefinedBy oa: .
 oa:leader a rdf:Property;
   rdfs:label ""@en;
   rdfs:comment """The person who will be leading an event. E.g. a coach. This is a more specific role than an organiser or a contributor"""@en;
   rdfs:domain http://schema.org/Event;
+  rdfs:range http://schema.org/Person;
   rdfs:isDefinedBy oa: .
 oa:accessibilityInformation a rdf:Property;
   rdfs:label ""@en;
@@ -78,6 +79,23 @@ oa:accessibilityInformation a rdf:Property;
 oa:accessibilitySupport a rdf:Property;
   rdfs:label ""@en;
   rdfs:comment """What types of disabilities or conditions are accommodated at the event"""@en;
+  rdfs:domain http://schema.org/Event;
+  rdfs:isDefinedBy oa: .
+oa:isCoached a rdf:Property;
+  rdfs:label ""@en;
+  rdfs:comment """A boolean property that indicates whether an Event will be coached. This flag allows an Event to be marked as being coached without having to specify a named individual as a coach. This addresses both privacy concerns and also scenarios where the actual coach may only be decided on the day. """@en;
+  rdfs:domain http://schema.org/Event;
+  rdfs:isDefinedBy oa: .
+oa:level a rdf:Property;
+  rdfs:label ""@en;
+  rdfs:comment """A general purpose property for specifying the suitability of an event for different participant levels. E.g. beginner/intermediate/advanced. Or in the case of martial arts, specific belt requirements. Values should ideally draw from a controlled vocabulary """@en;
+  rdfs:subPropertyOf http://openactive.org/ns#category;
+  rdfs:domain http://schema.org/Event;
+  rdfs:isDefinedBy oa: .
+oa:meetingPoint a rdf:Property;
+  rdfs:label ""@en;
+  rdfs:comment """Instructions for the attendees of an Event about where they should meet the organizer or leader at the start of the event. Some larger locations may have several possible meeting points, so this property provides additional more specific directions."""@en;
+  rdfs:subPropertyOf http://openactive.org/ns#attendeeInstructions;
   rdfs:domain http://schema.org/Event;
   rdfs:isDefinedBy oa: .
 

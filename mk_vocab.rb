@@ -215,7 +215,7 @@ class Vocab
 
     @prefixes.each {|id, entry| output << "@prefix #{id}: <#{entry[:subClassOf]}> ."}
 
-    output << "\n# CSVM Ontology definition"
+    output << "\n# OpenActive Ontology definition"
     output << "oa: a owl:Ontology;"
     output << %(  dc:title "#{TITLE}"@en;)
     output << %(  dc:description """#{DESCRIPTION}"""@en;)

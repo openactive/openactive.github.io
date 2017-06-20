@@ -138,7 +138,7 @@
     </style>
 
   </head>
-  <body resource="http://www.w3.org/ns/csvw#" typeof="owl:Ontology" prefix="csvw: http://www.w3.org/ns/csvw#">
+  <body resource="http://openactive.org/ns#" typeof="owl:Ontology">
     <style>
     html {
       background-image: none !important;
@@ -213,7 +213,7 @@
           <td resource="oa:ActivityOpportunity" typeof="rdfs:Class">
             <em property="rdfs:label">ActivityOpportunity</em>
             <p property="rdfs:comment">An opportunity to carry out an activity at a location, at a time of the participants choosing.</p>
-            <span property="rdfs:isDefinedBy" resource="csvw:"></span>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
               <dl class="terms">
                   <dt>rdfs:subClassOf</dt>
                       <dd property="rdfs:subClassOf" resource="http://schema.org/Thing">http://schema.org/Thing</dd>
@@ -231,7 +231,7 @@
           <td resource="oa:activity" typeof="rdf:Property">
             <em property="rdfs:label">activity</em>
             <p property="rdfs:comment">Specifies the physical activity or activities that will take place during an event</p>
-            <span property="rdfs:isDefinedBy" resource="csvw:"></span>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
               <dl class="terms">
                   <dt>rdfs:domain</dt>
                       <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
@@ -241,8 +241,8 @@
         <tr id="category"><td class="bold">category</td>
           <td resource="oa:category" typeof="rdf:Property">
             <em property="rdfs:label">category</em>
-            <p property="rdfs:comment">Provides a set of tags that help categorise and describe an event, e.g. its intensity, purpose, etc.</p>
-            <span property="rdfs:isDefinedBy" resource="csvw:"></span>
+            <p property="rdfs:comment">Associate one or more tags to an Event to further categorise and describe it event, e.g. its intensity, purpose, setting, membership requirements, etc.</p>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
               <dl class="terms">
                   <dt>rdfs:domain</dt>
                       <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
@@ -253,7 +253,7 @@
           <td resource="oa:ageRange" typeof="rdf:Property">
             <em property="rdfs:label">ageRange</em>
             <p property="rdfs:comment">Indicates that an event is suitable for a specific age range. If only a single age is specified then this is assumed to be a minimum age. Age ranges can be specified as follows: 18-30</p>
-            <span property="rdfs:isDefinedBy" resource="csvw:"></span>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
               <dl class="terms">
                   <dt>rdfs:domain</dt>
                       <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
@@ -264,7 +264,7 @@
           <td resource="oa:heightRange" typeof="rdf:Property">
             <em property="rdfs:label">heightRange</em>
             <p property="rdfs:comment">Indicates that an event is suitable for a people within a specific range of heights. Heights are specified in metres. If only a single height is specified, this is assumed to be a minimum height. Height ranges can be specified as follows: 1-1.4</p>
-            <span property="rdfs:isDefinedBy" resource="csvw:"></span>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
               <dl class="terms">
                   <dt>rdfs:domain</dt>
                       <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
@@ -275,7 +275,7 @@
           <td resource="oa:weightRange" typeof="rdf:Property">
             <em property="rdfs:label">weightRange</em>
             <p property="rdfs:comment">Indicates that an event is suitable for a people within a specific range of weights. Weights are specified in kilograms. If only a single weight is specified, this is assumed to be a minimum weight. Weight ranges can be specified as follows: 45-125</p>
-            <span property="rdfs:isDefinedBy" resource="csvw:"></span>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
               <dl class="terms">
                   <dt>rdfs:domain</dt>
                       <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
@@ -286,7 +286,7 @@
           <td resource="oa:genderRestriction" typeof="rdf:Property">
             <em property="rdfs:label">genderRestriction</em>
             <p property="rdfs:comment">Indicates that an event is restricted to male, female or a mixed audience. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience</p>
-            <span property="rdfs:isDefinedBy" resource="csvw:"></span>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
               <dl class="terms">
                   <dt>rdfs:domain</dt>
                       <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
@@ -297,7 +297,7 @@
           <td resource="oa:programme" typeof="rdf:Property">
             <em property="rdfs:label">programme</em>
             <p property="rdfs:comment">Indicates that an event will be organised according to a specific Programme</p>
-            <span property="rdfs:isDefinedBy" resource="csvw:"></span>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
               <dl class="terms">
                   <dt>rdfs:domain</dt>
                       <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
@@ -307,8 +307,8 @@
         <tr id="attendeeInstructions"><td class="bold">attendeeInstructions</td>
           <td resource="oa:attendeeInstructions" typeof="rdf:Property">
             <em property="rdfs:label"></em>
-            <p property="rdfs:comment">Provides additional notes and instructions for event attendees. E.g. more information on how to find the event, what to bring, etc.</p>
-            <span property="rdfs:isDefinedBy" resource="csvw:"></span>
+            <p property="rdfs:comment">Provides additional notes and instructions for event attendees. This information is targetted at attendees rather than potential participants. The instructions might include information on what to bring, what to wear, how to find the event, etc.</p>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
               <dl class="terms">
                   <dt>rdfs:domain</dt>
                       <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
@@ -319,8 +319,10 @@
           <td resource="oa:leader" typeof="rdf:Property">
             <em property="rdfs:label"></em>
             <p property="rdfs:comment">The person who will be leading an event. E.g. a coach. This is a more specific role than an organiser or a contributor</p>
-            <span property="rdfs:isDefinedBy" resource="csvw:"></span>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
               <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="http://schema.org/Person">http://schema.org/Person</dd>
                   <dt>rdfs:domain</dt>
                       <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
               </dl>
@@ -330,7 +332,7 @@
           <td resource="oa:accessibilityInformation" typeof="rdf:Property">
             <em property="rdfs:label"></em>
             <p property="rdfs:comment">Intended to capture further notes for attendees about support for disabilities or other conditions at the event</p>
-            <span property="rdfs:isDefinedBy" resource="csvw:"></span>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
               <dl class="terms">
                   <dt>rdfs:domain</dt>
                       <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
@@ -341,8 +343,45 @@
           <td resource="oa:accessibilitySupport" typeof="rdf:Property">
             <em property="rdfs:label"></em>
             <p property="rdfs:comment">What types of disabilities or conditions are accommodated at the event</p>
-            <span property="rdfs:isDefinedBy" resource="csvw:"></span>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
               <dl class="terms">
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="isCoached"><td class="bold">isCoached</td>
+          <td resource="oa:isCoached" typeof="rdf:Property">
+            <em property="rdfs:label"></em>
+            <p property="rdfs:comment">A boolean property that indicates whether an Event will be coached. This flag allows an Event to be marked as being coached without having to specify a named individual as a coach. This addresses both privacy concerns and also scenarios where the actual coach may only be decided on the day. </p>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
+              <dl class="terms">
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="level"><td class="bold">level</td>
+          <td resource="oa:level" typeof="rdf:Property">
+            <em property="rdfs:label"></em>
+            <p property="rdfs:comment">A general purpose property for specifying the suitability of an event for different participant levels. E.g. beginner/intermediate/advanced. Or in the case of martial arts, specific belt requirements. Values should ideally draw from a controlled vocabulary </p>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
+              <dl class="terms">
+                  <dt>rdfs:subPropertyOf</dt>
+                      <dd property="rdfs:subPropertyOf" resource="http://openactive.org/ns#category">http://openactive.org/ns#category</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="meetingPoint"><td class="bold">meetingPoint</td>
+          <td resource="oa:meetingPoint" typeof="rdf:Property">
+            <em property="rdfs:label"></em>
+            <p property="rdfs:comment">Instructions for the attendees of an Event about where they should meet the organizer or leader at the start of the event. Some larger locations may have several possible meeting points, so this property provides additional more specific directions.</p>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
+              <dl class="terms">
+                  <dt>rdfs:subPropertyOf</dt>
+                      <dd property="rdfs:subPropertyOf" resource="http://openactive.org/ns#attendeeInstructions">http://openactive.org/ns#attendeeInstructions</dd>
                   <dt>rdfs:domain</dt>
                       <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
               </dl>
@@ -420,13 +459,26 @@
         <dd>
             skos:inScheme
         </dd>
+        <dt>isCoached</dt>
+        <dd>
+            oa:isCoached
+        </dd>
         <dt>leader</dt>
         <dd>
             oa:leader
+            with string values interpreted as @id
+        </dd>
+        <dt>level</dt>
+        <dd>
+            oa:level
         </dd>
         <dt>license</dt>
         <dd>
             dc:license
+        </dd>
+        <dt>meetingPoint</dt>
+        <dd>
+            oa:meetingPoint
         </dd>
         <dt>narrower</dt>
         <dd>

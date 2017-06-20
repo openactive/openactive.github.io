@@ -51,13 +51,23 @@
       "@id": "oa:attendeeInstructions"
     },
     "leader": {
-      "@id": "oa:leader"
+      "@id": "oa:leader",
+      "@type": "@id"
     },
     "accessibilityInformation": {
       "@id": "oa:accessibilityInformation"
     },
     "accessibilitySupport": {
       "@id": "oa:accessibilitySupport"
+    },
+    "isCoached": {
+      "@id": "oa:isCoached"
+    },
+    "level": {
+      "@id": "oa:level"
+    },
+    "meetingPoint": {
+      "@id": "oa:meetingPoint"
     }
   },
   "@graph": {
@@ -145,8 +155,8 @@
     "dc:description": {
       "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
     },
-    "dc:date": "2017-05-16",
-    "owl:versionInfo": "https://github.com/openactive/ns/commit/80ae984f3c3004e69d3bd834893b188a5cf79f3d",
+    "dc:date": "2017-06-20",
+    "owl:versionInfo": "https://github.com/openactive/ns/commit/cb4b37f51e70cc5576f8d51246f3cada207f6b05",
     "rdfs_classes": [
       {
         "@id": "oa:ActivityOpportunity",
@@ -179,7 +189,7 @@
           "en": "category"
         },
         "rdfs:comment": {
-          "en": "Provides a set of tags that help categorise and describe an event, e.g. its intensity, purpose, etc."
+          "en": "Associate one or more tags to an Event to further categorise and describe it event, e.g. its intensity, purpose, setting, membership requirements, etc."
         },
         "rdfs:domain": "http://schema.org/Event"
       },
@@ -245,7 +255,7 @@
           "en": ""
         },
         "rdfs:comment": {
-          "en": "Provides additional notes and instructions for event attendees. E.g. more information on how to find the event, what to bring, etc."
+          "en": "Provides additional notes and instructions for event attendees. This information is targetted at attendees rather than potential participants. The instructions might include information on what to bring, what to wear, how to find the event, etc."
         },
         "rdfs:domain": "http://schema.org/Event"
       },
@@ -258,7 +268,8 @@
         "rdfs:comment": {
           "en": "The person who will be leading an event. E.g. a coach. This is a more specific role than an organiser or a contributor"
         },
-        "rdfs:domain": "http://schema.org/Event"
+        "rdfs:domain": "http://schema.org/Event",
+        "rdfs:range": "http://schema.org/Person"
       },
       {
         "@id": "oa:accessibilityInformation",
@@ -280,6 +291,41 @@
         "rdfs:comment": {
           "en": "What types of disabilities or conditions are accommodated at the event"
         },
+        "rdfs:domain": "http://schema.org/Event"
+      },
+      {
+        "@id": "oa:isCoached",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": ""
+        },
+        "rdfs:comment": {
+          "en": "A boolean property that indicates whether an Event will be coached. This flag allows an Event to be marked as being coached without having to specify a named individual as a coach. This addresses both privacy concerns and also scenarios where the actual coach may only be decided on the day. "
+        },
+        "rdfs:domain": "http://schema.org/Event"
+      },
+      {
+        "@id": "oa:level",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": ""
+        },
+        "rdfs:comment": {
+          "en": "A general purpose property for specifying the suitability of an event for different participant levels. E.g. beginner/intermediate/advanced. Or in the case of martial arts, specific belt requirements. Values should ideally draw from a controlled vocabulary "
+        },
+        "rdfs:subPropertyOf": "http://openactive.org/ns#category",
+        "rdfs:domain": "http://schema.org/Event"
+      },
+      {
+        "@id": "oa:meetingPoint",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": ""
+        },
+        "rdfs:comment": {
+          "en": "Instructions for the attendees of an Event about where they should meet the organizer or leader at the start of the event. Some larger locations may have several possible meeting points, so this property provides additional more specific directions."
+        },
+        "rdfs:subPropertyOf": "http://openactive.org/ns#attendeeInstructions",
         "rdfs:domain": "http://schema.org/Event"
       }
     ]
