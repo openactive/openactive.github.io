@@ -13,7 +13,7 @@ oa: a owl:Ontology;
   dc:title "OpenActive Namespace Vocabulary Terms"@en;
   dc:description """This document describes the vocabulary used in the Modelling Opportunity Data specification."""@en;
   dc:date "2017-06-20"^^xsd:date;
-  owl:versionInfo <https://github.com/openactive/ns/commit/47caeae0fb7f7471649c8649b799a5cd1d02c11b>;
+  owl:versionInfo <https://github.com/openactive/ns/commit/4c1d437c41a36f2a1b0a845e71d643255014b7e3>;
   .
 
 
@@ -39,16 +39,6 @@ oa:ageRange a rdf:Property;
   rdfs:label "ageRange"@en;
   rdfs:comment """Indicates that an event is suitable for a specific age range. If only a single age is specified then this is assumed to be a minimum age. Age ranges can be specified as follows: 18-30"""@en;
   rdfs:subPropertyOf http://schema.org/typicalAgeRange;
-  rdfs:domain http://schema.org/Event;
-  rdfs:isDefinedBy oa: .
-oa:heightRange a rdf:Property;
-  rdfs:label "heightRange"@en;
-  rdfs:comment """Indicates that an event is suitable for a people within a specific range of heights. Heights are specified in metres. If only a single height is specified, this is assumed to be a minimum height. Height ranges can be specified as follows: 1-1.4"""@en;
-  rdfs:domain http://schema.org/Event;
-  rdfs:isDefinedBy oa: .
-oa:weightRange a rdf:Property;
-  rdfs:label "weightRange"@en;
-  rdfs:comment """Indicates that an event is suitable for a people within a specific range of weights. Weights are specified in kilograms. If only a single weight is specified, this is assumed to be a minimum weight. Weight ranges can be specified as follows: 45-125"""@en;
   rdfs:domain http://schema.org/Event;
   rdfs:isDefinedBy oa: .
 oa:genderRestriction a rdf:Property;

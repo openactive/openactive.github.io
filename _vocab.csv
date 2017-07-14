@@ -1,35 +1,33 @@
-id,type,label,subClassOf,domain,range,@type,@container,required,term,@reverse,comment
-oa,prefix,,http://openactive.org/ns#,,,,,,,,
-dc,prefix,,http://purl.org/dc/terms/,,,,,,,,
-owl,prefix,,http://www.w3.org/2002/07/owl#,,,,,,,,
-rdf,prefix,,http://www.w3.org/1999/02/22-rdf-syntax-ns#,,,,,,,,
-rdfa,prefix,,http://www.w3.org/ns/rdfa#,,,,,,,,
-rdfs,prefix,,http://www.w3.org/2000/01/rdf-schema#,,,,,,,,
-schema,prefix,,http://schema.org/,,,,,,,,
-skos,prefix,,http://www.w3.org/2004/02/skos/core#,,,,,,,,
-xsd,prefix,,http://www.w3.org/2001/XMLSchema#,,,,,,,,
-ActivityOpportunity,rdfs:Class,ActivityOpportunity,http://schema.org/Thing,,,,,,,,"An opportunity to carry out an activity at a location, at a time of the participants choosing."
-activity,rdf:Property,activity,,http://schema.org/Event,,,,,,,Specifies the physical activity or activities that will take place during an event
-category,rdf:Property,category,,http://schema.org/Event,,,,,,,"Associate one or more tags to an Event to further categorise and describe it event, e.g. its intensity, purpose, setting, membership requirements, etc."
-ageRange,rdf:Property,ageRange,http://schema.org/typicalAgeRange,http://schema.org/Event,,,,,,,Indicates that an event is suitable for a specific age range. If only a single age is specified then this is assumed to be a minimum age. Age ranges can be specified as follows: 18-30
-heightRange,rdf:Property,heightRange,,http://schema.org/Event,,,,,,,"Indicates that an event is suitable for a people within a specific range of heights. Heights are specified in metres. If only a single height is specified, this is assumed to be a minimum height. Height ranges can be specified as follows: 1-1.4"
-weightRange,rdf:Property,weightRange,,http://schema.org/Event,,,,,,,"Indicates that an event is suitable for a people within a specific range of weights. Weights are specified in kilograms. If only a single weight is specified, this is assumed to be a minimum weight. Weight ranges can be specified as follows: 45-125"
-genderRestriction,rdf:Property,genderRestriction,,http://schema.org/Event,,,,,,,"Indicates that an event is restricted to male, female or a mixed audience. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience"
-programme,rdf:Property,programme,,http://schema.org/Event,,,,,,,Indicates that an event will be organised according to a specific Programme
-title,term,,dc:title,,,,,,,,
-license,term,,dc:license,,,,,,,,
-prefLabel,term,,skos:prefLabel,,,,,,,,
-altLabel,term,,skos:altLabel,,,,,,,,
-inScheme,term,,skos:inScheme,,,,,,,,
-broader,term,,skos:broader,,,,,,,,
-narrower,term,,skos:narrower,,,,,,,,
-notation,term,,skos:notation,,,,,,,,
-topConceptOf,term,,skos:topConceptOf,,,,,,,,
-type,term,,@type,,,,,,,,
-attendeeInstructions,rdf:Property,,,http://schema.org/Event,,,,,,,"Provides additional notes and instructions for event attendees. This information is targetted at attendees rather than potential participants. The instructions might include information on what to bring, what to wear, how to find the event, etc."
-leader,rdf:Property,,,http://schema.org/Event,http://schema.org/Person,,,,,,The person who will be leading an event. E.g. a coach. This is a more specific role than an organiser or a contributor
-accessibilityInformation,rdf:Property,,,http://schema.org/Event,,,,,,,Intended to capture further notes for attendees about support for disabilities or other conditions at the event
-accessibilitySupport,rdf:Property,,,http://schema.org/Event,,,,,,,What types of disabilities or conditions are accommodated at the event
-isCoached,rdf:Property,,,http://schema.org/Event,,,,,,,A boolean property that indicates whether an Event will be coached. This flag allows an Event to be marked as being coached without having to specify a named individual as a coach. This addresses both privacy concerns and also scenarios where the actual coach may only be decided on the day. 
-level,rdf:Property,,http://openactive.org/ns#category,http://schema.org/Event,,,,,,,"A general purpose property for specifying the suitability of an event for different participant levels. E.g. beginner/intermediate/advanced. Or in the case of martial arts, specific belt requirements. Values should ideally draw from a controlled vocabulary "
-meetingPoint,rdf:Property,,http://openactive.org/ns#attendeeInstructions,http://schema.org/Event,,,,,,,"Instructions for the attendees of an Event about where they should meet the organizer or leader at the start of the event. Some larger locations may have several possible meeting points, so this property provides additional more specific directions."
+"id","type","label","subClassOf","domain","range","@type","@container","required","term","@reverse","comment"
+"oa","prefix",,"http://openactive.org/ns#",,,,,,,,
+"dc","prefix",,"http://purl.org/dc/terms/",,,,,,,,
+"owl","prefix",,"http://www.w3.org/2002/07/owl#",,,,,,,,
+"rdf","prefix",,"http://www.w3.org/1999/02/22-rdf-syntax-ns#",,,,,,,,
+"rdfa","prefix",,"http://www.w3.org/ns/rdfa#",,,,,,,,
+"rdfs","prefix",,"http://www.w3.org/2000/01/rdf-schema#",,,,,,,,
+"schema","prefix",,"http://schema.org/",,,,,,,,
+"skos","prefix",,"http://www.w3.org/2004/02/skos/core#",,,,,,,,
+"xsd","prefix",,"http://www.w3.org/2001/XMLSchema#",,,,,,,,
+"ActivityOpportunity","rdfs:Class","ActivityOpportunity","http://schema.org/Thing",,,,,,,,"An opportunity to carry out an activity at a location, at a time of the participants choosing."
+"activity","rdf:Property","activity",,"http://schema.org/Event",,,,,,,"Specifies the physical activity or activities that will take place during an event"
+"category","rdf:Property","category",,"http://schema.org/Event",,,,,,,"Associate one or more tags to an Event to further categorise and describe it event, e.g. its intensity, purpose, setting, membership requirements, etc."
+"ageRange","rdf:Property","ageRange","http://schema.org/typicalAgeRange","http://schema.org/Event",,,,,,,"Indicates that an event is suitable for a specific age range. If only a single age is specified then this is assumed to be a minimum age. Age ranges can be specified as follows: 18-30"
+"genderRestriction","rdf:Property","genderRestriction",,"http://schema.org/Event",,,,,,,"Indicates that an event is restricted to male, female or a mixed audience. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience"
+"programme","rdf:Property","programme",,"http://schema.org/Event",,,,,,,"Indicates that an event will be organised according to a specific Programme"
+"title","term",,"dc:title",,,,,,,,
+"license","term",,"dc:license",,,,,,,,
+"prefLabel","term",,"skos:prefLabel",,,,,,,,
+"altLabel","term",,"skos:altLabel",,,,,,,,
+"inScheme","term",,"skos:inScheme",,,,,,,,
+"broader","term",,"skos:broader",,,,,,,,
+"narrower","term",,"skos:narrower",,,,,,,,
+"notation","term",,"skos:notation",,,,,,,,
+"topConceptOf","term",,"skos:topConceptOf",,,,,,,,
+"type","term",,"@type",,,,,,,,
+"attendeeInstructions","rdf:Property",,,"http://schema.org/Event",,,,,,,"Provides additional notes and instructions for event attendees. This information is targetted at attendees rather than potential participants. The instructions might include information on what to bring, what to wear, how to find the event, etc."
+"leader","rdf:Property",,,"http://schema.org/Event","http://schema.org/Person",,,,,,"The person who will be leading an event. E.g. a coach. This is a more specific role than an organiser or a contributor"
+"accessibilityInformation","rdf:Property",,,"http://schema.org/Event",,,,,,,"Intended to capture further notes for attendees about support for disabilities or other conditions at the event"
+"accessibilitySupport","rdf:Property",,,"http://schema.org/Event",,,,,,,"What types of disabilities or conditions are accommodated at the event"
+"isCoached","rdf:Property",,,"http://schema.org/Event",,,,,,,"A boolean property that indicates whether an Event will be coached. This flag allows an Event to be marked as being coached without having to specify a named individual as a coach. This addresses both privacy concerns and also scenarios where the actual coach may only be decided on the day. "
+"level","rdf:Property",,"http://openactive.org/ns#category","http://schema.org/Event",,,,,,,"A general purpose property for specifying the suitability of an event for different participant levels. E.g. beginner/intermediate/advanced. Or in the case of martial arts, specific belt requirements. Values should ideally draw from a controlled vocabulary "
+"meetingPoint","rdf:Property",,"http://openactive.org/ns#attendeeInstructions","http://schema.org/Event",,,,,,,"Instructions for the attendees of an Event about where they should meet the organizer or leader at the start of the event. Some larger locations may have several possible meeting points, so this property provides additional more specific directions."
