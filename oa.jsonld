@@ -15,6 +15,7 @@
     "schema": "http://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "pending": "http://pending.schema.org/",
     "title": "dc:title",
     "license": "dc:license",
     "prefLabel": "skos:prefLabel",
@@ -25,6 +26,14 @@
     "notation": "skos:notation",
     "topConceptOf": "skos:topConceptOf",
     "type": "@type",
+    "Schedule": "pending:Schedule",
+    "repeatFrequency": "pending:repeatFrequency",
+    "repeatCount": "pending:repeatCount",
+    "byDay": "pending:byDay",
+    "byMonth": "pending:byMonth",
+    "byMonthDay": "pending:byMonthDay",
+    "exceptDate": "pending:exceptDate",
+    "eventSchedule": "pending:eventSchedule",
     "ActivityOpportunity": "oa:ActivityOpportunity",
     "activity": {
       "@id": "oa:activity"
@@ -149,8 +158,8 @@
     "dc:description": {
       "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
     },
-    "dc:date": "2017-06-20",
-    "owl:versionInfo": "https://github.com/openactive/ns/commit/4c1d437c41a36f2a1b0a845e71d643255014b7e3",
+    "dc:date": "2017-07-14",
+    "owl:versionInfo": "https://github.com/openactive/ns/commit/d494656da176c4b143fd78fc51622c12c38dd5ca",
     "rdfs_classes": [
       {
         "@id": "oa:ActivityOpportunity",
