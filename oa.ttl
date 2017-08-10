@@ -7,6 +7,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix pending: <http://pending.schema.org/> .
 
 # OpenActive Ontology definition
 oa: a owl:Ontology;
