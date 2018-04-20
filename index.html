@@ -253,6 +253,39 @@
               </dl>
           </td>
         </tr>
+        <tr id="FacilityUse"><td class="bold">FacilityUse</td>
+          <td resource="oa:FacilityUse" typeof="rdfs:Class">
+            <em property="rdfs:label">FacilityUse</em>
+            <p property="rdfs:comment"></p>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
+              <dl class="terms">
+                  <dt>rdfs:subClassOf</dt>
+                      <dd property="rdfs:subClassOf" resource="schema:Product">schema:Product</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="Available"><td class="bold">Available</td>
+          <td resource="oa:Available" typeof="rdfs:Class">
+            <em property="rdfs:label">Available</em>
+            <p property="rdfs:comment">General Event status to specify that a scheduled Event is taking place and still has availability</p>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
+              <dl class="terms">
+                  <dt>rdfs:subClassOf</dt>
+                      <dd property="rdfs:subClassOf" resource="schema:EventStatusType">schema:EventStatusType</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="Unavailable"><td class="bold">Unavailable</td>
+          <td resource="oa:Unavailable" typeof="rdfs:Class">
+            <em property="rdfs:label">Unavailable</em>
+            <p property="rdfs:comment">General Event status to specify that a scheduled Event is no longer available</p>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
+              <dl class="terms">
+                  <dt>rdfs:subClassOf</dt>
+                      <dd property="rdfs:subClassOf" resource="schema:EventStatusType">schema:EventStatusType</dd>
+              </dl>
+          </td>
+        </tr>
       </table>
     </section>
     <section>
@@ -267,7 +300,7 @@
             <span property="rdfs:isDefinedBy" resource="oa:"></span>
               <dl class="terms">
                   <dt>rdfs:domain</dt>
-                      <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
+                      <dd property="rdfs:domain" resource="http://schema.org/Thing">http://schema.org/Thing</dd>
               </dl>
           </td>
         </tr>
@@ -298,11 +331,11 @@
         <tr id="genderRestriction"><td class="bold">genderRestriction</td>
           <td resource="oa:genderRestriction" typeof="rdf:Property">
             <em property="rdfs:label">genderRestriction</em>
-            <p property="rdfs:comment">Indicates that an event is restricted to male, female or a mixed audience. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience</p>
+            <p property="rdfs:comment">Indicates that an event is restricted to male, female or a mixed audience. Values should be one of the gender types specified in this vocabulary. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience</p>
             <span property="rdfs:isDefinedBy" resource="oa:"></span>
               <dl class="terms">
                   <dt>rdfs:range</dt>
-                      <dd property="rdfs:range" resource="schema:GenderType">schema:GenderType</dd>
+                      <dd property="rdfs:range" resource="http://schema.org/GenderType">http://schema.org/GenderType</dd>
                   <dt>rdfs:domain</dt>
                       <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
               </dl>
@@ -418,6 +451,14 @@
         <dd>
             oa:ActivityOpportunity
         </dd>
+        <dt>Available</dt>
+        <dd>
+            oa:Available
+        </dd>
+        <dt>FacilityUse</dt>
+        <dd>
+            oa:FacilityUse
+        </dd>
         <dt>Female</dt>
         <dd>
             oa:Female
@@ -433,6 +474,10 @@
         <dt>Schedule</dt>
         <dd>
             pending:Schedule
+        </dd>
+        <dt>Unavailable</dt>
+        <dd>
+            oa:Unavailable
         </dd>
         <dt>accessibilityInformation</dt>
         <dd>

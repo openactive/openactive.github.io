@@ -13,8 +13,8 @@
 oa: a owl:Ontology;
   dc:title "OpenActive Namespace Vocabulary Terms"@en;
   dc:description """This document describes the vocabulary used in the Modelling Opportunity Data specification."""@en;
-  dc:date "2017-08-09"^^xsd:date;
-  owl:versionInfo <https://github.com/openactive/ns/commit/4ee3888b2a000552a52ba6f9cd22b41c34a085c9>;
+  dc:date "2018-04-20"^^xsd:date;
+  owl:versionInfo <https://github.com/openactive/ns/commit/54140eb6704f524275069ff4177db4022babc885>;
   .
 
 
@@ -39,12 +39,27 @@ oa:Mixed a rdfs:Class;
   rdfs:comment """Enumerated value for specifying gender restrictions"""@en;
   rdfs:subClassOf schema:GenderType;
   rdfs:isDefinedBy oa: .
+oa:FacilityUse a rdfs:Class;
+  rdfs:label "FacilityUse"@en;
+  rdfs:comment """"""@en;
+  rdfs:subClassOf schema:Product;
+  rdfs:isDefinedBy oa: .
+oa:Available a rdfs:Class;
+  rdfs:label "Available"@en;
+  rdfs:comment """General Event status to specify that a scheduled Event is taking place and still has availability"""@en;
+  rdfs:subClassOf schema:EventStatusType;
+  rdfs:isDefinedBy oa: .
+oa:Unavailable a rdfs:Class;
+  rdfs:label "Unavailable"@en;
+  rdfs:comment """General Event status to specify that a scheduled Event is no longer available"""@en;
+  rdfs:subClassOf schema:EventStatusType;
+  rdfs:isDefinedBy oa: .
 
 # Property definitions
 oa:activity a rdf:Property;
   rdfs:label "activity"@en;
   rdfs:comment """Specifies the physical activity or activities that will take place during an event"""@en;
-  rdfs:domain http://schema.org/Event;
+  rdfs:domain http://schema.org/Thing;
   rdfs:isDefinedBy oa: .
 oa:category a rdf:Property;
   rdfs:label "category"@en;
@@ -59,9 +74,9 @@ oa:ageRange a rdf:Property;
   rdfs:isDefinedBy oa: .
 oa:genderRestriction a rdf:Property;
   rdfs:label "genderRestriction"@en;
-  rdfs:comment """Indicates that an event is restricted to male, female or a mixed audience. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience"""@en;
+  rdfs:comment """Indicates that an event is restricted to male, female or a mixed audience. Values should be one of the gender types specified in this vocabulary. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience"""@en;
   rdfs:domain http://schema.org/Event;
-  rdfs:range schema:GenderType;
+  rdfs:range http://schema.org/GenderType;
   rdfs:isDefinedBy oa: .
 oa:programme a rdf:Property;
   rdfs:label "programme"@en;

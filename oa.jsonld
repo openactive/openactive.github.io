@@ -38,6 +38,9 @@
     "Male": "oa:Male",
     "Female": "oa:Female",
     "Mixed": "oa:Mixed",
+    "FacilityUse": "oa:FacilityUse",
+    "Available": "oa:Available",
+    "Unavailable": "oa:Unavailable",
     "activity": {
       "@id": "oa:activity"
     },
@@ -163,8 +166,8 @@
     "dc:description": {
       "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
     },
-    "dc:date": "2017-08-09",
-    "owl:versionInfo": "https://github.com/openactive/ns/commit/4ee3888b2a000552a52ba6f9cd22b41c34a085c9",
+    "dc:date": "2018-04-20",
+    "owl:versionInfo": "https://github.com/openactive/ns/commit/54140eb6704f524275069ff4177db4022babc885",
     "rdfs_classes": [
       {
         "@id": "oa:ActivityOpportunity",
@@ -209,6 +212,39 @@
           "en": "Enumerated value for specifying gender restrictions"
         },
         "rdfs:subClassOf": "schema:GenderType"
+      },
+      {
+        "@id": "oa:FacilityUse",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "FacilityUse"
+        },
+        "rdfs:comment": {
+          "en": ""
+        },
+        "rdfs:subClassOf": "schema:Product"
+      },
+      {
+        "@id": "oa:Available",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "Available"
+        },
+        "rdfs:comment": {
+          "en": "General Event status to specify that a scheduled Event is taking place and still has availability"
+        },
+        "rdfs:subClassOf": "schema:EventStatusType"
+      },
+      {
+        "@id": "oa:Unavailable",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "Unavailable"
+        },
+        "rdfs:comment": {
+          "en": "General Event status to specify that a scheduled Event is no longer available"
+        },
+        "rdfs:subClassOf": "schema:EventStatusType"
       }
     ],
     "rdfs_properties": [
@@ -221,7 +257,7 @@
         "rdfs:comment": {
           "en": "Specifies the physical activity or activities that will take place during an event"
         },
-        "rdfs:domain": "http://schema.org/Event"
+        "rdfs:domain": "http://schema.org/Thing"
       },
       {
         "@id": "oa:category",
@@ -253,10 +289,10 @@
           "en": "genderRestriction"
         },
         "rdfs:comment": {
-          "en": "Indicates that an event is restricted to male, female or a mixed audience. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience"
+          "en": "Indicates that an event is restricted to male, female or a mixed audience. Values should be one of the gender types specified in this vocabulary. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience"
         },
         "rdfs:domain": "http://schema.org/Event",
-        "rdfs:range": "schema:GenderType"
+        "rdfs:range": "http://schema.org/GenderType"
       },
       {
         "@id": "oa:programme",
