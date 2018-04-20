@@ -35,6 +35,9 @@
     "exceptDate": "pending:exceptDate",
     "eventSchedule": "pending:eventSchedule",
     "ActivityOpportunity": "oa:ActivityOpportunity",
+    "Male": "oa:Male",
+    "Female": "oa:Female",
+    "Mixed": "oa:Mixed",
     "activity": {
       "@id": "oa:activity"
     },
@@ -42,10 +45,12 @@
       "@id": "oa:category"
     },
     "ageRange": {
-      "@id": "oa:ageRange"
+      "@id": "oa:ageRange",
+      "@type": "@id"
     },
     "genderRestriction": {
-      "@id": "oa:genderRestriction"
+      "@id": "oa:genderRestriction",
+      "@type": "@id"
     },
     "programme": {
       "@id": "oa:programme"
@@ -158,8 +163,8 @@
     "dc:description": {
       "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
     },
-    "dc:date": "2017-07-14",
-    "owl:versionInfo": "https://github.com/openactive/ns/commit/d494656da176c4b143fd78fc51622c12c38dd5ca",
+    "dc:date": "2017-08-09",
+    "owl:versionInfo": "https://github.com/openactive/ns/commit/4ee3888b2a000552a52ba6f9cd22b41c34a085c9",
     "rdfs_classes": [
       {
         "@id": "oa:ActivityOpportunity",
@@ -171,6 +176,39 @@
           "en": "An opportunity to carry out an activity at a location, at a time of the participants choosing."
         },
         "rdfs:subClassOf": "http://schema.org/Thing"
+      },
+      {
+        "@id": "oa:Male",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "Male"
+        },
+        "rdfs:comment": {
+          "en": "Enumerated value for specifying gender restrictions"
+        },
+        "rdfs:subClassOf": "schema:GenderType"
+      },
+      {
+        "@id": "oa:Female",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "Female"
+        },
+        "rdfs:comment": {
+          "en": "Enumerated value for specifying gender restrictions"
+        },
+        "rdfs:subClassOf": "schema:GenderType"
+      },
+      {
+        "@id": "oa:Mixed",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "Mixed"
+        },
+        "rdfs:comment": {
+          "en": "Enumerated value for specifying gender restrictions"
+        },
+        "rdfs:subClassOf": "schema:GenderType"
       }
     ],
     "rdfs_properties": [
@@ -203,10 +241,10 @@
           "en": "ageRange"
         },
         "rdfs:comment": {
-          "en": "Indicates that an event is suitable for a specific age range. If only a single age is specified then this is assumed to be a minimum age. Age ranges can be specified as follows: 18-30"
+          "en": "Indicates that an event is suitable for a specified age range, or that an Offer applies only to people of a specific age"
         },
-        "rdfs:subPropertyOf": "http://schema.org/typicalAgeRange",
-        "rdfs:domain": "http://schema.org/Event"
+        "rdfs:domain": "http://schema.org/Thing",
+        "rdfs:range": "http://schema.org/QuantitativeValue"
       },
       {
         "@id": "oa:genderRestriction",
@@ -217,7 +255,8 @@
         "rdfs:comment": {
           "en": "Indicates that an event is restricted to male, female or a mixed audience. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience"
         },
-        "rdfs:domain": "http://schema.org/Event"
+        "rdfs:domain": "http://schema.org/Event",
+        "rdfs:range": "schema:GenderType"
       },
       {
         "@id": "oa:programme",

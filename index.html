@@ -220,6 +220,39 @@
               </dl>
           </td>
         </tr>
+        <tr id="Male"><td class="bold">Male</td>
+          <td resource="oa:Male" typeof="rdfs:Class">
+            <em property="rdfs:label">Male</em>
+            <p property="rdfs:comment">Enumerated value for specifying gender restrictions</p>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
+              <dl class="terms">
+                  <dt>rdfs:subClassOf</dt>
+                      <dd property="rdfs:subClassOf" resource="schema:GenderType">schema:GenderType</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="Female"><td class="bold">Female</td>
+          <td resource="oa:Female" typeof="rdfs:Class">
+            <em property="rdfs:label">Female</em>
+            <p property="rdfs:comment">Enumerated value for specifying gender restrictions</p>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
+              <dl class="terms">
+                  <dt>rdfs:subClassOf</dt>
+                      <dd property="rdfs:subClassOf" resource="schema:GenderType">schema:GenderType</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="Mixed"><td class="bold">Mixed</td>
+          <td resource="oa:Mixed" typeof="rdfs:Class">
+            <em property="rdfs:label">Mixed</em>
+            <p property="rdfs:comment">Enumerated value for specifying gender restrictions</p>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
+              <dl class="terms">
+                  <dt>rdfs:subClassOf</dt>
+                      <dd property="rdfs:subClassOf" resource="schema:GenderType">schema:GenderType</dd>
+              </dl>
+          </td>
+        </tr>
       </table>
     </section>
     <section>
@@ -252,13 +285,13 @@
         <tr id="ageRange"><td class="bold">ageRange</td>
           <td resource="oa:ageRange" typeof="rdf:Property">
             <em property="rdfs:label">ageRange</em>
-            <p property="rdfs:comment">Indicates that an event is suitable for a specific age range. If only a single age is specified then this is assumed to be a minimum age. Age ranges can be specified as follows: 18-30</p>
+            <p property="rdfs:comment">Indicates that an event is suitable for a specified age range, or that an Offer applies only to people of a specific age</p>
             <span property="rdfs:isDefinedBy" resource="oa:"></span>
               <dl class="terms">
-                  <dt>rdfs:subPropertyOf</dt>
-                      <dd property="rdfs:subPropertyOf" resource="http://schema.org/typicalAgeRange">http://schema.org/typicalAgeRange</dd>
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="http://schema.org/QuantitativeValue">http://schema.org/QuantitativeValue</dd>
                   <dt>rdfs:domain</dt>
-                      <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
+                      <dd property="rdfs:domain" resource="http://schema.org/Thing">http://schema.org/Thing</dd>
               </dl>
           </td>
         </tr>
@@ -268,6 +301,8 @@
             <p property="rdfs:comment">Indicates that an event is restricted to male, female or a mixed audience. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience</p>
             <span property="rdfs:isDefinedBy" resource="oa:"></span>
               <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="schema:GenderType">schema:GenderType</dd>
                   <dt>rdfs:domain</dt>
                       <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
               </dl>
@@ -383,6 +418,18 @@
         <dd>
             oa:ActivityOpportunity
         </dd>
+        <dt>Female</dt>
+        <dd>
+            oa:Female
+        </dd>
+        <dt>Male</dt>
+        <dd>
+            oa:Male
+        </dd>
+        <dt>Mixed</dt>
+        <dd>
+            oa:Mixed
+        </dd>
         <dt>Schedule</dt>
         <dd>
             pending:Schedule
@@ -402,6 +449,7 @@
         <dt>ageRange</dt>
         <dd>
             oa:ageRange
+            with string values interpreted as @id
         </dd>
         <dt>altLabel</dt>
         <dd>
@@ -450,6 +498,7 @@
         <dt>genderRestriction</dt>
         <dd>
             oa:genderRestriction
+            with string values interpreted as @id
         </dd>
         <dt>id</dt>
         <dd>
