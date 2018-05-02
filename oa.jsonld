@@ -41,6 +41,14 @@
     "FacilityUse": "oa:FacilityUse",
     "Available": "oa:Available",
     "Unavailable": "oa:Unavailable",
+    "ChangingRooms": "oa:ChangingRooms",
+    "Showers": "oa:Showers",
+    "PublicToilets": "oa:PublicToilets",
+    "Lockers": "oa:Lockers",
+    "Towels": "oa:Towels",
+    "Creche": "oa:Creche",
+    "Parking": "oa:Parking",
+    "BabyChanging": "oa:BabyChanging",
     "activity": {
       "@id": "oa:activity"
     },
@@ -167,7 +175,7 @@
       "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
     },
     "dc:date": "2018-04-20",
-    "owl:versionInfo": "https://github.com/openactive/ns/commit/54140eb6704f524275069ff4177db4022babc885",
+    "owl:versionInfo": "https://github.com/openactive/ns/commit/ea87d0c57131c32d0819c6ed3c4ad35c19696cf7",
     "rdfs_classes": [
       {
         "@id": "oa:ActivityOpportunity",
@@ -245,6 +253,94 @@
           "en": "General Event status to specify that a scheduled Event is no longer available"
         },
         "rdfs:subClassOf": "schema:EventStatusType"
+      },
+      {
+        "@id": "oa:ChangingRooms",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "ChangingRooms"
+        },
+        "rdfs:comment": {
+          "en": "Changing Rooms. "
+        },
+        "rdfs:subClassOf": "schema:LocationFeatureSpecification"
+      },
+      {
+        "@id": "oa:Showers",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "Showers"
+        },
+        "rdfs:comment": {
+          "en": "Showers"
+        },
+        "rdfs:subClassOf": "schema:LocationFeatureSpecification"
+      },
+      {
+        "@id": "oa:PublicToilets",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "PublicToilets"
+        },
+        "rdfs:comment": {
+          "en": "Public Toilets"
+        },
+        "rdfs:subClassOf": "schema:LocationFeatureSpecification"
+      },
+      {
+        "@id": "oa:Lockers",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "Lockers"
+        },
+        "rdfs:comment": {
+          "en": "Lockers"
+        },
+        "rdfs:subClassOf": "schema:LocationFeatureSpecification"
+      },
+      {
+        "@id": "oa:Towels",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "Towels"
+        },
+        "rdfs:comment": {
+          "en": "Towels"
+        },
+        "rdfs:subClassOf": "schema:LocationFeatureSpecification"
+      },
+      {
+        "@id": "oa:Creche",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "Creche"
+        },
+        "rdfs:comment": {
+          "en": "Creche"
+        },
+        "rdfs:subClassOf": "schema:LocationFeatureSpecification"
+      },
+      {
+        "@id": "oa:Parking",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "Parking"
+        },
+        "rdfs:comment": {
+          "en": "Parking"
+        },
+        "rdfs:subClassOf": "schema:LocationFeatureSpecification"
+      },
+      {
+        "@id": "oa:BabyChanging",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "BabyChanging"
+        },
+        "rdfs:comment": {
+          "en": "BabyChanging"
+        },
+        "rdfs:subClassOf": "schema:LocationFeatureSpecification"
       }
     ],
     "rdfs_properties": [

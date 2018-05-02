@@ -14,7 +14,7 @@ oa: a owl:Ontology;
   dc:title "OpenActive Namespace Vocabulary Terms"@en;
   dc:description """This document describes the vocabulary used in the Modelling Opportunity Data specification."""@en;
   dc:date "2018-04-20"^^xsd:date;
-  owl:versionInfo <https://github.com/openactive/ns/commit/54140eb6704f524275069ff4177db4022babc885>;
+  owl:versionInfo <https://github.com/openactive/ns/commit/ea87d0c57131c32d0819c6ed3c4ad35c19696cf7>;
   .
 
 
@@ -53,6 +53,46 @@ oa:Unavailable a rdfs:Class;
   rdfs:label "Unavailable"@en;
   rdfs:comment """General Event status to specify that a scheduled Event is no longer available"""@en;
   rdfs:subClassOf schema:EventStatusType;
+  rdfs:isDefinedBy oa: .
+oa:ChangingRooms a rdfs:Class;
+  rdfs:label "ChangingRooms"@en;
+  rdfs:comment """Changing Rooms. """@en;
+  rdfs:subClassOf schema:LocationFeatureSpecification;
+  rdfs:isDefinedBy oa: .
+oa:Showers a rdfs:Class;
+  rdfs:label "Showers"@en;
+  rdfs:comment """Showers"""@en;
+  rdfs:subClassOf schema:LocationFeatureSpecification;
+  rdfs:isDefinedBy oa: .
+oa:PublicToilets a rdfs:Class;
+  rdfs:label "PublicToilets"@en;
+  rdfs:comment """Public Toilets"""@en;
+  rdfs:subClassOf schema:LocationFeatureSpecification;
+  rdfs:isDefinedBy oa: .
+oa:Lockers a rdfs:Class;
+  rdfs:label "Lockers"@en;
+  rdfs:comment """Lockers"""@en;
+  rdfs:subClassOf schema:LocationFeatureSpecification;
+  rdfs:isDefinedBy oa: .
+oa:Towels a rdfs:Class;
+  rdfs:label "Towels"@en;
+  rdfs:comment """Towels"""@en;
+  rdfs:subClassOf schema:LocationFeatureSpecification;
+  rdfs:isDefinedBy oa: .
+oa:Creche a rdfs:Class;
+  rdfs:label "Creche"@en;
+  rdfs:comment """Creche"""@en;
+  rdfs:subClassOf schema:LocationFeatureSpecification;
+  rdfs:isDefinedBy oa: .
+oa:Parking a rdfs:Class;
+  rdfs:label "Parking"@en;
+  rdfs:comment """Parking"""@en;
+  rdfs:subClassOf schema:LocationFeatureSpecification;
+  rdfs:isDefinedBy oa: .
+oa:BabyChanging a rdfs:Class;
+  rdfs:label "BabyChanging"@en;
+  rdfs:comment """BabyChanging"""@en;
+  rdfs:subClassOf schema:LocationFeatureSpecification;
   rdfs:isDefinedBy oa: .
 
 # Property definitions

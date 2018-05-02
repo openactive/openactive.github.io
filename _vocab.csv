@@ -46,3 +46,11 @@
 "FacilityUse","rdfs:Class","FacilityUse","schema:Product",,,,,,,,
 "Available","rdfs:Class","Available","schema:EventStatusType",,,,,,,,"General Event status to specify that a scheduled Event is taking place and still has availability"
 "Unavailable","rdfs:Class","Unavailable","schema:EventStatusType",,,,,,,,"General Event status to specify that a scheduled Event is no longer available"
+"ChangingRooms","rdfs:Class","ChangingRooms","schema:LocationFeatureSpecification",,,,,,,,"Changing Rooms. "
+"Showers","rdfs:Class","Showers","schema:LocationFeatureSpecification",,,,,,,,"Showers"
+"PublicToilets","rdfs:Class","PublicToilets","schema:LocationFeatureSpecification",,,,,,,,"Public Toilets"
+"Lockers","rdfs:Class","Lockers","schema:LocationFeatureSpecification",,,,,,,,"Lockers"
+"Towels","rdfs:Class","Towels","schema:LocationFeatureSpecification",,,,,,,,"Towels"
+"Creche","rdfs:Class","Creche","schema:LocationFeatureSpecification",,,,,,,,"Creche"
+"Parking","rdfs:Class","Parking","schema:LocationFeatureSpecification",,,,,,,,"Parking"
+"BabyChanging","rdfs:Class","BabyChanging","schema:LocationFeatureSpecification",,,,,,,,"BabyChanging"
