@@ -1,4 +1,4 @@
-@prefix oa: <http://openactive.org/ns#> .
+@prefix oa: <https://www.openactive.org/ns#> .
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -13,8 +13,8 @@
 oa: a owl:Ontology;
   dc:title "OpenActive Namespace Vocabulary Terms"@en;
   dc:description """This document describes the vocabulary used in the Modelling Opportunity Data specification."""@en;
-  dc:date "2017-07-14"^^xsd:date;
-  owl:versionInfo <https://github.com/openactive/ns/commit/d494656da176c4b143fd78fc51622c12c38dd5ca>;
+  dc:date "2018-05-02"^^xsd:date;
+  owl:versionInfo <https://github.com/openactive/ns/commit/2d887ce73b0782e07967878d2f504a08b6b106db>;
   .
 
 
@@ -24,12 +24,86 @@ oa:ActivityOpportunity a rdfs:Class;
   rdfs:comment """An opportunity to carry out an activity at a location, at a time of the participants choosing."""@en;
   rdfs:subClassOf http://schema.org/Thing;
   rdfs:isDefinedBy oa: .
+oa:GenderRestrictionType a rdfs:Class;
+  rdfs:label "GenderRestrictionType"@en;
+  rdfs:comment """Enumerated types for gender restrictions that are applied to Events"""@en;
+  rdfs:isDefinedBy oa: .
+oa:Male a rdfs:Class;
+  rdfs:label "Male"@en;
+  rdfs:comment """Enumerated value for specifying gender restrictions"""@en;
+  rdfs:subClassOf oa:GenderRestrictionType;
+  rdfs:isDefinedBy oa: .
+oa:Female a rdfs:Class;
+  rdfs:label "Female"@en;
+  rdfs:comment """Enumerated value for specifying gender restrictions"""@en;
+  rdfs:subClassOf oa:GenderRestrictionType;
+  rdfs:isDefinedBy oa: .
+oa:None a rdfs:Class;
+  rdfs:label "None"@en;
+  rdfs:comment """Enumerated value for specifying gender restrictions"""@en;
+  rdfs:subClassOf oa:GenderRestrictionType;
+  rdfs:isDefinedBy oa: .
+oa:FacilityUse a rdfs:Class;
+  rdfs:label "FacilityUse"@en;
+  rdfs:comment """An opportunity to use a facility"""@en;
+  rdfs:subClassOf schema:Product;
+  rdfs:isDefinedBy oa: .
+oa:ChangingRooms a rdfs:Class;
+  rdfs:label "ChangingRooms"@en;
+  rdfs:comment """Changing Rooms. """@en;
+  rdfs:subClassOf schema:LocationFeatureSpecification;
+  rdfs:isDefinedBy oa: .
+oa:Showers a rdfs:Class;
+  rdfs:label "Showers"@en;
+  rdfs:comment """Showers"""@en;
+  rdfs:subClassOf schema:LocationFeatureSpecification;
+  rdfs:isDefinedBy oa: .
+oa:PublicToilets a rdfs:Class;
+  rdfs:label "PublicToilets"@en;
+  rdfs:comment """Public Toilets"""@en;
+  rdfs:subClassOf schema:LocationFeatureSpecification;
+  rdfs:isDefinedBy oa: .
+oa:Lockers a rdfs:Class;
+  rdfs:label "Lockers"@en;
+  rdfs:comment """Lockers"""@en;
+  rdfs:subClassOf schema:LocationFeatureSpecification;
+  rdfs:isDefinedBy oa: .
+oa:Towels a rdfs:Class;
+  rdfs:label "Towels"@en;
+  rdfs:comment """Towels"""@en;
+  rdfs:subClassOf schema:LocationFeatureSpecification;
+  rdfs:isDefinedBy oa: .
+oa:Creche a rdfs:Class;
+  rdfs:label "Creche"@en;
+  rdfs:comment """Creche"""@en;
+  rdfs:subClassOf schema:LocationFeatureSpecification;
+  rdfs:isDefinedBy oa: .
+oa:Parking a rdfs:Class;
+  rdfs:label "Parking"@en;
+  rdfs:comment """Parking"""@en;
+  rdfs:subClassOf schema:LocationFeatureSpecification;
+  rdfs:isDefinedBy oa: .
+oa:BabyChanging a rdfs:Class;
+  rdfs:label "BabyChanging"@en;
+  rdfs:comment """BabyChanging"""@en;
+  rdfs:subClassOf schema:LocationFeatureSpecification;
+  rdfs:isDefinedBy oa: .
+oa:Slot a rdfs:Class;
+  rdfs:label "Slot"@en;
+  rdfs:comment """A Slot is an opportunity to use a facility at a specific time and for a specified duration. A Slot is therefore a specific type of Event, although it has a more constrained set of properties."""@en;
+  rdfs:subClassOf schema:Event;
+  rdfs:isDefinedBy oa: .
+oa:IndividualFacilityUse a rdfs:Class;
+  rdfs:label "FacilityUse"@en;
+  rdfs:comment """An opportunity to use a specific facility"""@en;
+  rdfs:subClassOf oa:FacilityUse;
+  rdfs:isDefinedBy oa: .
 
 # Property definitions
 oa:activity a rdf:Property;
   rdfs:label "activity"@en;
   rdfs:comment """Specifies the physical activity or activities that will take place during an event"""@en;
-  rdfs:domain http://schema.org/Event;
+  rdfs:domain http://schema.org/Thing;
   rdfs:isDefinedBy oa: .
 oa:category a rdf:Property;
   rdfs:label "category"@en;
@@ -38,14 +112,15 @@ oa:category a rdf:Property;
   rdfs:isDefinedBy oa: .
 oa:ageRange a rdf:Property;
   rdfs:label "ageRange"@en;
-  rdfs:comment """Indicates that an event is suitable for a specific age range. If only a single age is specified then this is assumed to be a minimum age. Age ranges can be specified as follows: 18-30"""@en;
-  rdfs:subPropertyOf http://schema.org/typicalAgeRange;
-  rdfs:domain http://schema.org/Event;
+  rdfs:comment """Indicates that an event is suitable for a specified age range, or that an Offer applies only to people of a specific age"""@en;
+  rdfs:domain http://schema.org/Thing;
+  rdfs:range http://schema.org/QuantitativeValue;
   rdfs:isDefinedBy oa: .
 oa:genderRestriction a rdf:Property;
   rdfs:label "genderRestriction"@en;
-  rdfs:comment """Indicates that an event is restricted to male, female or a mixed audience. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience"""@en;
+  rdfs:comment """Indicates that an event is restricted to male, female or a mixed audience. Values should be one of the gender types specified in this vocabulary. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience"""@en;
   rdfs:domain http://schema.org/Event;
+  rdfs:range oa:GenderRestrictionType;
   rdfs:isDefinedBy oa: .
 oa:programme a rdf:Property;
   rdfs:label "programme"@en;
@@ -89,6 +164,27 @@ oa:meetingPoint a rdf:Property;
   rdfs:comment """Instructions for the attendees of an Event about where they should meet the organizer or leader at the start of the event. Some larger locations may have several possible meeting points, so this property provides additional more specific directions."""@en;
   rdfs:subPropertyOf http://openactive.org/ns#attendeeInstructions;
   rdfs:domain http://schema.org/Event;
+  rdfs:isDefinedBy oa: .
+oa:facilityUse a rdf:Property;
+  rdfs:label "facilityUse"@en;
+  rdfs:comment """Associates a Slot with a FacilityUse"""@en;
+  rdfs:domain oa:Slot;
+  rdfs:range oa:FacilityUse;
+  rdfs:isDefinedBy oa: .
+oa:remainingUses a rdf:Property;
+  rdfs:label ""@en;
+  rdfs:comment """Remaining opportunities to use a Slot"""@en;
+  rdfs:domain oa:Slot;
+  rdfs:isDefinedBy oa: .
+oa:maximumUses a rdf:Property;
+  rdfs:label ""@en;
+  rdfs:comment """Maximum opportunities to use a Slot"""@en;
+  rdfs:domain oa:Slot;
+  rdfs:isDefinedBy oa: .
+oa:individualFacilityUse a rdf:Property;
+  rdfs:label ""@en;
+  rdfs:comment """Provides a list of more specific opportunities to use facilities at a location, e.g. opportunities for individual courts or pitches"""@en;
+  rdfs:domain oa:FacilityUse;
   rdfs:isDefinedBy oa: .
 
 # Datatype definitions

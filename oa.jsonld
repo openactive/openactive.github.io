@@ -6,7 +6,7 @@
     "@vocab": "http://schema.org/",
     "type": "@type",
     "id": "@id",
-    "oa": "http://openactive.org/ns#",
+    "oa": "https://www.openactive.org/ns#",
     "dc": "http://purl.org/dc/terms/",
     "owl": "http://www.w3.org/2002/07/owl#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -35,6 +35,21 @@
     "exceptDate": "pending:exceptDate",
     "eventSchedule": "pending:eventSchedule",
     "ActivityOpportunity": "oa:ActivityOpportunity",
+    "GenderRestrictionType": "oa:GenderRestrictionType",
+    "Male": "oa:Male",
+    "Female": "oa:Female",
+    "None": "oa:None",
+    "FacilityUse": "oa:FacilityUse",
+    "ChangingRooms": "oa:ChangingRooms",
+    "Showers": "oa:Showers",
+    "PublicToilets": "oa:PublicToilets",
+    "Lockers": "oa:Lockers",
+    "Towels": "oa:Towels",
+    "Creche": "oa:Creche",
+    "Parking": "oa:Parking",
+    "BabyChanging": "oa:BabyChanging",
+    "Slot": "oa:Slot",
+    "IndividualFacilityUse": "oa:IndividualFacilityUse",
     "activity": {
       "@id": "oa:activity"
     },
@@ -42,10 +57,12 @@
       "@id": "oa:category"
     },
     "ageRange": {
-      "@id": "oa:ageRange"
+      "@id": "oa:ageRange",
+      "@type": "@id"
     },
     "genderRestriction": {
-      "@id": "oa:genderRestriction"
+      "@id": "oa:genderRestriction",
+      "@type": "@id"
     },
     "programme": {
       "@id": "oa:programme"
@@ -71,6 +88,19 @@
     },
     "meetingPoint": {
       "@id": "oa:meetingPoint"
+    },
+    "facilityUse": {
+      "@id": "oa:facilityUse",
+      "@type": "@id"
+    },
+    "remainingUses": {
+      "@id": "oa:remainingUses"
+    },
+    "maximumUses": {
+      "@id": "oa:maximumUses"
+    },
+    "individualFacilityUse": {
+      "@id": "oa:individualFacilityUse"
     }
   },
   "@graph": {
@@ -150,7 +180,7 @@
         "@reverse": "skos:inScheme"
       }
     },
-    "@id": "http://openactive.org/ns#",
+    "@id": "https://www.openactive.org/ns#",
     "@type": "owl:Ontology",
     "dc:title": {
       "en": "OpenActive Namespace Vocabulary Terms"
@@ -158,8 +188,8 @@
     "dc:description": {
       "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
     },
-    "dc:date": "2017-07-14",
-    "owl:versionInfo": "https://github.com/openactive/ns/commit/d494656da176c4b143fd78fc51622c12c38dd5ca",
+    "dc:date": "2018-05-02",
+    "owl:versionInfo": "https://github.com/openactive/ns/commit/2d887ce73b0782e07967878d2f504a08b6b106db",
     "rdfs_classes": [
       {
         "@id": "oa:ActivityOpportunity",
@@ -171,6 +201,170 @@
           "en": "An opportunity to carry out an activity at a location, at a time of the participants choosing."
         },
         "rdfs:subClassOf": "http://schema.org/Thing"
+      },
+      {
+        "@id": "oa:GenderRestrictionType",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "GenderRestrictionType"
+        },
+        "rdfs:comment": {
+          "en": "Enumerated types for gender restrictions that are applied to Events"
+        }
+      },
+      {
+        "@id": "oa:Male",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "Male"
+        },
+        "rdfs:comment": {
+          "en": "Enumerated value for specifying gender restrictions"
+        },
+        "rdfs:subClassOf": "oa:GenderRestrictionType"
+      },
+      {
+        "@id": "oa:Female",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "Female"
+        },
+        "rdfs:comment": {
+          "en": "Enumerated value for specifying gender restrictions"
+        },
+        "rdfs:subClassOf": "oa:GenderRestrictionType"
+      },
+      {
+        "@id": "oa:None",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "None"
+        },
+        "rdfs:comment": {
+          "en": "Enumerated value for specifying gender restrictions"
+        },
+        "rdfs:subClassOf": "oa:GenderRestrictionType"
+      },
+      {
+        "@id": "oa:FacilityUse",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "FacilityUse"
+        },
+        "rdfs:comment": {
+          "en": "An opportunity to use a facility"
+        },
+        "rdfs:subClassOf": "schema:Product"
+      },
+      {
+        "@id": "oa:ChangingRooms",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "ChangingRooms"
+        },
+        "rdfs:comment": {
+          "en": "Changing Rooms. "
+        },
+        "rdfs:subClassOf": "schema:LocationFeatureSpecification"
+      },
+      {
+        "@id": "oa:Showers",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "Showers"
+        },
+        "rdfs:comment": {
+          "en": "Showers"
+        },
+        "rdfs:subClassOf": "schema:LocationFeatureSpecification"
+      },
+      {
+        "@id": "oa:PublicToilets",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "PublicToilets"
+        },
+        "rdfs:comment": {
+          "en": "Public Toilets"
+        },
+        "rdfs:subClassOf": "schema:LocationFeatureSpecification"
+      },
+      {
+        "@id": "oa:Lockers",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "Lockers"
+        },
+        "rdfs:comment": {
+          "en": "Lockers"
+        },
+        "rdfs:subClassOf": "schema:LocationFeatureSpecification"
+      },
+      {
+        "@id": "oa:Towels",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "Towels"
+        },
+        "rdfs:comment": {
+          "en": "Towels"
+        },
+        "rdfs:subClassOf": "schema:LocationFeatureSpecification"
+      },
+      {
+        "@id": "oa:Creche",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "Creche"
+        },
+        "rdfs:comment": {
+          "en": "Creche"
+        },
+        "rdfs:subClassOf": "schema:LocationFeatureSpecification"
+      },
+      {
+        "@id": "oa:Parking",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "Parking"
+        },
+        "rdfs:comment": {
+          "en": "Parking"
+        },
+        "rdfs:subClassOf": "schema:LocationFeatureSpecification"
+      },
+      {
+        "@id": "oa:BabyChanging",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "BabyChanging"
+        },
+        "rdfs:comment": {
+          "en": "BabyChanging"
+        },
+        "rdfs:subClassOf": "schema:LocationFeatureSpecification"
+      },
+      {
+        "@id": "oa:Slot",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "Slot"
+        },
+        "rdfs:comment": {
+          "en": "A Slot is an opportunity to use a facility at a specific time and for a specified duration. A Slot is therefore a specific type of Event, although it has a more constrained set of properties."
+        },
+        "rdfs:subClassOf": "schema:Event"
+      },
+      {
+        "@id": "oa:IndividualFacilityUse",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "FacilityUse"
+        },
+        "rdfs:comment": {
+          "en": "An opportunity to use a specific facility"
+        },
+        "rdfs:subClassOf": "oa:FacilityUse"
       }
     ],
     "rdfs_properties": [
@@ -183,7 +377,7 @@
         "rdfs:comment": {
           "en": "Specifies the physical activity or activities that will take place during an event"
         },
-        "rdfs:domain": "http://schema.org/Event"
+        "rdfs:domain": "http://schema.org/Thing"
       },
       {
         "@id": "oa:category",
@@ -203,10 +397,10 @@
           "en": "ageRange"
         },
         "rdfs:comment": {
-          "en": "Indicates that an event is suitable for a specific age range. If only a single age is specified then this is assumed to be a minimum age. Age ranges can be specified as follows: 18-30"
+          "en": "Indicates that an event is suitable for a specified age range, or that an Offer applies only to people of a specific age"
         },
-        "rdfs:subPropertyOf": "http://schema.org/typicalAgeRange",
-        "rdfs:domain": "http://schema.org/Event"
+        "rdfs:domain": "http://schema.org/Thing",
+        "rdfs:range": "http://schema.org/QuantitativeValue"
       },
       {
         "@id": "oa:genderRestriction",
@@ -215,9 +409,10 @@
           "en": "genderRestriction"
         },
         "rdfs:comment": {
-          "en": "Indicates that an event is restricted to male, female or a mixed audience. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience"
+          "en": "Indicates that an event is restricted to male, female or a mixed audience. Values should be one of the gender types specified in this vocabulary. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience"
         },
-        "rdfs:domain": "http://schema.org/Event"
+        "rdfs:domain": "http://schema.org/Event",
+        "rdfs:range": "oa:GenderRestrictionType"
       },
       {
         "@id": "oa:programme",
@@ -309,6 +504,51 @@
         },
         "rdfs:subPropertyOf": "http://openactive.org/ns#attendeeInstructions",
         "rdfs:domain": "http://schema.org/Event"
+      },
+      {
+        "@id": "oa:facilityUse",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "facilityUse"
+        },
+        "rdfs:comment": {
+          "en": "Associates a Slot with a FacilityUse"
+        },
+        "rdfs:domain": "oa:Slot",
+        "rdfs:range": "oa:FacilityUse"
+      },
+      {
+        "@id": "oa:remainingUses",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": ""
+        },
+        "rdfs:comment": {
+          "en": "Remaining opportunities to use a Slot"
+        },
+        "rdfs:domain": "oa:Slot"
+      },
+      {
+        "@id": "oa:maximumUses",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": ""
+        },
+        "rdfs:comment": {
+          "en": "Maximum opportunities to use a Slot"
+        },
+        "rdfs:domain": "oa:Slot"
+      },
+      {
+        "@id": "oa:individualFacilityUse",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": ""
+        },
+        "rdfs:comment": {
+          "en": "Provides a list of more specific opportunities to use facilities at a location, e.g. opportunities for individual courts or pitches"
+        },
+        "rdfs:domain": "oa:FacilityUse"
       }
     ]
   }
