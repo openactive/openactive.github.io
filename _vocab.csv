@@ -24,7 +24,7 @@
 "narrower","term",,"skos:narrower",,,,,,,,
 "notation","term",,"skos:notation",,,,,,,,
 "topConceptOf","term",,"skos:topConceptOf",,,,,,,,
-"type","term",,"@type",,,,,,"e",,
+"type","term",,"@type",,,,,,,,
 "attendeeInstructions","rdf:Property",,,"http://schema.org/Event",,,,,,,"Provides additional notes and instructions for event attendees. This information is targetted at attendees rather than potential participants. The instructions might include information on what to bring, what to wear, how to find the event, etc."
 "leader","rdf:Property",,,"http://schema.org/Event","http://schema.org/Person",,,,,,"The person who will be leading an event. E.g. a coach. This is a more specific role than an organiser or a contributor"
 "accessibilityInformation","rdf:Property",,,"http://schema.org/Event",,,,,,,"Intended to capture further notes for attendees about support for disabilities or other conditions at the event"

@@ -5,6 +5,7 @@ require 'getoptlong'
 require 'csv'
 require 'json'
 require 'erubis'
+require 'time'
 
 class Vocab
   JSON_STATE = JSON::State.new(
