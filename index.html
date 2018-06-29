@@ -220,6 +220,13 @@
               </dl>
           </td>
         </tr>
+        <tr id="GenderRestrictionType"><td class="bold">GenderRestrictionType</td>
+          <td resource="oa:GenderRestrictionType" typeof="rdfs:Class">
+            <em property="rdfs:label">GenderRestrictionType</em>
+            <p property="rdfs:comment">Enumerated types for gender restrictions that are applied to Events</p>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
+          </td>
+        </tr>
         <tr id="Male"><td class="bold">Male</td>
           <td resource="oa:Male" typeof="rdfs:Class">
             <em property="rdfs:label">Male</em>
@@ -227,7 +234,7 @@
             <span property="rdfs:isDefinedBy" resource="oa:"></span>
               <dl class="terms">
                   <dt>rdfs:subClassOf</dt>
-                      <dd property="rdfs:subClassOf" resource="schema:GenderType">schema:GenderType</dd>
+                      <dd property="rdfs:subClassOf" resource="oa:GenderRestrictionType">oa:GenderRestrictionType</dd>
               </dl>
           </td>
         </tr>
@@ -238,51 +245,29 @@
             <span property="rdfs:isDefinedBy" resource="oa:"></span>
               <dl class="terms">
                   <dt>rdfs:subClassOf</dt>
-                      <dd property="rdfs:subClassOf" resource="schema:GenderType">schema:GenderType</dd>
+                      <dd property="rdfs:subClassOf" resource="oa:GenderRestrictionType">oa:GenderRestrictionType</dd>
               </dl>
           </td>
         </tr>
-        <tr id="Mixed"><td class="bold">Mixed</td>
-          <td resource="oa:Mixed" typeof="rdfs:Class">
-            <em property="rdfs:label">Mixed</em>
+        <tr id="None"><td class="bold">None</td>
+          <td resource="oa:None" typeof="rdfs:Class">
+            <em property="rdfs:label">None</em>
             <p property="rdfs:comment">Enumerated value for specifying gender restrictions</p>
             <span property="rdfs:isDefinedBy" resource="oa:"></span>
               <dl class="terms">
                   <dt>rdfs:subClassOf</dt>
-                      <dd property="rdfs:subClassOf" resource="schema:GenderType">schema:GenderType</dd>
+                      <dd property="rdfs:subClassOf" resource="oa:GenderRestrictionType">oa:GenderRestrictionType</dd>
               </dl>
           </td>
         </tr>
         <tr id="FacilityUse"><td class="bold">FacilityUse</td>
           <td resource="oa:FacilityUse" typeof="rdfs:Class">
             <em property="rdfs:label">FacilityUse</em>
-            <p property="rdfs:comment"></p>
+            <p property="rdfs:comment">An opportunity to use a facility</p>
             <span property="rdfs:isDefinedBy" resource="oa:"></span>
               <dl class="terms">
                   <dt>rdfs:subClassOf</dt>
                       <dd property="rdfs:subClassOf" resource="schema:Product">schema:Product</dd>
-              </dl>
-          </td>
-        </tr>
-        <tr id="Available"><td class="bold">Available</td>
-          <td resource="oa:Available" typeof="rdfs:Class">
-            <em property="rdfs:label">Available</em>
-            <p property="rdfs:comment">General Event status to specify that a scheduled Event is taking place and still has availability</p>
-            <span property="rdfs:isDefinedBy" resource="oa:"></span>
-              <dl class="terms">
-                  <dt>rdfs:subClassOf</dt>
-                      <dd property="rdfs:subClassOf" resource="schema:EventStatusType">schema:EventStatusType</dd>
-              </dl>
-          </td>
-        </tr>
-        <tr id="Unavailable"><td class="bold">Unavailable</td>
-          <td resource="oa:Unavailable" typeof="rdfs:Class">
-            <em property="rdfs:label">Unavailable</em>
-            <p property="rdfs:comment">General Event status to specify that a scheduled Event is no longer available</p>
-            <span property="rdfs:isDefinedBy" resource="oa:"></span>
-              <dl class="terms">
-                  <dt>rdfs:subClassOf</dt>
-                      <dd property="rdfs:subClassOf" resource="schema:EventStatusType">schema:EventStatusType</dd>
               </dl>
           </td>
         </tr>
@@ -374,6 +359,28 @@
               </dl>
           </td>
         </tr>
+        <tr id="Slot"><td class="bold">Slot</td>
+          <td resource="oa:Slot" typeof="rdfs:Class">
+            <em property="rdfs:label">Slot</em>
+            <p property="rdfs:comment">A Slot is an opportunity to use a facility at a specific time and for a specified duration. A Slot is therefore a specific type of Event, although it has a more constrained set of properties.</p>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
+              <dl class="terms">
+                  <dt>rdfs:subClassOf</dt>
+                      <dd property="rdfs:subClassOf" resource="schema:Event">schema:Event</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="IndividualFacilityUse"><td class="bold">IndividualFacilityUse</td>
+          <td resource="oa:IndividualFacilityUse" typeof="rdfs:Class">
+            <em property="rdfs:label">FacilityUse</em>
+            <p property="rdfs:comment">An opportunity to use a specific facility</p>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
+              <dl class="terms">
+                  <dt>rdfs:subClassOf</dt>
+                      <dd property="rdfs:subClassOf" resource="oa:FacilityUse">oa:FacilityUse</dd>
+              </dl>
+          </td>
+        </tr>
       </table>
     </section>
     <section>
@@ -423,7 +430,7 @@
             <span property="rdfs:isDefinedBy" resource="oa:"></span>
               <dl class="terms">
                   <dt>rdfs:range</dt>
-                      <dd property="rdfs:range" resource="http://schema.org/GenderType">http://schema.org/GenderType</dd>
+                      <dd property="rdfs:range" resource="oa:GenderRestrictionType">oa:GenderRestrictionType</dd>
                   <dt>rdfs:domain</dt>
                       <dd property="rdfs:domain" resource="http://schema.org/Event">http://schema.org/Event</dd>
               </dl>
@@ -523,6 +530,52 @@
               </dl>
           </td>
         </tr>
+        <tr id="facilityUse"><td class="bold">facilityUse</td>
+          <td resource="oa:facilityUse" typeof="rdf:Property">
+            <em property="rdfs:label">facilityUse</em>
+            <p property="rdfs:comment">Associates a Slot with a FacilityUse</p>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="oa:FacilityUse">oa:FacilityUse</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="oa:Slot">oa:Slot</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="remainingUses"><td class="bold">remainingUses</td>
+          <td resource="oa:remainingUses" typeof="rdf:Property">
+            <em property="rdfs:label"></em>
+            <p property="rdfs:comment">Remaining opportunities to use a Slot</p>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
+              <dl class="terms">
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="oa:Slot">oa:Slot</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="maximumUses"><td class="bold">maximumUses</td>
+          <td resource="oa:maximumUses" typeof="rdf:Property">
+            <em property="rdfs:label"></em>
+            <p property="rdfs:comment">Maximum opportunities to use a Slot</p>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
+              <dl class="terms">
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="oa:Slot">oa:Slot</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="individualFacilityUse"><td class="bold">individualFacilityUse</td>
+          <td resource="oa:individualFacilityUse" typeof="rdf:Property">
+            <em property="rdfs:label"></em>
+            <p property="rdfs:comment">Provides a list of more specific opportunities to use facilities at a location, e.g. opportunities for individual courts or pitches</p>
+            <span property="rdfs:isDefinedBy" resource="oa:"></span>
+              <dl class="terms">
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="oa:FacilityUse">oa:FacilityUse</dd>
+              </dl>
+          </td>
+        </tr>
       </table>
     </section>
     <section>
@@ -538,10 +591,6 @@
         <dt>ActivityOpportunity</dt>
         <dd>
             oa:ActivityOpportunity
-        </dd>
-        <dt>Available</dt>
-        <dd>
-            oa:Available
         </dd>
         <dt>BabyChanging</dt>
         <dd>
@@ -563,6 +612,14 @@
         <dd>
             oa:Female
         </dd>
+        <dt>GenderRestrictionType</dt>
+        <dd>
+            oa:GenderRestrictionType
+        </dd>
+        <dt>IndividualFacilityUse</dt>
+        <dd>
+            oa:IndividualFacilityUse
+        </dd>
         <dt>Lockers</dt>
         <dd>
             oa:Lockers
@@ -571,9 +628,9 @@
         <dd>
             oa:Male
         </dd>
-        <dt>Mixed</dt>
+        <dt>None</dt>
         <dd>
-            oa:Mixed
+            oa:None
         </dd>
         <dt>Parking</dt>
         <dd>
@@ -591,13 +648,13 @@
         <dd>
             oa:Showers
         </dd>
+        <dt>Slot</dt>
+        <dd>
+            oa:Slot
+        </dd>
         <dt>Towels</dt>
         <dd>
             oa:Towels
-        </dd>
-        <dt>Unavailable</dt>
-        <dd>
-            oa:Unavailable
         </dd>
         <dt>accessibilityInformation</dt>
         <dd>
@@ -660,6 +717,11 @@
         <dd>
             pending:exceptDate
         </dd>
+        <dt>facilityUse</dt>
+        <dd>
+            oa:facilityUse
+            with string values interpreted as @id
+        </dd>
         <dt>genderRestriction</dt>
         <dd>
             oa:genderRestriction
@@ -672,6 +734,10 @@
         <dt>inScheme</dt>
         <dd>
             skos:inScheme
+        </dd>
+        <dt>individualFacilityUse</dt>
+        <dd>
+            oa:individualFacilityUse
         </dd>
         <dt>isCoached</dt>
         <dd>
@@ -690,6 +756,10 @@
         <dd>
             dc:license
         </dd>
+        <dt>maximumUses</dt>
+        <dd>
+            oa:maximumUses
+        </dd>
         <dt>meetingPoint</dt>
         <dd>
             oa:meetingPoint
@@ -704,7 +774,7 @@
         </dd>
         <dt>oa</dt>
         <dd>
-            http://openactive.org/ns#
+            https://www.openactive.org/ns#
         </dd>
         <dt>owl</dt>
         <dd>
@@ -733,6 +803,10 @@
         <dt>rdfs</dt>
         <dd>
             http://www.w3.org/2000/01/rdf-schema#
+        </dd>
+        <dt>remainingUses</dt>
+        <dd>
+            oa:remainingUses
         </dd>
         <dt>repeatCount</dt>
         <dd>

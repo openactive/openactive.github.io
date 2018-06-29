@@ -1,5 +1,5 @@
 "id","type","label","subClassOf","domain","range","@type","@container","required","term","@reverse","comment"
-"oa","prefix",,"http://openactive.org/ns#",,,,,,,,
+"oa","prefix",,"https://www.openactive.org/ns#",,,,,,,,
 "dc","prefix",,"http://purl.org/dc/terms/",,,,,,,,
 "owl","prefix",,"http://www.w3.org/2002/07/owl#",,,,,,,,
 "rdf","prefix",,"http://www.w3.org/1999/02/22-rdf-syntax-ns#",,,,,,,,
@@ -13,7 +13,7 @@
 "activity","rdf:Property","activity",,"http://schema.org/Thing",,,,,,,"Specifies the physical activity or activities that will take place during an event"
 "category","rdf:Property","category",,"http://schema.org/Event",,,,,,,"Associate one or more tags to an Event to further categorise and describe it event, e.g. its intensity, purpose, setting, membership requirements, etc."
 "ageRange","rdf:Property","ageRange",,"http://schema.org/Thing","http://schema.org/QuantitativeValue",,,,,,"Indicates that an event is suitable for a specified age range, or that an Offer applies only to people of a specific age"
-"genderRestriction","rdf:Property","genderRestriction",,"http://schema.org/Event","http://schema.org/GenderType",,,,,,"Indicates that an event is restricted to male, female or a mixed audience. Values should be one of the gender types specified in this vocabulary. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience"
+"genderRestriction","rdf:Property","genderRestriction",,"http://schema.org/Event","oa:GenderRestrictionType",,,,,,"Indicates that an event is restricted to male, female or a mixed audience. Values should be one of the gender types specified in this vocabulary. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience"
 "programme","rdf:Property","programme",,"http://schema.org/Event",,,,,,,"Indicates that an event will be organised according to a specific Programme"
 "title","term",,"dc:title",,,,,,,,
 "license","term",,"dc:license",,,,,,,,
@@ -40,12 +40,11 @@
 "byMonthDay","term",,"pending:byMonthDay",,,,,,,,
 "exceptDate","term",,"pending:exceptDate",,,,,,,,
 "eventSchedule","term",,"pending:eventSchedule",,,,,,,,
-"Male","rdfs:Class","Male","schema:GenderType",,,,,,,,"Enumerated value for specifying gender restrictions"
-"Female","rdfs:Class","Female","schema:GenderType",,,,,,,,"Enumerated value for specifying gender restrictions"
-"Mixed","rdfs:Class","Mixed","schema:GenderType",,,,,,,,"Enumerated value for specifying gender restrictions"
-"FacilityUse","rdfs:Class","FacilityUse","schema:Product",,,,,,,,
-"Available","rdfs:Class","Available","schema:EventStatusType",,,,,,,,"General Event status to specify that a scheduled Event is taking place and still has availability"
-"Unavailable","rdfs:Class","Unavailable","schema:EventStatusType",,,,,,,,"General Event status to specify that a scheduled Event is no longer available"
+"GenderRestrictionType","rdfs:Class","GenderRestrictionType",,,,,,,,,"Enumerated types for gender restrictions that are applied to Events"
+"Male","rdfs:Class","Male","oa:GenderRestrictionType",,,,,,,,"Enumerated value for specifying gender restrictions"
+"Female","rdfs:Class","Female","oa:GenderRestrictionType",,,,,,,,"Enumerated value for specifying gender restrictions"
+"None","rdfs:Class","None","oa:GenderRestrictionType",,,,,,,,"Enumerated value for specifying gender restrictions"
+"FacilityUse","rdfs:Class","FacilityUse","schema:Product",,,,,,,,"An opportunity to use a facility"
 "ChangingRooms","rdfs:Class","ChangingRooms","schema:LocationFeatureSpecification",,,,,,,,"Changing Rooms. "
 "Showers","rdfs:Class","Showers","schema:LocationFeatureSpecification",,,,,,,,"Showers"
 "PublicToilets","rdfs:Class","PublicToilets","schema:LocationFeatureSpecification",,,,,,,,"Public Toilets"
@@ -54,3 +53,9 @@
 "Creche","rdfs:Class","Creche","schema:LocationFeatureSpecification",,,,,,,,"Creche"
 "Parking","rdfs:Class","Parking","schema:LocationFeatureSpecification",,,,,,,,"Parking"
 "BabyChanging","rdfs:Class","BabyChanging","schema:LocationFeatureSpecification",,,,,,,,"BabyChanging"
+"Slot","rdfs:Class","Slot","schema:Event",,,,,,,,"A Slot is an opportunity to use a facility at a specific time and for a specified duration. A Slot is therefore a specific type of Event, although it has a more constrained set of properties."
+"IndividualFacilityUse","rdfs:Class","FacilityUse","oa:FacilityUse",,,,,,,,"An opportunity to use a specific facility"
+"facilityUse","rdf:Property","facilityUse",,"oa:Slot","oa:FacilityUse",,,,,,"Associates a Slot with a FacilityUse"
+"remainingUses","rdf:Property",,,"oa:Slot",,,,,,,"Remaining opportunities to use a Slot"
+"maximumUses","rdf:Property",,,"oa:Slot",,,,,,,"Maximum opportunities to use a Slot"
+"individualFacilityUse","rdf:Property",,,"oa:FacilityUse",,,,,,,"Provides a list of more specific opportunities to use facilities at a location, e.g. opportunities for individual courts or pitches"
