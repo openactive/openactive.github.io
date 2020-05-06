@@ -1,0 +1,12 @@
+sudo: true
+language: node_js
+node_js:
+- '8'
+script:
+- bash ./deploy.sh
+branches:
+  only:
+  - master
+env:
+  global:
+    secure: tUhU2eYs3KEQ6OMtpHfl7aqpwEgIQjcsZgkbfnpg+O4WExc9sgKIANGl867Wly6cixREjl6PsGfgShHImPYv27rxYyxt+PjN8uCBKhYyc6gO4fyXJ9LlMttYTFk0GlnIa7CZlCFK4ClTNOcJCIn4+VofVWu7f3OIoASkddKybjGDUs0h9F7kfU/hLA1yzDcnrRR2XbImseWLiTg6wHlsEMgDj9X8E1eX3ugqB/+/2crXy5Z+Zggk7sW/R8tCrjzv5dp4Z/RZMo3XOYI8SPU46vL19OzCQdHkg2HLTATaGIRFHGbr9T5E3WyqH0SYf8/b2HMMbrqcXGQscQYrw0/sdUJnpf2b6p6CjYZhdjEIQMbuoT38NFldDTkZY6wu6YnB8gokafizReXaZ3OouwUUiGZI7feYDgsEfmdgBVbENHLr5gbz2UpfV3/gEJYgLKYl6rZvnsoaD3YgdiGR5daeebGN1YBPOcJEakreLF9fD6t4DVBcdAatbj6xMuJ+ZU2zW8Ksx7vR49xHG2yMreV98AgLU8nocbTTqnGn0DeSap0kTeyP/+GM3pbtbYMJrThWT/Mpg7sHnJhkmxyKsG2TAYgeXI0eChMOqvOjbFZz4ti756DT0PiuN3GneRsoNwcUczUn+rdlSfy/PCH/v44vmcHMLjvn+8LEyNAl5H0S/Kc=

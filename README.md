@@ -4,10 +4,5 @@ This repository holds the definitions and source for the OpenActive namespace. T
 
 The specification is being developed by the [OpenActive Community Group](https://www.w3.org/community/openactive).
 
-## Building the namespace document
-
-* Make any necessary edits to the `_vocab.csv` document
-* Run `ruby mk_vocab.rb` to generate the human and machine-readable views
-* Commit and push changes
 
 

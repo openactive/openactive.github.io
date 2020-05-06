@@ -1,0 +1,25 @@
+{
+  "name": "openactive-namespace-documentation-generator",
+  "version": "1.0.0",
+  "description": "OpenActive Namespace Documentation Generator",
+  "main": "index.js",
+  "dependencies": {
+    "@openactive/data-models": "latest"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "node --inspect-brk -i index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openactive/openactive.github.io.git"
+  },
+  "author": "Nick Evans",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/openactive/openactive.github.io/issues"
+  },
+  "homepage": "https://github.com/openactive/openactive.github.io#readme"
+}
