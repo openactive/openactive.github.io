@@ -89,10 +89,6 @@ permalink: /${name}
 # ` + name + `
 ` + node['rdfs:comment'].en
 
-+ (node['@type'] === 'rdfs:Class' ? `
-
-For more information, see the [developer site](${DATA_MODEL_DOCS_URL_PREFIX + name.toLowerCase()}).` : "")
-
 + (node['rdfs:subClassOf'] ? `
 
 Inherits from: ${formatReference(namespaces, node['rdfs:subClassOf'])}` : "") 
@@ -103,6 +99,15 @@ This property can be used on: ${formatReference(namespaces, node['schema:domainI
 
 + (node['schema:rangeIncludes'] ? `
 
-This property include the values: ${formatReference(namespaces, node['schema:rangeIncludes'])}` : "") + `
-`;
+This property include the values: ${formatReference(namespaces, node['schema:rangeIncludes'])}` : "") 
+
++ `
+
+For more information, see the [developer site](${DATA_MODEL_DOCS_URL_PREFIX}).`
+
+// TODO: This currently will render a broken link for enums, which are not included in the developer site
+// Need to analyse the models more carefully
+// + (node['@type'] === 'rdfs:Class' ? `[types reference](${DATA_MODEL_DOCS_URL_PREFIX + name.toLowerCase()}).` : "")
+
+;
 }
