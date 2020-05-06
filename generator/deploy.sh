@@ -10,14 +10,14 @@ checkout_current_branch() {
 }
 
 erase_existing_docs() {
-  rm -rf rdfs_* || exit 0;
-  mkdir rdfs_classes
-  mkdir rdfs_properties
+  rm -rf ../rdfs_*
+  mkdir -p ../rdfs_classes
+  mkdir -p ../rdfs_properties
 }
 
 commit_generated_files() {
-  git add rdfs_*
-  git add oa.jsonld
+  git add ../rdfs_*
+  git add ../oa.jsonld
   git status
   git commit --message "Updating auto-generated namespace documentation: $TRAVIS_BUILD_NUMBER [ci skip]"
 }
