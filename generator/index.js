@@ -99,7 +99,7 @@ This property can be used on: ${formatReference(namespaces, node['schema:domainI
 
 + (node['schema:rangeIncludes'] ? `
 
-This property include the values: ${formatReference(namespaces, node['schema:rangeIncludes'])}` : "") 
+This property may include the values: ${formatReference(namespaces, node['schema:rangeIncludes'])}` : "") 
 
 + `
 
