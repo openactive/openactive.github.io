@@ -9,6 +9,6 @@ Indicates whether to accept this offer, a participant must book in advance, whet
 
 This property can be used on: [`schema:Offer`](https://schema.org/Offer)
 
-This property include the values: [`oa:RequiredStatusType`](https://openactive.io/RequiredStatusType)
+This property may include the values: [`oa:RequiredStatusType`](https://openactive.io/RequiredStatusType)
 
 For more information, see the [developer site](https://developer.openactive.io/data-model/types/).

@@ -9,6 +9,6 @@ ImageObject or Barcode that contains reference to an asset (e.g. Barcode, QR cod
 
 This property can be used on: [`schema:OrderItem`](https://schema.org/OrderItem)
 
-This property include the values: [`schema:ImageObject`](https://schema.org/ImageObject)
+This property may include the values: [`schema:ImageObject`](https://schema.org/ImageObject)
 
 For more information, see the [developer site](https://developer.openactive.io/data-model/types/).

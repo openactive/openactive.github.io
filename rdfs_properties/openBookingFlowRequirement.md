@@ -9,6 +9,6 @@ Can include  https://openactive.io/OpenBookingIntakeForm,  https://openactive.io
 
 This property can be used on: [`schema:Offer`](https://schema.org/Offer)
 
-This property include the values: [`oa:OpenBookingFlowRequirement`](https://openactive.io/OpenBookingFlowRequirement)
+This property may include the values: [`oa:OpenBookingFlowRequirement`](https://openactive.io/OpenBookingFlowRequirement)
 
 For more information, see the [developer site](https://developer.openactive.io/data-model/types/).

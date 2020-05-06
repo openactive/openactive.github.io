@@ -9,6 +9,6 @@ A boolean property that indicates whether an Event will be coached. This flag al
 
 This property can be used on: [`schema:Event`](https://schema.org/Event)
 
-This property include the values: [`schema:Boolean`](https://schema.org/Boolean)
+This property may include the values: [`schema:Boolean`](https://schema.org/Boolean)
 
 For more information, see the [developer site](https://developer.openactive.io/data-model/types/).

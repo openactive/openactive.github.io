@@ -9,6 +9,6 @@ Instructions for the attendees of an Event about where they should meet the orga
 
 This property can be used on: [`schema:Event`](https://schema.org/Event)
 
-This property include the values: [`schema:Text`](https://schema.org/Text)
+This property may include the values: [`schema:Text`](https://schema.org/Text)
 
 For more information, see the [developer site](https://developer.openactive.io/data-model/types/).
