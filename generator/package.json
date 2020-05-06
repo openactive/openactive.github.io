@@ -4,7 +4,7 @@
   "description": "OpenActive Namespace Documentation Generator",
   "main": "index.js",
   "dependencies": {
-    "@openactive/data-models": "latest"
+    "@openactive/data-models": "^2.0.114"
   },
   "devDependencies": {},
   "scripts": {

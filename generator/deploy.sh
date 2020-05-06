@@ -1,4 +1,63 @@
 #!/bin/bash
+
+setup_git() {
+  git config --global user.email "travis@travis-ci.org"
+  git config --global user.name "Travis CI"
+}
+
+checkout_current_branch() {
+  git checkout $TRAVIS_BRANCH
+}
+
+erase_existing_docs() {
+  rm -rf rdfs_* || exit 0;
+  mkdir rdfs_classes
+  mkdir rdfs_properties
+}
+
+commit_generated_files() {
+  git add rdfs_*
+  git add oa.jsonld
+  git status
+  git commit --message "Updating auto-generated namespace documentation: $TRAVIS_BUILD_NUMBER [ci skip]"
+}
+
+push_files() {
+  git remote add origin-branch https://${GH_TOKEN}@github.com/openactive/openactive.github.io.git > /dev/null 2>&1
+  git push --quiet --set-upstream origin-branch $TRAVIS_BRANCH
+}
+
+echo "Git version:"
+git --version
+
+echo "Setup Git:"
+setup_git
+
+echo "Checkout master:"
+checkout_current_branch
+
+echo "Erase existing documentation..."
+erase_existing_docs
+
+echo "npm install:"
+npm install
+npm install @openactive/data-models@latest
+npm ls @openactive/data-models
+
+echo "Generating data model documentation..."
+npm run start
+
+echo "Commit Generated Files:"
+commit_generated_files
+
+echo "Push Files:"
+push_files
+
+
+
+
+
+#!/bin/bash
 set -e # exit with nonzero exit code if anything fails
 
 # squash messages
@@ -41,5 +100,9 @@ git commit -m "Deploy to GitHub Pages - Static"
 # /dev/null to hide any sensitive credential data that might otherwise be exposed.
 # FIXME should be authorised via key
 git push --force "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
+
+
+
+8a2758c77b01523041b54aab85b46a616294dfc8
 
 cd ..

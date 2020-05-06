@@ -1,5 +1,5 @@
-const DATA_MODEL_DOCS_DIR = "./output/";
-const NAMESPACE_FILE = "./output/oa.jsonld";
+const DATA_MODEL_DOCS_DIR = "../";
+const NAMESPACE_FILE = "../oa.jsonld";
 const DATA_MODEL_DOCS_URL_PREFIX = "https://developer.openactive.io/data-model/types/";
 
 const { getContext, getGraph, getMetaData } = require('@openactive/data-models');
