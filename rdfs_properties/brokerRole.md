@@ -10,3 +10,5 @@ Either https://openactive.io/AgentBroker,  https://openactive.io/ResellerBroker 
 This property can be used on: [`schema:Order`](https://schema.org/Order)
 
 This property include the values: [`oa:BrokerType`](https://openactive.io/BrokerType)
+
+For more information, see the [developer site](https://developer.openactive.io/data-model/types/).

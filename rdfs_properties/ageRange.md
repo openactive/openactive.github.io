@@ -10,3 +10,5 @@ Indicates that an event is suitable for a specific age range. If only a single a
 This property can be used on: [`schema:Event`](https://schema.org/Event), [`schema:Offer`](https://schema.org/Offer)
 
 This property include the values: [`schema:QuantitativeValue`](https://schema.org/QuantitativeValue)
+
+For more information, see the [developer site](https://developer.openactive.io/data-model/types/).

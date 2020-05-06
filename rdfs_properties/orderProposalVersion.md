@@ -10,3 +10,5 @@ The unique URL representing this version of the  OrderProposal, or the version o
 This property can be used on: [`schema:Order`](https://schema.org/Order)
 
 This property include the values: [`schema:URL`](https://schema.org/URL)
+
+For more information, see the [developer site](https://developer.openactive.io/data-model/types/).

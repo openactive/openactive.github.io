@@ -10,3 +10,5 @@ permalink: /facilityUse
 This property can be used on: [`oa:Slot`](https://openactive.io/Slot)
 
 This property include the values: [`schema:URL`](https://schema.org/URL), [`oa:FacilityUse`](https://openactive.io/FacilityUse), [`oa:IndividualFacilityUse`](https://openactive.io/IndividualFacilityUse)
+
+For more information, see the [developer site](https://developer.openactive.io/data-model/types/).

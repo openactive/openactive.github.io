@@ -10,3 +10,5 @@ Inverse of the oa:aggregateFacilityUse property. Relates a oa:FacilityUse (e.g. 
 This property can be used on: [`oa:FacilityUse`](https://openactive.io/FacilityUse)
 
 This property include the values: [`oa:IndividualFacilityUse`](https://openactive.io/IndividualFacilityUse)
+
+For more information, see the [developer site](https://developer.openactive.io/data-model/types/).

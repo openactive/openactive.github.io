@@ -10,3 +10,5 @@ Provides additional notes and instructions for event attendees, for example more
 This property can be used on: [`schema:Event`](https://schema.org/Event), [`oa:FacilityUse`](https://openactive.io/FacilityUse)
 
 This property include the values: [`schema:Text`](https://schema.org/Text)
+
+For more information, see the [developer site](https://developer.openactive.io/data-model/types/).

@@ -10,3 +10,5 @@ Indicates whether to accept this offer, a participant must pay in advance, pay w
 This property can be used on: [`schema:Offer`](https://schema.org/Offer), [`schema:PriceSpecification`](https://schema.org/PriceSpecification)
 
 This property include the values: [`oa:RequiredStatusType`](https://openactive.io/RequiredStatusType)
+
+For more information, see the [developer site](https://developer.openactive.io/data-model/types/).

@@ -10,3 +10,5 @@ A message set by the Seller in the event of Opportunity cancellation, only appli
 This property can be used on: [`schema:OrderItem`](https://schema.org/OrderItem)
 
 This property include the values: [`schema:Text`](https://schema.org/Text)
+
+For more information, see the [developer site](https://developer.openactive.io/data-model/types/).

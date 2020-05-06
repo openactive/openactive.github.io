@@ -10,3 +10,5 @@ The duration before the startDate for which this Offer is valid, given in ISO 86
 This property can be used on: [`schema:Offer`](https://schema.org/Offer)
 
 This property include the values: [`schema:Duration`](https://schema.org/Duration)
+
+For more information, see the [developer site](https://developer.openactive.io/data-model/types/).
