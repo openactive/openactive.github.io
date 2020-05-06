@@ -81,6 +81,8 @@ function createModelMarkdownPage(namespaces, name, node) {
   var subClassOf
 
   return `---
+layout: default
+title: ${name}
 permalink: /${name}
 ---
 
@@ -93,14 +95,14 @@ For more information, see the [developer site](${DATA_MODEL_DOCS_URL_PREFIX + na
 
 + (node['rdfs:subClassOf'] ? `
 
-Inherits from: ${formatReference(namespaces, node['rdfs:subClassOf'])}]` : "") 
+Inherits from: ${formatReference(namespaces, node['rdfs:subClassOf'])}` : "") 
 
 + (node['schema:domainIncludes'] ? `
 
-This property can be used on: ${formatReference(namespaces, node['schema:domainIncludes'])}]` : "") 
+This property can be used on: ${formatReference(namespaces, node['schema:domainIncludes'])}` : "") 
 
 + (node['schema:rangeIncludes'] ? `
 
-This property include the values: ${formatReference(namespaces, node['schema:rangeIncludes'])}]` : "") + `
+This property include the values: ${formatReference(namespaces, node['schema:rangeIncludes'])}` : "") + `
 `;
 }
