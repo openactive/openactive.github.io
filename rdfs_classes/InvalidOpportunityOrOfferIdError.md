@@ -1,4 +1,6 @@
 ---
+layout: default
+title: InvalidOpportunityOrOfferIdError
 permalink: /InvalidOpportunityOrOfferIdError
 ---
 
@@ -7,4 +9,4 @@ permalink: /InvalidOpportunityOrOfferIdError
 
 For more information, see the [developer site](https://developer.openactive.io/data-model/types/invalidopportunityorofferiderror).
 
-Inherits from: [`oa:OpenBookingError`](https://openactive.io/OpenBookingError)]
+Inherits from: [`oa:OpenBookingError`](https://openactive.io/OpenBookingError)

@@ -1,4 +1,6 @@
 ---
+layout: default
+title: NoBroker
 permalink: /NoBroker
 ---
 
@@ -7,4 +9,4 @@ Enumerated value of BrokerType
 
 For more information, see the [developer site](https://developer.openactive.io/data-model/types/nobroker).
 
-Inherits from: [`oa:BrokerType`](https://openactive.io/BrokerType)]
+Inherits from: [`oa:BrokerType`](https://openactive.io/BrokerType)

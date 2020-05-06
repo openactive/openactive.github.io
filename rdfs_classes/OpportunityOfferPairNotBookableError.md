@@ -1,4 +1,6 @@
 ---
+layout: default
+title: OpportunityOfferPairNotBookableError
 permalink: /OpportunityOfferPairNotBookableError
 ---
 
@@ -7,4 +9,4 @@ permalink: /OpportunityOfferPairNotBookableError
 
 For more information, see the [developer site](https://developer.openactive.io/data-model/types/opportunityofferpairnotbookableerror).
 
-Inherits from: [`oa:OpenBookingError`](https://openactive.io/OpenBookingError)]
+Inherits from: [`oa:OpenBookingError`](https://openactive.io/OpenBookingError)

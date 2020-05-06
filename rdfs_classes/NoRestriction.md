@@ -1,4 +1,6 @@
 ---
+layout: default
+title: NoRestriction
 permalink: /NoRestriction
 ---
 
@@ -7,4 +9,4 @@ Enumerated value of GenderRestrictionType
 
 For more information, see the [developer site](https://developer.openactive.io/data-model/types/norestriction).
 
-Inherits from: [`oa:GenderRestrictionType`](https://openactive.io/GenderRestrictionType)]
+Inherits from: [`oa:GenderRestrictionType`](https://openactive.io/GenderRestrictionType)

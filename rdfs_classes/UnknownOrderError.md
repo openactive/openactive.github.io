@@ -1,4 +1,6 @@
 ---
+layout: default
+title: UnknownOrderError
 permalink: /UnknownOrderError
 ---
 
@@ -7,4 +9,4 @@ permalink: /UnknownOrderError
 
 For more information, see the [developer site](https://developer.openactive.io/data-model/types/unknownordererror).
 
-Inherits from: [`oa:OpenBookingError`](https://openactive.io/OpenBookingError)]
+Inherits from: [`oa:OpenBookingError`](https://openactive.io/OpenBookingError)

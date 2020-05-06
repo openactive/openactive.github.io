@@ -1,4 +1,6 @@
 ---
+layout: default
+title: OrderProposalVersionOutdatedError
 permalink: /OrderProposalVersionOutdatedError
 ---
 
@@ -7,4 +9,4 @@ permalink: /OrderProposalVersionOutdatedError
 
 For more information, see the [developer site](https://developer.openactive.io/data-model/types/orderproposalversionoutdatederror).
 
-Inherits from: [`oa:OpenBookingError`](https://openactive.io/OpenBookingError)]
+Inherits from: [`oa:OpenBookingError`](https://openactive.io/OpenBookingError)

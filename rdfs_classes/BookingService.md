@@ -1,4 +1,6 @@
 ---
+layout: default
+title: BookingService
 permalink: /BookingService
 ---
 
@@ -7,4 +9,4 @@ permalink: /BookingService
 
 For more information, see the [developer site](https://developer.openactive.io/data-model/types/bookingservice).
 
-Inherits from: [`schema:Service`](https://schema.org/Service)]
+Inherits from: [`schema:Service`](https://schema.org/Service)

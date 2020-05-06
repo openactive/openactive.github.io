@@ -1,4 +1,6 @@
 ---
+layout: default
+title: Towels
 permalink: /Towels
 ---
 
@@ -7,4 +9,4 @@ permalink: /Towels
 
 For more information, see the [developer site](https://developer.openactive.io/data-model/types/towels).
 
-Inherits from: [`schema:LocationFeatureSpecification`](https://schema.org/LocationFeatureSpecification)]
+Inherits from: [`schema:LocationFeatureSpecification`](https://schema.org/LocationFeatureSpecification)

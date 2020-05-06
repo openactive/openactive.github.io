@@ -1,4 +1,6 @@
 ---
+layout: default
+title: OrderProposalStatus
 permalink: /OrderProposalStatus
 ---
 

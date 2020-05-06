@@ -1,4 +1,6 @@
 ---
+layout: default
+title: Creche
 permalink: /Creche
 ---
 
@@ -7,4 +9,4 @@ permalink: /Creche
 
 For more information, see the [developer site](https://developer.openactive.io/data-model/types/creche).
 
-Inherits from: [`schema:LocationFeatureSpecification`](https://schema.org/LocationFeatureSpecification)]
+Inherits from: [`schema:LocationFeatureSpecification`](https://schema.org/LocationFeatureSpecification)

@@ -1,4 +1,6 @@
 ---
+layout: default
+title: OpenBookingFlowRequirement
 permalink: /OpenBookingFlowRequirement
 ---
 

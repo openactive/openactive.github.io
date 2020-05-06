@@ -1,4 +1,6 @@
 ---
+layout: default
+title: OpportunityCapacityIsReservedByLeaseError
 permalink: /OpportunityCapacityIsReservedByLeaseError
 ---
 
@@ -7,4 +9,4 @@ permalink: /OpportunityCapacityIsReservedByLeaseError
 
 For more information, see the [developer site](https://developer.openactive.io/data-model/types/opportunitycapacityisreservedbyleaseerror).
 
-Inherits from: [`oa:OpenBookingError`](https://openactive.io/OpenBookingError)]
+Inherits from: [`oa:OpenBookingError`](https://openactive.io/OpenBookingError)

@@ -1,4 +1,6 @@
 ---
+layout: default
+title: TaxMode
 permalink: /TaxMode
 ---
 

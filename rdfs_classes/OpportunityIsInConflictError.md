@@ -1,4 +1,6 @@
 ---
+layout: default
+title: OpportunityIsInConflictError
 permalink: /OpportunityIsInConflictError
 ---
 
@@ -7,4 +9,4 @@ permalink: /OpportunityIsInConflictError
 
 For more information, see the [developer site](https://developer.openactive.io/data-model/types/opportunityisinconflicterror).
 
-Inherits from: [`oa:OpenBookingError`](https://openactive.io/OpenBookingError)]
+Inherits from: [`oa:OpenBookingError`](https://openactive.io/OpenBookingError)

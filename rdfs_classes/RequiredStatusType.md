@@ -1,4 +1,6 @@
 ---
+layout: default
+title: RequiredStatusType
 permalink: /RequiredStatusType
 ---
 

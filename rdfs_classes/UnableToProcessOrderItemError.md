@@ -1,4 +1,6 @@
 ---
+layout: default
+title: UnableToProcessOrderItemError
 permalink: /UnableToProcessOrderItemError
 ---
 
@@ -7,4 +9,4 @@ permalink: /UnableToProcessOrderItemError
 
 For more information, see the [developer site](https://developer.openactive.io/data-model/types/unabletoprocessorderitemerror).
 
-Inherits from: [`oa:OpenBookingError`](https://openactive.io/OpenBookingError)]
+Inherits from: [`oa:OpenBookingError`](https://openactive.io/OpenBookingError)

@@ -1,4 +1,6 @@
 ---
+layout: default
+title: UnknownOrIncorrectEndpointError
 permalink: /UnknownOrIncorrectEndpointError
 ---
 
@@ -7,4 +9,4 @@ permalink: /UnknownOrIncorrectEndpointError
 
 For more information, see the [developer site](https://developer.openactive.io/data-model/types/unknownorincorrectendpointerror).
 
-Inherits from: [`oa:OpenBookingError`](https://openactive.io/OpenBookingError)]
+Inherits from: [`oa:OpenBookingError`](https://openactive.io/OpenBookingError)

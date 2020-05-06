@@ -1,4 +1,6 @@
 ---
+layout: default
+title: BrokerType
 permalink: /BrokerType
 ---
 
