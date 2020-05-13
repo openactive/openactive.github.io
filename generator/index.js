@@ -1,6 +1,6 @@
 const DATA_MODEL_DOCS_DIR = "../";
-const NAMESPACE_FILE = "../oa.jsonld";
-const INDEX_FILE = "../ns.md";
+const NAMESPACE_FILE = "../ns/oa.jsonld";
+const INDEX_FILE = "../ns/index.md";
 const DATA_MODEL_DOCS_URL_PREFIX = "https://developer.openactive.io/data-model/types/";
 
 const { getContext, getGraph, getMetaData } = require('@openactive/data-models');
@@ -95,7 +95,6 @@ function createNamespaceIndexPage(classesIndex, propertiesIndex) {
   return `---
 layout: default
 title: OpenActive Vocabulary
-permalink: /ns/
 ---
 
 # OpenActive Vocabulary
