@@ -1,5 +1,6 @@
 const DATA_MODEL_DOCS_DIR = "../";
 const NAMESPACE_FILE = "../oa.jsonld";
+const INDEX_FILE = "../ns.md";
 const DATA_MODEL_DOCS_URL_PREFIX = "https://developer.openactive.io/data-model/types/";
 
 const { getContext, getGraph, getMetaData } = require('@openactive/data-models');
@@ -16,6 +17,8 @@ function generateDocumentation() {
   var contents = [];
 
   var terms = [].concat(graph.rdfs_classes, graph.rdfs_properties);
+  var classesIndex = [];
+  var propertiesIndex = [];
 
   terms.forEach(function(node) {
       console.log(typeof node['@id']);
@@ -23,11 +26,14 @@ function generateDocumentation() {
         var prefix = node['@id'].split(':')[0];
         var name = node['@id'].split(':')[1];
         if (prefix === "oa") {
+          var isClass = node['@type'] === 'rdfs:Class';
           
-          var directory = node['@type'] === 'rdfs:Class' ? 'rdfs_classes/' : 'rdfs_properties/';
+          var directory = isClass ? 'rdfs_classes/' : 'rdfs_properties/';
 
           var pageName = name + ".md";
           var pageContent = createModelMarkdownPage(namespaces, name, node);
+          
+          (isClass ? classesIndex : propertiesIndex).push(`- [${name}](/${name})`);
 
           console.log("NAME: " + pageName);
           console.log(pageContent);
@@ -44,6 +50,17 @@ function generateDocumentation() {
         }
       }
   });
+  
+  // Write ns.md
+  classesIndex.sort();
+  propertiesIndex.sort();
+  fs.writeFile(INDEX_FILE, createNamespaceIndexPage(classesIndex, propertiesIndex), function(err) {
+      if(err) {
+          return console.log(err);
+      }
+
+      console.log("FILE SAVED: " + INDEX_FILE);
+  }); 
 
   // Write oa.jsonld
   var jsonld = {
@@ -72,6 +89,25 @@ function formatReference(namespaces, x, separator = ", ", isArray = false) {
       return arrayPrefix + "`" + x + "`";
     }
   }).join(separator);
+}
+
+function createNamespaceIndexPage(classesIndex, propertiesIndex) {
+  return `---
+layout: default
+title: OpenActive Modelling Opportunity Data Namespace
+permalink: /ns/
+---
+
+# OpenActive Modelling Opportunity Data Namespace
+For more information, see the [developer site](${DATA_MODEL_DOCS_URL_PREFIX}).
+
+## Classes
+${classesIndex.join('\n')}
+
+## Properties
+${propertiesIndex.join('\n')}
+
+`;
 }
 
 function createModelMarkdownPage(namespaces, name, node) {
