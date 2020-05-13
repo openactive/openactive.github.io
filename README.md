@@ -1,6 +1,6 @@
 # OpenActive Vocabulary
 
-This repository contains [HTML](https://openactive.io/ns/) and [JSON-LD](https://openactive.io/ns.jsonld) representations of the OpenActive Vocabulary, and allows terms in the vocabulary to resolve to valid HTML page.
+This repository contains [HTML](https://openactive.io/ns/) and [JSON-LD](https://openactive.io/oa.jsonld) representations of the OpenActive Vocabulary, and allows terms in the vocabulary to resolve to valid HTML page.
 
 The terms are defined within the [Modelling Opportunity Data](https://www.openactive.io/modelling-opportunity-data/) and [Open Booking API](https://www.openactive.io/open-booking-api/EditorsDraft/) specifications. These specification are being developed by the [OpenActive Community Group](https://www.w3.org/community/openactive).
 
