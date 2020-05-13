@@ -104,6 +104,8 @@ The terms in the OpenActive Vocabulary, listed below, are defined within the [Mo
 
 These specifications are being developed by the [OpenActive Community Group](https://www.w3.org/community/openactive).
 
+This vocabulary is also available in JSON-LD format via a GET of the URL `"https://openactive.io/"` using an `Accept` header of `application/ld+json`, and also available via a CDN via a GET of the URL [`"https://openactive.io/ns.jsonld"`](https://openactive.io/ns.jsonld) for production use.
+
 For more information, see the [developer site](${DATA_MODEL_DOCS_URL_PREFIX}).
 
 ## Classes
