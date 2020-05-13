@@ -94,11 +94,16 @@ function formatReference(namespaces, x, separator = ", ", isArray = false) {
 function createNamespaceIndexPage(classesIndex, propertiesIndex) {
   return `---
 layout: default
-title: OpenActive Modelling Opportunity Data Namespace
+title: OpenActive Vocabulary
 permalink: /ns/
 ---
 
-# OpenActive Modelling Opportunity Data Namespace
+# OpenActive Vocabulary
+
+The terms in the OpenActive Vocabulary, listed below, are defined within the [Modelling Opportunity Data](https://www.openactive.io/modelling-opportunity-data/) and [Open Booking API](https://www.openactive.io/open-booking-api/EditorsDraft/) specifications.
+
+These specifications are being developed by the [OpenActive Community Group](https://www.w3.org/community/openactive).
+
 For more information, see the [developer site](${DATA_MODEL_DOCS_URL_PREFIX}).
 
 ## Classes
