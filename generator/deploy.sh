@@ -17,8 +17,8 @@ erase_existing_docs() {
 
 commit_generated_files() {
   git add ../rdfs_*
-  git add ../oa.jsonld
-  git add ../ns.md
+  git add ../ns/oa.jsonld
+  git add ../ns/index.md
   git status
   git commit --message "Updating auto-generated namespace documentation: $TRAVIS_BUILD_NUMBER [ci skip]"
 }
