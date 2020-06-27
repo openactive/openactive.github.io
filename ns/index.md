@@ -3,7 +3,7 @@ layout: default
 title: OpenActive Vocabulary
 ---
 
-# OpenActive Vocabulary Terms
+# OpenActive Vocabulary
 
 The terms in the OpenActive Vocabulary, listed below, are defined within the [Modelling Opportunity Data](https://www.openactive.io/modelling-opportunity-data/) and [Open Booking API](https://www.openactive.io/open-booking-api/EditorsDraft/) specifications.
 
