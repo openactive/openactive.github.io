@@ -105,7 +105,7 @@ These specifications are being developed by the [OpenActive Community Group](htt
 
 ${'This vocabulary is also available in JSON-LD format via a GET of the URL `"https://openactive.io/"` using an `Accept` header of `application/ld+json`, and additionally via a CDN at the URL [`"https://openactive.io/ns/oa.jsonld"`](https://openactive.io/ns/oa.jsonld) for production use.'}
 
-For more information, see the [developer site](${DATA_MODEL_DOCS_URL_PREFIX}).
+For more information, see the [developer documentation](${DATA_MODEL_DOCS_URL_PREFIX}).
 
 ## Classes
 ${classesIndex.join('\n')}
@@ -145,9 +145,9 @@ This property may include the values: ${formatReference(namespaces, node['schema
 
 + `
 
-For more information, see the [developer site](${DATA_MODEL_DOCS_URL_PREFIX}).`
+For more information, see the [developer documentation](${DATA_MODEL_DOCS_URL_PREFIX}).`
 
-// TODO: This currently will render a broken link for enums, which are not included in the developer site
+// TODO: This currently will render a broken link for enums, which are not included in the developer documentation
 // Need to analyse the models more carefully
 // + (node['@type'] === 'rdfs:Class' ? `[types reference](${DATA_MODEL_DOCS_URL_PREFIX + name.toLowerCase()}).` : "")
 
