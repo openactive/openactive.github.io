@@ -7,7 +7,7 @@ title: OpenActive Vocabulary
 
 The terms in the OpenActive Vocabulary, listed below, are defined within the [Modelling Opportunity Data](https://www.openactive.io/modelling-opportunity-data/) and [Open Booking API](https://www.openactive.io/open-booking-api/EditorsDraft/) specifications.
 
-These specifications are being developed by the [OpenActive W3C Community Group](https://www.w3.org/community/openactive).
+These specifications are being developed by the [OpenActive Community Group](https://www.w3.org/community/openactive).
 
 This vocabulary is also available in JSON-LD format via a GET of the URL `"https://openactive.io/"` using an `Accept` header of `application/ld+json`, and additionally via a CDN at the URL [`"https://openactive.io/ns/oa.jsonld"`](https://openactive.io/ns/oa.jsonld) for production use.
 
