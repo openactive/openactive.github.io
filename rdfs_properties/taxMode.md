@@ -11,4 +11,4 @@ This property can be used on: [`schema:Organization`](https://schema.org/Organiz
 
 This property may include the values: [`oa:TaxMode`](https://openactive.io/TaxMode)
 
-For more information, see the [developer site](https://developer.openactive.io/data-model/types/).
+For more information, see the [developer documentation](https://developer.openactive.io/data-model/types/).

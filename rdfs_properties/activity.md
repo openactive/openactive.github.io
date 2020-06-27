@@ -11,4 +11,4 @@ This property can be used on: [`schema:Course`](https://schema.org/Course), [`sc
 
 This property may include the values: [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept)
 
-For more information, see the [developer site](https://developer.openactive.io/data-model/types/).
+For more information, see the [developer documentation](https://developer.openactive.io/data-model/types/).

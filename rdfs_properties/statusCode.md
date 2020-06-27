@@ -11,4 +11,4 @@ This property can be used on: [`oa:CancellationNotPermittedError`](https://opena
 
 This property may include the values: [`schema:Integer`](https://schema.org/Integer)
 
-For more information, see the [developer site](https://developer.openactive.io/data-model/types/).
+For more information, see the [developer documentation](https://developer.openactive.io/data-model/types/).

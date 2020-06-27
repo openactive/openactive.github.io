@@ -11,4 +11,4 @@ This property can be used on: [`schema:Event`](https://schema.org/Event), [`sche
 
 This property may include the values: [`schema:QuantitativeValue`](https://schema.org/QuantitativeValue)
 
-For more information, see the [developer site](https://developer.openactive.io/data-model/types/).
+For more information, see the [developer documentation](https://developer.openactive.io/data-model/types/).

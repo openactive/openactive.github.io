@@ -11,4 +11,4 @@ This property can be used on: [`oa:FacilityUse`](https://openactive.io/FacilityU
 
 This property may include the values: [`oa:IndividualFacilityUse`](https://openactive.io/IndividualFacilityUse)
 
-For more information, see the [developer site](https://developer.openactive.io/data-model/types/).
+For more information, see the [developer documentation](https://developer.openactive.io/data-model/types/).

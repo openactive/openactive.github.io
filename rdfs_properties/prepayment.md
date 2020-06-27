@@ -11,4 +11,4 @@ This property can be used on: [`schema:Offer`](https://schema.org/Offer), [`sche
 
 This property may include the values: [`oa:RequiredStatusType`](https://openactive.io/RequiredStatusType)
 
-For more information, see the [developer site](https://developer.openactive.io/data-model/types/).
+For more information, see the [developer documentation](https://developer.openactive.io/data-model/types/).

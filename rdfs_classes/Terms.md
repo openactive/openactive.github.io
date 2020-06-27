@@ -9,4 +9,4 @@ permalink: /Terms
 
 Inherits from: [`schema:DigitalDocument`](https://schema.org/DigitalDocument)
 
-For more information, see the [developer site](https://developer.openactive.io/data-model/types/).
+For more information, see the [developer documentation](https://developer.openactive.io/data-model/types/).

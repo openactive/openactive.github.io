@@ -9,4 +9,4 @@ Enumerated value of GenderRestrictionType
 
 Inherits from: [`oa:GenderRestrictionType`](https://openactive.io/GenderRestrictionType)
 
-For more information, see the [developer site](https://developer.openactive.io/data-model/types/).
+For more information, see the [developer documentation](https://developer.openactive.io/data-model/types/).

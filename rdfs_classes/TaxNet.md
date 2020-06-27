@@ -9,4 +9,4 @@ Enumerated value of TaxMode
 
 Inherits from: [`oa:TaxMode`](https://openactive.io/TaxMode)
 
-For more information, see the [developer site](https://developer.openactive.io/data-model/types/).
+For more information, see the [developer documentation](https://developer.openactive.io/data-model/types/).

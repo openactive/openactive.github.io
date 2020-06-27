@@ -11,4 +11,4 @@ This property can be used on: [`schema:Dataset`](https://schema.org/Dataset), [`
 
 This property may include the values: [`oa:BookingService`](https://openactive.io/BookingService)
 
-For more information, see the [developer site](https://developer.openactive.io/data-model/types/).
+For more information, see the [developer documentation](https://developer.openactive.io/data-model/types/).

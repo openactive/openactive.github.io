@@ -11,4 +11,4 @@ This property can be used on: [`schema:Order`](https://schema.org/Order)
 
 This property may include the values: [`oa:Payment`](https://openactive.io/Payment)
 
-For more information, see the [developer site](https://developer.openactive.io/data-model/types/).
+For more information, see the [developer documentation](https://developer.openactive.io/data-model/types/).
