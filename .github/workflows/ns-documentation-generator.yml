@@ -36,17 +36,17 @@ jobs:
         mkdir -p ../rdfs_properties
       
     - run: npm install
-      working-directory: generator
+      working-directory: _generator
     
     - name: Update data models
       run: |
         npm install @openactive/data-models@latest
         npm ls @openactive/data-models
-      working-directory: generator
+      working-directory: _generator
         
     - name: Generate data model documentation  
       run: npm start
-      working-directory: generator
+      working-directory: _generator
 
     - name: Commit generated files
       run: |
