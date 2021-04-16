@@ -81,7 +81,6 @@
     "TaxGross": "oa:TaxGross",
     "TaxNet": "oa:TaxNet",
     "OpenBookingFlowRequirement": "oa:OpenBookingFlowRequirement",
-    "OnlinePrepayment": "oa:OnlinePrepayment",
     "OpenBookingIntakeForm": "oa:OpenBookingIntakeForm",
     "OpenBookingAttendeeDetails": "oa:OpenBookingAttendeeDetails",
     "OpenBookingApproval": "oa:OpenBookingApproval",
@@ -97,6 +96,7 @@
     "OpenBookingPrepayment": "oa:OpenBookingPrepayment",
     "TelephoneAdvanceBooking": "oa:TelephoneAdvanceBooking",
     "TelephonePrepayment": "oa:TelephonePrepayment",
+    "OnlinePrepayment": "oa:OnlinePrepayment",
     "BabyChanging": "oa:BabyChanging",
     "BookingService": "oa:BookingService",
     "BooleanFormFieldSpecification": "oa:BooleanFormFieldSpecification",
@@ -115,6 +115,10 @@
     "IncompleteOrderItemError": "oa:IncompleteOrderItemError",
     "IncompletePaymentDetailsError": "oa:IncompletePaymentDetailsError",
     "IndividualFacilityUse": "oa:IndividualFacilityUse",
+    "InternalApplicationError": "oa:InternalApplicationError",
+    "InternalLibraryConfigurationError": "oa:InternalLibraryConfigurationError",
+    "InternalLibraryError": "oa:InternalLibraryError",
+    "InternalOpenBookingError": "oa:InternalOpenBookingError",
     "InvalidAPITokenError": "oa:InvalidAPITokenError",
     "InvalidAuthorizationDetailsError": "oa:InvalidAuthorizationDetailsError",
     "InvalidIntakeFormError": "oa:InvalidIntakeFormError",
@@ -204,15 +208,22 @@
       "@id": "oa:accessibilitySupport",
       "@type": "@id"
     },
-    "ageRange": {
-      "@id": "oa:ageRange",
-      "@type": "@id"
-    },
     "attendeeInstructions": {
       "@id": "oa:attendeeInstructions"
     },
     "genderRestriction": {
       "@id": "oa:genderRestriction"
+    },
+    "ageRange": {
+      "@id": "oa:ageRange",
+      "@type": "@id"
+    },
+    "ageRestriction": {
+      "@id": "oa:ageRestriction",
+      "@type": "@id"
+    },
+    "additionalAdmissionRestriction": {
+      "@id": "oa:additionalAdmissionRestriction"
     },
     "isCoached": {
       "@id": "oa:isCoached"
@@ -257,6 +268,9 @@
     "latestCancellationBeforeStartDate": {
       "@id": "oa:latestCancellationBeforeStartDate"
     },
+    "allowCustomerCancellationFullRefund": {
+      "@id": "oa:allowCustomerCancellationFullRefund"
+    },
     "openBookingFlowRequirement": {
       "@id": "oa:openBookingFlowRequirement"
     },
@@ -286,15 +300,16 @@
     "orderProposalVersion": {
       "@id": "oa:orderProposalVersion"
     },
-    "allowCustomerCancellationFullRefund": {
-      "@id": "oa:allowCustomerCancellationFullRefund"
-    },
     "unitTaxSpecification": {
       "@id": "oa:unitTaxSpecification",
       "@type": "@id"
     },
     "accessPass": {
       "@id": "oa:accessPass",
+      "@type": "@id"
+    },
+    "accessChannel": {
+      "@id": "oa:accessChannel",
       "@type": "@id"
     },
     "cancellationMessage": {
@@ -343,7 +358,8 @@
       "@id": "oa:scheduledEventType"
     },
     "facilityUse": {
-      "@id": "oa:facilityUse"
+      "@id": "oa:facilityUse",
+      "@type": "@id"
     },
     "maximumUses": {
       "@id": "oa:maximumUses"
@@ -356,6 +372,12 @@
     },
     "requiresExplicitConsent": {
       "@id": "oa:requiresExplicitConsent"
+    },
+    "accessId": {
+      "@id": "oa:accessId"
+    },
+    "authenticationAuthority": {
+      "@id": "oa:authenticationAuthority"
     }
   },
   "@graph": {
@@ -443,7 +465,7 @@
     "dc:description": {
       "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
     },
-    "dc:date": "2020-06-18",
+    "dc:date": "2021-04-13",
     "owl:versionInfo": "#",
     "rdfs_classes": [
       {
@@ -724,17 +746,6 @@
         "rdfs:comment": {
           "en": ""
         }
-      },
-      {
-        "@id": "oa:OnlinePrepayment",
-        "@type": "rdfs:Class",
-        "rdfs:label": {
-          "en": "OnlinePrepayment"
-        },
-        "rdfs:comment": {
-          "en": "Enumerated value of OpenBookingFlowRequirement"
-        },
-        "rdfs:subClassOf": "oa:OpenBookingFlowRequirement"
       },
       {
         "@id": "oa:OpenBookingIntakeForm",
@@ -1107,6 +1118,50 @@
           "en": ""
         },
         "rdfs:subClassOf": "oa:FacilityUse"
+      },
+      {
+        "@id": "oa:InternalApplicationError",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "InternalApplicationError"
+        },
+        "rdfs:comment": {
+          "en": ""
+        },
+        "rdfs:subClassOf": "oa:InternalOpenBookingError"
+      },
+      {
+        "@id": "oa:InternalLibraryConfigurationError",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "InternalLibraryConfigurationError"
+        },
+        "rdfs:comment": {
+          "en": ""
+        },
+        "rdfs:subClassOf": "oa:InternalOpenBookingError"
+      },
+      {
+        "@id": "oa:InternalLibraryError",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "InternalLibraryError"
+        },
+        "rdfs:comment": {
+          "en": ""
+        },
+        "rdfs:subClassOf": "oa:InternalOpenBookingError"
+      },
+      {
+        "@id": "oa:InternalOpenBookingError",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "InternalOpenBookingError"
+        },
+        "rdfs:comment": {
+          "en": ""
+        },
+        "rdfs:subClassOf": "oa:OpenBookingError"
       },
       {
         "@id": "oa:InvalidAPITokenError",
@@ -1788,11 +1843,16 @@
           "oa:IncompleteIntakeFormError",
           "oa:IncompleteOrderItemError",
           "oa:IncompletePaymentDetailsError",
+          "oa:InternalApplicationError",
+          "oa:InternalLibraryConfigurationError",
+          "oa:InternalLibraryError",
+          "oa:InternalOpenBookingError",
           "oa:InvalidAPITokenError",
           "oa:InvalidAuthorizationDetailsError",
           "oa:InvalidIntakeFormError",
           "oa:InvalidOpportunityOrOfferIdError",
           "oa:InvalidPaymentDetailsError",
+          "oa:MethodNotAllowedError",
           "oa:MissingPaymentDetailsError",
           "oa:NoAPITokenError",
           "oa:NotFoundError",
@@ -1808,6 +1868,8 @@
           "oa:OrderItemIdInvalidError",
           "oa:OrderItemNotWithinOrderError",
           "oa:OrderProposalVersionOutdatedError",
+          "oa:PatchContainsExcessivePropertiesError",
+          "oa:PatchNotAllowedOnPropertyError",
           "oa:SellerMismatchError",
           "oa:SellerNotFoundError",
           "oa:TemporarilyUnableToCreateOrderError",
@@ -1948,23 +2010,6 @@
         ]
       },
       {
-        "@id": "oa:ageRange",
-        "@type": "rdf:Property",
-        "rdfs:label": {
-          "en": "ageRange"
-        },
-        "rdfs:comment": {
-          "en": "Indicates that an event is suitable for a specific age range. If only a single age is specified then this is assumed to be a minimum age. Age ranges can be specified as follows: 18-30"
-        },
-        "schema:domainIncludes": [
-          "schema:Event",
-          "schema:Offer"
-        ],
-        "schema:rangeIncludes": [
-          "schema:QuantitativeValue"
-        ]
-      },
-      {
         "@id": "oa:attendeeInstructions",
         "@type": "rdf:Property",
         "rdfs:label": {
@@ -1988,13 +2033,64 @@
           "en": "genderRestriction"
         },
         "rdfs:comment": {
-          "en": "Indicates that an event is restricted to male, female or a mixed audience. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience"
+          "en": "Indicates that an event is restricted to male, female or a mixed audience. This information must be displayed prominently to the user before booking. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience."
         },
         "schema:domainIncludes": [
           "schema:Event"
         ],
         "schema:rangeIncludes": [
           "oa:GenderRestrictionType"
+        ]
+      },
+      {
+        "@id": "oa:ageRange",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "ageRange"
+        },
+        "rdfs:comment": {
+          "en": "Indicates that an event is recommended as being suitable for or is targetted at a specific age range."
+        },
+        "schema:domainIncludes": [
+          "schema:Event",
+          "schema:Offer"
+        ],
+        "schema:rangeIncludes": [
+          "schema:QuantitativeValue"
+        ]
+      },
+      {
+        "@id": "oa:ageRestriction",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "ageRestriction"
+        },
+        "rdfs:comment": {
+          "en": "The enforced attendee age range requirement of the Event or Offer, that must be displayed prominently to the user before booking."
+        },
+        "schema:domainIncludes": [
+          "schema:Event",
+          "schema:Offer"
+        ],
+        "schema:rangeIncludes": [
+          "schema:QuantitativeValue"
+        ]
+      },
+      {
+        "@id": "oa:additionalAdmissionRestriction",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "additionalAdmissionRestriction"
+        },
+        "rdfs:comment": {
+          "en": "Free text restrictions that must be displayed prominently to the user before booking. This property must only contain restrictions not described by `oa:ageRestriction` or `oa:genderRestriction`."
+        },
+        "schema:domainIncludes": [
+          "schema:Event",
+          "oa:FacilityUse"
+        ],
+        "schema:rangeIncludes": [
+          "schema:Text"
         ]
       },
       {
@@ -2208,6 +2304,22 @@
         ]
       },
       {
+        "@id": "oa:allowCustomerCancellationFullRefund",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "allowCustomerCancellationFullRefund"
+        },
+        "rdfs:comment": {
+          "en": "Whether the opportunity can be cancelled with a full refund at any time before the `startDate`, or before the `latestCancellationBeforeStartDate` if provided."
+        },
+        "schema:domainIncludes": [
+          "schema:Offer"
+        ],
+        "schema:rangeIncludes": [
+          "schema:Boolean"
+        ]
+      },
+      {
         "@id": "oa:openBookingFlowRequirement",
         "@type": "rdf:Property",
         "rdfs:label": {
@@ -2352,22 +2464,6 @@
         ]
       },
       {
-        "@id": "oa:allowCustomerCancellationFullRefund",
-        "@type": "rdf:Property",
-        "rdfs:label": {
-          "en": "allowCustomerCancellationFullRefund"
-        },
-        "rdfs:comment": {
-          "en": "Whether the event can be cancelled."
-        },
-        "schema:domainIncludes": [
-          "schema:OrderItem"
-        ],
-        "schema:rangeIncludes": [
-          "schema:Boolean"
-        ]
-      },
-      {
         "@id": "oa:unitTaxSpecification",
         "@type": "rdf:Property",
         "rdfs:label": {
@@ -2400,13 +2496,29 @@
         ]
       },
       {
+        "@id": "oa:accessChannel",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "accessChannel"
+        },
+        "rdfs:comment": {
+          "en": "Channel through which the user can participate in the Opportunity. Not applicable for an OrderQuote."
+        },
+        "schema:domainIncludes": [
+          "schema:OrderItem"
+        ],
+        "schema:rangeIncludes": [
+          "pending:VirtualLocation"
+        ]
+      },
+      {
         "@id": "oa:cancellationMessage",
         "@type": "rdf:Property",
         "rdfs:label": {
           "en": "cancellationMessage"
         },
         "rdfs:comment": {
-          "en": "A message set by the Seller in the event of Opportunity cancellation, only applicable for an  Order and where the OrderItem has  orderItemStatus set to  https://openactive.io/SellerCancelled"
+          "en": "A message set by the Seller in the event of Opportunity cancellation, only applicable for an  `Order` and where the `OrderItem` has `orderItemStatus` set to `https://openactive.io/SellerCancelled`"
         },
         "schema:domainIncludes": [
           "schema:OrderItem"
@@ -2422,7 +2534,7 @@
           "en": "customerNotice"
         },
         "rdfs:comment": {
-          "en": "A message set by the Seller to trigger a notification to the Customer, only applicable for an Order and where the OrderItem has  orderItemStatus set to  https://openactive.io/OrderItemConfirmed or  https://openactive.io/CustomerAttended"
+          "en": "A message set by the Seller to trigger a notification to the Customer, only applicable for an `Order` and where the `OrderItem` has `orderItemStatus` set to  `https://openactive.io/OrderItemConfirmed` or `https://openactive.io/CustomerAttended`"
         },
         "schema:domainIncludes": [
           "schema:OrderItem"
@@ -2438,7 +2550,7 @@
           "en": "attendeeDetailsRequired"
         },
         "rdfs:comment": {
-          "en": ""
+          "en": "The properties of `schema:Person` that are required to describe an `attendee` for this `OrderItem`."
         },
         "schema:domainIncludes": [
           "schema:OrderItem"
@@ -2605,7 +2717,7 @@
           "pending:Schedule"
         ],
         "schema:rangeIncludes": [
-          "schema:URL"
+          "schema:Text"
         ]
       },
       {
@@ -2637,9 +2749,7 @@
           "oa:Slot"
         ],
         "schema:rangeIncludes": [
-          "schema:URL",
-          "oa:FacilityUse",
-          "oa:IndividualFacilityUse"
+          "oa:FacilityUse"
         ]
       },
       {
@@ -2704,6 +2814,38 @@
         ],
         "schema:rangeIncludes": [
           "schema:Boolean"
+        ]
+      },
+      {
+        "@id": "oa:accessId",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "accessId"
+        },
+        "rdfs:comment": {
+          "en": "The identifier required to access the `VirtualLocation` from any device, without requiring the URL, e.g. the meeting ID."
+        },
+        "schema:domainIncludes": [
+          "pending:VirtualLocation"
+        ],
+        "schema:rangeIncludes": [
+          "schema:Text"
+        ]
+      },
+      {
+        "@id": "oa:authenticationAuthority",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "authenticationAuthority"
+        },
+        "rdfs:comment": {
+          "en": "The location of the OpenID Provider or other relevant authentication authority that must be used to access the API."
+        },
+        "schema:domainIncludes": [
+          "pending:WebAPI"
+        ],
+        "schema:rangeIncludes": [
+          "schema:URL"
         ]
       }
     ]

@@ -1,11 +1,11 @@
 ---
 layout: default
-title: ageRange
-permalink: /ageRange
+title: ageRestriction
+permalink: /ageRestriction
 ---
 
-# ageRange
-Indicates that an event is recommended as being suitable for or is targetted at a specific age range.
+# ageRestriction
+The enforced attendee age range requirement of the Event or Offer, that must be displayed prominently to the user before booking.
 
 This property can be used on: [`schema:Event`](https://schema.org/Event), [`schema:Offer`](https://schema.org/Offer)
 

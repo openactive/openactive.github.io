@@ -5,7 +5,7 @@ permalink: /attendeeDetailsRequired
 ---
 
 # attendeeDetailsRequired
-
+The properties of `schema:Person` that are required to describe an `attendee` for this `OrderItem`.
 
 This property can be used on: [`schema:OrderItem`](https://schema.org/OrderItem)
 
