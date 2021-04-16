@@ -6,8 +6,6 @@ on:
     types: [data-models-update]
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
   ns-documentation-generator:
@@ -56,3 +54,5 @@ jobs:
         git status
         git commit --message "Updating auto-generated namespace documentation [ci skip]"
 
+    - name: Push generated files
+      run: git push
