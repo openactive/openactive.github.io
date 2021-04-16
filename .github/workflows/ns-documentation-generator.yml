@@ -1,0 +1,58 @@
+name: Namespace Documentation Generator
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [data-models-update]
+  push:
+    branches: [ master ]
+
+jobs:
+  ns-documentation-generator:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout master branch
+      uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.PUBLIC_REPO_ACCESS_TOKEN }}
+        
+    - name: Identify
+      run: |
+        git config user.name OpenActive Bot
+        git config user.email hello@openactive.io
+    
+    - name: Use Node.js 14.x
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14.x
+        
+    - name: Erase existing docs
+      run: |
+        rm -rf ./rdfs_*
+        mkdir -p ./rdfs_classes
+        mkdir -p ./rdfs_properties
+      
+    - run: npm install
+      working-directory: _generator
+    
+    - name: Update data models
+      run: |
+        npm install @openactive/data-models@latest
+        npm ls @openactive/data-models
+      working-directory: _generator
+        
+    - name: Generate data model documentation  
+      run: npm start
+      working-directory: _generator
+
+    - name: Commit generated files
+      run: |
+        git add rdfs_*
+        git add ns/oa.jsonld
+        git add ns/index.md
+        git status
+        git commit --message "Updating auto-generated namespace documentation [ci skip]"
+
+    - name: Push generated files
+      run: git push
