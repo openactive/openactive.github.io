@@ -92,8 +92,7 @@
     "OrderItemProposed": "oa:OrderItemProposed",
     "OrderItemConfirmed": "oa:OrderItemConfirmed",
     "CustomerAttended": "oa:CustomerAttended",
-    "AvailableChannelType": "oa:AvailableChannelType",
-    "OpenBookingPrepayment": "oa:OpenBookingPrepayment",
+    "BookingChannelType": "oa:BookingChannelType",
     "TelephoneAdvanceBooking": "oa:TelephoneAdvanceBooking",
     "TelephonePrepayment": "oa:TelephonePrepayment",
     "OnlinePrepayment": "oa:OnlinePrepayment",
@@ -190,6 +189,9 @@
       "@id": "oa:activity",
       "@type": "@id"
     },
+    "bookingChannel": {
+      "@id": "oa:bookingChannel"
+    },
     "backgroundImage": {
       "@id": "oa:backgroundImage",
       "@type": "@id"
@@ -256,11 +258,11 @@
     "leaseExpires": {
       "@id": "oa:leaseExpires"
     },
-    "advanceBooking": {
-      "@id": "oa:advanceBooking"
+    "openBookingInAdvance": {
+      "@id": "oa:openBookingInAdvance"
     },
-    "prepayment": {
-      "@id": "oa:prepayment"
+    "openBookingPrepayment": {
+      "@id": "oa:openBookingPrepayment"
     },
     "validFromBeforeStartDate": {
       "@id": "oa:validFromBeforeStartDate"
@@ -347,6 +349,9 @@
     },
     "taxMode": {
       "@id": "oa:taxMode"
+    },
+    "allowOpenBooking": {
+      "@id": "oa:allowOpenBooking"
     },
     "paymentProviderId": {
       "@id": "oa:paymentProviderId"
@@ -465,7 +470,7 @@
     "dc:description": {
       "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
     },
-    "dc:date": "2021-04-13",
+    "dc:date": "2021-04-22",
     "owl:versionInfo": "#",
     "rdfs_classes": [
       {
@@ -868,25 +873,14 @@
         "rdfs:subClassOf": "oa:OrderItemStatus"
       },
       {
-        "@id": "oa:AvailableChannelType",
+        "@id": "oa:BookingChannelType",
         "@type": "rdfs:Class",
         "rdfs:label": {
-          "en": "AvailableChannelType"
+          "en": "BookingChannelType"
         },
         "rdfs:comment": {
           "en": ""
         }
-      },
-      {
-        "@id": "oa:OpenBookingPrepayment",
-        "@type": "rdfs:Class",
-        "rdfs:label": {
-          "en": "OpenBookingPrepayment"
-        },
-        "rdfs:comment": {
-          "en": "Enumerated value of AvailableChannelType"
-        },
-        "rdfs:subClassOf": "oa:AvailableChannelType"
       },
       {
         "@id": "oa:TelephoneAdvanceBooking",
@@ -895,9 +889,9 @@
           "en": "TelephoneAdvanceBooking"
         },
         "rdfs:comment": {
-          "en": "Enumerated value of AvailableChannelType"
+          "en": "Enumerated value of BookingChannelType"
         },
-        "rdfs:subClassOf": "oa:AvailableChannelType"
+        "rdfs:subClassOf": "oa:BookingChannelType"
       },
       {
         "@id": "oa:TelephonePrepayment",
@@ -906,9 +900,9 @@
           "en": "TelephonePrepayment"
         },
         "rdfs:comment": {
-          "en": "Enumerated value of AvailableChannelType"
+          "en": "Enumerated value of BookingChannelType"
         },
-        "rdfs:subClassOf": "oa:AvailableChannelType"
+        "rdfs:subClassOf": "oa:BookingChannelType"
       },
       {
         "@id": "oa:OnlinePrepayment",
@@ -917,9 +911,9 @@
           "en": "OnlinePrepayment"
         },
         "rdfs:comment": {
-          "en": "Enumerated value of AvailableChannelType"
+          "en": "Enumerated value of BookingChannelType"
         },
-        "rdfs:subClassOf": "oa:AvailableChannelType"
+        "rdfs:subClassOf": "oa:BookingChannelType"
       },
       {
         "@id": "oa:BabyChanging",
@@ -1927,6 +1921,26 @@
         ]
       },
       {
+        "@id": "oa:bookingChannel",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "bookingChannel"
+        },
+        "rdfs:comment": {
+          "en": "The channels through which a booking can be made."
+        },
+        "schema:domainIncludes": [
+          "schema:CourseInstance",
+          "schema:Event",
+          "oa:FacilityUse",
+          "schema:OnDemandEvent",
+          "oa:SessionSeries"
+        ],
+        "schema:rangeIncludes": [
+          "oa:BookingChannelType"
+        ]
+      },
+      {
         "@id": "oa:backgroundImage",
         "@type": "rdf:Property",
         "rdfs:label": {
@@ -2239,10 +2253,10 @@
         ]
       },
       {
-        "@id": "oa:advanceBooking",
+        "@id": "oa:openBookingInAdvance",
         "@type": "rdf:Property",
         "rdfs:label": {
-          "en": "advanceBooking"
+          "en": "openBookingInAdvance"
         },
         "rdfs:comment": {
           "en": "Indicates whether to accept this offer, a participant must book in advance, whether they must pay on attending, or have option to do either. Values must be one of  https://openactive.io/Required,  https://openactive.io/Optional or  https://openactive.io/Unavailable."
@@ -2255,10 +2269,10 @@
         ]
       },
       {
-        "@id": "oa:prepayment",
+        "@id": "oa:openBookingPrepayment",
         "@type": "rdf:Property",
         "rdfs:label": {
-          "en": "prepayment"
+          "en": "openBookingPrepayment"
         },
         "rdfs:comment": {
           "en": "Indicates whether to accept this offer, a participant must pay in advance, pay when attending, or have the option to do either. Values must be one of  https://openactive.io/Required,  https://openactive.io/Optional or  https://openactive.io/Unavailable."
@@ -2686,6 +2700,23 @@
         ],
         "schema:rangeIncludes": [
           "oa:TaxMode"
+        ]
+      },
+      {
+        "@id": "oa:allowOpenBooking",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "allowOpenBooking"
+        },
+        "rdfs:comment": {
+          "en": "Indicates whether the Seller allows open booking"
+        },
+        "schema:domainIncludes": [
+          "schema:Organization",
+          "schema:Person"
+        ],
+        "schema:rangeIncludes": [
+          "schema:Boolean"
         ]
       },
       {
