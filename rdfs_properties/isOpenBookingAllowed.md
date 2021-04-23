@@ -1,10 +1,10 @@
 ---
 layout: default
-title: allowOpenBooking
-permalink: /allowOpenBooking
+title: isOpenBookingAllowed
+permalink: /isOpenBookingAllowed
 ---
 
-# allowOpenBooking
+# isOpenBookingAllowed
 Indicates whether the Seller allows open booking
 
 This property can be used on: [`schema:Organization`](https://schema.org/Organization), [`schema:Person`](https://schema.org/Person)

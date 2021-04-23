@@ -350,8 +350,8 @@
     "taxMode": {
       "@id": "oa:taxMode"
     },
-    "allowOpenBooking": {
-      "@id": "oa:allowOpenBooking"
+    "isOpenBookingAllowed": {
+      "@id": "oa:isOpenBookingAllowed"
     },
     "paymentProviderId": {
       "@id": "oa:paymentProviderId"
@@ -470,7 +470,7 @@
     "dc:description": {
       "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
     },
-    "dc:date": "2021-04-22",
+    "dc:date": "2021-04-23",
     "owl:versionInfo": "#",
     "rdfs_classes": [
       {
@@ -2703,10 +2703,10 @@
         ]
       },
       {
-        "@id": "oa:allowOpenBooking",
+        "@id": "oa:isOpenBookingAllowed",
         "@type": "rdf:Property",
         "rdfs:label": {
-          "en": "allowOpenBooking"
+          "en": "isOpenBookingAllowed"
         },
         "rdfs:comment": {
           "en": "Indicates whether the Seller allows open booking"
