@@ -92,10 +92,6 @@
     "OrderItemProposed": "oa:OrderItemProposed",
     "OrderItemConfirmed": "oa:OrderItemConfirmed",
     "CustomerAttended": "oa:CustomerAttended",
-    "BookingChannelType": "oa:BookingChannelType",
-    "TelephoneAdvanceBooking": "oa:TelephoneAdvanceBooking",
-    "TelephonePrepayment": "oa:TelephonePrepayment",
-    "OnlinePrepayment": "oa:OnlinePrepayment",
     "BabyChanging": "oa:BabyChanging",
     "BookingService": "oa:BookingService",
     "BooleanFormFieldSpecification": "oa:BooleanFormFieldSpecification",
@@ -188,9 +184,6 @@
     "activity": {
       "@id": "oa:activity",
       "@type": "@id"
-    },
-    "bookingChannel": {
-      "@id": "oa:bookingChannel"
     },
     "backgroundImage": {
       "@id": "oa:backgroundImage",
@@ -470,7 +463,7 @@
     "dc:description": {
       "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
     },
-    "dc:date": "2021-04-23",
+    "dc:date": "2021-04-24",
     "owl:versionInfo": "#",
     "rdfs_classes": [
       {
@@ -871,49 +864,6 @@
           "en": "Enumerated value of OrderItemStatus"
         },
         "rdfs:subClassOf": "oa:OrderItemStatus"
-      },
-      {
-        "@id": "oa:BookingChannelType",
-        "@type": "rdfs:Class",
-        "rdfs:label": {
-          "en": "BookingChannelType"
-        },
-        "rdfs:comment": {
-          "en": ""
-        }
-      },
-      {
-        "@id": "oa:TelephoneAdvanceBooking",
-        "@type": "rdfs:Class",
-        "rdfs:label": {
-          "en": "TelephoneAdvanceBooking"
-        },
-        "rdfs:comment": {
-          "en": "Enumerated value of BookingChannelType"
-        },
-        "rdfs:subClassOf": "oa:BookingChannelType"
-      },
-      {
-        "@id": "oa:TelephonePrepayment",
-        "@type": "rdfs:Class",
-        "rdfs:label": {
-          "en": "TelephonePrepayment"
-        },
-        "rdfs:comment": {
-          "en": "Enumerated value of BookingChannelType"
-        },
-        "rdfs:subClassOf": "oa:BookingChannelType"
-      },
-      {
-        "@id": "oa:OnlinePrepayment",
-        "@type": "rdfs:Class",
-        "rdfs:label": {
-          "en": "OnlinePrepayment"
-        },
-        "rdfs:comment": {
-          "en": "Enumerated value of BookingChannelType"
-        },
-        "rdfs:subClassOf": "oa:BookingChannelType"
       },
       {
         "@id": "oa:BabyChanging",
@@ -1921,26 +1871,6 @@
         ]
       },
       {
-        "@id": "oa:bookingChannel",
-        "@type": "rdf:Property",
-        "rdfs:label": {
-          "en": "bookingChannel"
-        },
-        "rdfs:comment": {
-          "en": "The channels through which a booking can be made."
-        },
-        "schema:domainIncludes": [
-          "schema:CourseInstance",
-          "schema:Event",
-          "oa:FacilityUse",
-          "schema:OnDemandEvent",
-          "oa:SessionSeries"
-        ],
-        "schema:rangeIncludes": [
-          "oa:BookingChannelType"
-        ]
-      },
-      {
         "@id": "oa:backgroundImage",
         "@type": "rdf:Property",
         "rdfs:label": {
@@ -2709,7 +2639,7 @@
           "en": "isOpenBookingAllowed"
         },
         "rdfs:comment": {
-          "en": "Indicates whether the Seller allows open booking"
+          "en": "Indicates whether the Seller allows open booking or not"
         },
         "schema:domainIncludes": [
           "schema:Organization",

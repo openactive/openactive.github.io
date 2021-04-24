@@ -5,7 +5,7 @@ permalink: /isOpenBookingAllowed
 ---
 
 # isOpenBookingAllowed
-Indicates whether the Seller allows open booking
+Indicates whether the Seller allows open booking or not
 
 This property can be used on: [`schema:Organization`](https://schema.org/Organization), [`schema:Person`](https://schema.org/Person)
 
