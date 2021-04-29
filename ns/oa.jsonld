@@ -89,7 +89,6 @@
     "OrderItemStatus": "oa:OrderItemStatus",
     "SellerCancelled": "oa:SellerCancelled",
     "CustomerCancelled": "oa:CustomerCancelled",
-    "OrderItemProposed": "oa:OrderItemProposed",
     "OrderItemConfirmed": "oa:OrderItemConfirmed",
     "CustomerAttended": "oa:CustomerAttended",
     "BabyChanging": "oa:BabyChanging",
@@ -826,17 +825,6 @@
         "@type": "rdfs:Class",
         "rdfs:label": {
           "en": "CustomerCancelled"
-        },
-        "rdfs:comment": {
-          "en": "Enumerated value of OrderItemStatus"
-        },
-        "rdfs:subClassOf": "oa:OrderItemStatus"
-      },
-      {
-        "@id": "oa:OrderItemProposed",
-        "@type": "rdfs:Class",
-        "rdfs:label": {
-          "en": "OrderItemProposed"
         },
         "rdfs:comment": {
           "en": "Enumerated value of OrderItemStatus"

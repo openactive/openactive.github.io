@@ -83,7 +83,6 @@ For more information, see the [developer documentation](https://developer.openac
 - [OrderItemConfirmed](/OrderItemConfirmed)
 - [OrderItemIdInvalidError](/OrderItemIdInvalidError)
 - [OrderItemNotWithinOrderError](/OrderItemNotWithinOrderError)
-- [OrderItemProposed](/OrderItemProposed)
 - [OrderItemStatus](/OrderItemStatus)
 - [OrderProposalStatus](/OrderProposalStatus)
 - [OrderProposalVersionOutdatedError](/OrderProposalVersionOutdatedError)
