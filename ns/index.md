@@ -158,6 +158,7 @@ For more information, see the [developer documentation](https://developer.openac
 - [genderRestriction](/genderRestriction)
 - [idTemplate](/idTemplate)
 - [individualFacilityUse](/individualFacilityUse)
+- [instanceOfCourse](/instanceOfCourse)
 - [instance](/instance)
 - [isCoached](/isCoached)
 - [isOpenBookingAllowed](/isOpenBookingAllowed)

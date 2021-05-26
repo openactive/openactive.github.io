@@ -184,6 +184,10 @@
       "@id": "oa:activity",
       "@type": "@id"
     },
+    "instanceOfCourse": {
+      "@id": "oa:instanceOfCourse",
+      "@type": "@id"
+    },
     "backgroundImage": {
       "@id": "oa:backgroundImage",
       "@type": "@id"
@@ -1856,6 +1860,22 @@
         ],
         "schema:rangeIncludes": [
           "skos:Concept"
+        ]
+      },
+      {
+        "@id": "oa:instanceOfCourse",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "instanceOfCourse"
+        },
+        "rdfs:comment": {
+          "en": "The description of the Course for which this is a distinct instance."
+        },
+        "schema:domainIncludes": [
+          "schema:CourseInstance"
+        ],
+        "schema:rangeIncludes": [
+          "schema:Course"
         ]
       },
       {
