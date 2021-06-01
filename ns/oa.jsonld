@@ -180,9 +180,26 @@
       "@id": "oa:concept",
       "@type": "@id"
     },
+    "accessibilityInformation": {
+      "@id": "oa:accessibilityInformation"
+    },
+    "accessibilitySupport": {
+      "@id": "oa:accessibilitySupport",
+      "@type": "@id"
+    },
     "activity": {
       "@id": "oa:activity",
       "@type": "@id"
+    },
+    "ageRange": {
+      "@id": "oa:ageRange",
+      "@type": "@id"
+    },
+    "genderRestriction": {
+      "@id": "oa:genderRestriction"
+    },
+    "level": {
+      "@id": "oa:level"
     },
     "instanceOfCourse": {
       "@id": "oa:instanceOfCourse",
@@ -199,22 +216,8 @@
     "valueOption": {
       "@id": "oa:valueOption"
     },
-    "accessibilityInformation": {
-      "@id": "oa:accessibilityInformation"
-    },
-    "accessibilitySupport": {
-      "@id": "oa:accessibilitySupport",
-      "@type": "@id"
-    },
     "attendeeInstructions": {
       "@id": "oa:attendeeInstructions"
-    },
-    "genderRestriction": {
-      "@id": "oa:genderRestriction"
-    },
-    "ageRange": {
-      "@id": "oa:ageRange",
-      "@type": "@id"
     },
     "ageRestriction": {
       "@id": "oa:ageRestriction",
@@ -229,9 +232,6 @@
     "leader": {
       "@id": "oa:leader",
       "@type": "@id"
-    },
-    "level": {
-      "@id": "oa:level"
     },
     "meetingPoint": {
       "@id": "oa:meetingPoint"
@@ -466,7 +466,7 @@
     "dc:description": {
       "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
     },
-    "dc:date": "2021-05-28",
+    "dc:date": "2021-06-01",
     "owl:versionInfo": "#",
     "rdfs_classes": [
       {
@@ -1845,6 +1845,42 @@
         ]
       },
       {
+        "@id": "oa:accessibilityInformation",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "accessibilityInformation"
+        },
+        "rdfs:comment": {
+          "en": "Provide additional, specific documentation for participants about how disabilities are, or can be supported at the Event."
+        },
+        "schema:domainIncludes": [
+          "schema:Course",
+          "schema:Event",
+          "oa:FacilityUse"
+        ],
+        "schema:rangeIncludes": [
+          "schema:Text"
+        ]
+      },
+      {
+        "@id": "oa:accessibilitySupport",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "accessibilitySupport"
+        },
+        "rdfs:comment": {
+          "en": "Used to specify the types of disabilities or impairments that are supported at an event."
+        },
+        "schema:domainIncludes": [
+          "schema:Course",
+          "schema:Event",
+          "oa:FacilityUse"
+        ],
+        "schema:rangeIncludes": [
+          "skos:Concept"
+        ]
+      },
+      {
         "@id": "oa:activity",
         "@type": "rdf:Property",
         "rdfs:label": {
@@ -1859,6 +1895,59 @@
           "oa:FacilityUse"
         ],
         "schema:rangeIncludes": [
+          "skos:Concept"
+        ]
+      },
+      {
+        "@id": "oa:ageRange",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "ageRange"
+        },
+        "rdfs:comment": {
+          "en": "Indicates that an event is recommended as being suitable for or is targetted at a specific age range."
+        },
+        "schema:domainIncludes": [
+          "schema:Course",
+          "schema:Event",
+          "schema:Offer"
+        ],
+        "schema:rangeIncludes": [
+          "schema:QuantitativeValue"
+        ]
+      },
+      {
+        "@id": "oa:genderRestriction",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "genderRestriction"
+        },
+        "rdfs:comment": {
+          "en": "Indicates that an event is restricted to male, female or a mixed audience. This information must be displayed prominently to the user before booking. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience."
+        },
+        "schema:domainIncludes": [
+          "schema:Course",
+          "schema:Event"
+        ],
+        "schema:rangeIncludes": [
+          "oa:GenderRestrictionType"
+        ]
+      },
+      {
+        "@id": "oa:level",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "level"
+        },
+        "rdfs:comment": {
+          "en": "A general purpose property for specifying the suitability of an event for different participant “levels”. E.g. `Beginner`, `Intermediate`, `Advanced`. Or in the case of martial arts, specific belt requirements."
+        },
+        "schema:domainIncludes": [
+          "schema:Course",
+          "schema:Event"
+        ],
+        "schema:rangeIncludes": [
+          "schema:Text",
           "skos:Concept"
         ]
       },
@@ -1928,40 +2017,6 @@
         ]
       },
       {
-        "@id": "oa:accessibilityInformation",
-        "@type": "rdf:Property",
-        "rdfs:label": {
-          "en": "accessibilityInformation"
-        },
-        "rdfs:comment": {
-          "en": "Provide additional, specific documentation for participants about how disabilities are, or can be supported at the Event."
-        },
-        "schema:domainIncludes": [
-          "schema:Event",
-          "oa:FacilityUse"
-        ],
-        "schema:rangeIncludes": [
-          "schema:Text"
-        ]
-      },
-      {
-        "@id": "oa:accessibilitySupport",
-        "@type": "rdf:Property",
-        "rdfs:label": {
-          "en": "accessibilitySupport"
-        },
-        "rdfs:comment": {
-          "en": "Used to specify the types of disabilities or impairments that are supported at an event."
-        },
-        "schema:domainIncludes": [
-          "schema:Event",
-          "oa:FacilityUse"
-        ],
-        "schema:rangeIncludes": [
-          "skos:Concept"
-        ]
-      },
-      {
         "@id": "oa:attendeeInstructions",
         "@type": "rdf:Property",
         "rdfs:label": {
@@ -1976,39 +2031,6 @@
         ],
         "schema:rangeIncludes": [
           "schema:Text"
-        ]
-      },
-      {
-        "@id": "oa:genderRestriction",
-        "@type": "rdf:Property",
-        "rdfs:label": {
-          "en": "genderRestriction"
-        },
-        "rdfs:comment": {
-          "en": "Indicates that an event is restricted to male, female or a mixed audience. This information must be displayed prominently to the user before booking. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience."
-        },
-        "schema:domainIncludes": [
-          "schema:Event"
-        ],
-        "schema:rangeIncludes": [
-          "oa:GenderRestrictionType"
-        ]
-      },
-      {
-        "@id": "oa:ageRange",
-        "@type": "rdf:Property",
-        "rdfs:label": {
-          "en": "ageRange"
-        },
-        "rdfs:comment": {
-          "en": "Indicates that an event is recommended as being suitable for or is targetted at a specific age range."
-        },
-        "schema:domainIncludes": [
-          "schema:Event",
-          "schema:Offer"
-        ],
-        "schema:rangeIncludes": [
-          "schema:QuantitativeValue"
         ]
       },
       {
@@ -2075,23 +2097,6 @@
         ],
         "schema:rangeIncludes": [
           "schema:Person"
-        ]
-      },
-      {
-        "@id": "oa:level",
-        "@type": "rdf:Property",
-        "rdfs:label": {
-          "en": "level"
-        },
-        "rdfs:comment": {
-          "en": "A general purpose property for specifying the suitability of an event for different participant “levels”. E.g. `Beginner`, `Intermediate`, `Advanced`. Or in the case of martial arts, specific belt requirements."
-        },
-        "schema:domainIncludes": [
-          "schema:Event"
-        ],
-        "schema:rangeIncludes": [
-          "schema:Text",
-          "skos:Concept"
         ]
       },
       {
