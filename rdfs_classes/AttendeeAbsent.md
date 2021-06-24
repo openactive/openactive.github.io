@@ -1,10 +1,10 @@
 ---
 layout: default
-title: CustomerAttended
-permalink: /CustomerAttended
+title: AttendeeAbsent
+permalink: /AttendeeAbsent
 ---
 
-# CustomerAttended
+# AttendeeAbsent
 Enumerated value of OrderItemStatus
 
 Inherits from: [`oa:OrderItemStatus`](https://openactive.io/OrderItemStatus)

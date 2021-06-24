@@ -15,6 +15,8 @@ For more information, see the [developer documentation](https://developer.openac
 
 ## Classes
 - [AgentBroker](/AgentBroker)
+- [AttendeeAbsent](/AttendeeAbsent)
+- [AttendeeAttended](/AttendeeAttended)
 - [AwaitingSellerConfirmation](/AwaitingSellerConfirmation)
 - [BabyChanging](/BabyChanging)
 - [BookingService](/BookingService)
@@ -23,8 +25,6 @@ For more information, see the [developer documentation](https://developer.openac
 - [CancellationNotPermittedError](/CancellationNotPermittedError)
 - [ChangingFacilities](/ChangingFacilities)
 - [Creche](/Creche)
-- [CustomerAbsent](/CustomerAbsent)
-- [CustomerAttended](/CustomerAttended)
 - [CustomerCancelled](/CustomerCancelled)
 - [CustomerRejected](/CustomerRejected)
 - [DropdownFormFieldSpecification](/DropdownFormFieldSpecification)

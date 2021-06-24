@@ -90,8 +90,8 @@
     "SellerCancelled": "oa:SellerCancelled",
     "CustomerCancelled": "oa:CustomerCancelled",
     "OrderItemConfirmed": "oa:OrderItemConfirmed",
-    "CustomerAttended": "oa:CustomerAttended",
-    "CustomerAbsent": "oa:CustomerAbsent",
+    "AttendeeAttended": "oa:AttendeeAttended",
+    "AttendeeAbsent": "oa:AttendeeAbsent",
     "BabyChanging": "oa:BabyChanging",
     "BookingService": "oa:BookingService",
     "BooleanFormFieldSpecification": "oa:BooleanFormFieldSpecification",
@@ -848,10 +848,10 @@
         "rdfs:subClassOf": "oa:OrderItemStatus"
       },
       {
-        "@id": "oa:CustomerAttended",
+        "@id": "oa:AttendeeAttended",
         "@type": "rdfs:Class",
         "rdfs:label": {
-          "en": "CustomerAttended"
+          "en": "AttendeeAttended"
         },
         "rdfs:comment": {
           "en": "Enumerated value of OrderItemStatus"
@@ -859,10 +859,10 @@
         "rdfs:subClassOf": "oa:OrderItemStatus"
       },
       {
-        "@id": "oa:CustomerAbsent",
+        "@id": "oa:AttendeeAbsent",
         "@type": "rdfs:Class",
         "rdfs:label": {
-          "en": "CustomerAbsent"
+          "en": "AttendeeAbsent"
         },
         "rdfs:comment": {
           "en": "Enumerated value of OrderItemStatus"
