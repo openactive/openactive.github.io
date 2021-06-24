@@ -23,6 +23,7 @@ For more information, see the [developer documentation](https://developer.openac
 - [CancellationNotPermittedError](/CancellationNotPermittedError)
 - [ChangingFacilities](/ChangingFacilities)
 - [Creche](/Creche)
+- [CustomerAbsent](/CustomerAbsent)
 - [CustomerAttended](/CustomerAttended)
 - [CustomerCancelled](/CustomerCancelled)
 - [CustomerRejected](/CustomerRejected)

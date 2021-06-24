@@ -91,6 +91,7 @@
     "CustomerCancelled": "oa:CustomerCancelled",
     "OrderItemConfirmed": "oa:OrderItemConfirmed",
     "CustomerAttended": "oa:CustomerAttended",
+    "CustomerAbsent": "oa:CustomerAbsent",
     "BabyChanging": "oa:BabyChanging",
     "BookingService": "oa:BookingService",
     "BooleanFormFieldSpecification": "oa:BooleanFormFieldSpecification",
@@ -466,7 +467,7 @@
     "dc:description": {
       "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
     },
-    "dc:date": "2021-06-14",
+    "dc:date": "2021-06-24",
     "owl:versionInfo": "#",
     "rdfs_classes": [
       {
@@ -851,6 +852,17 @@
         "@type": "rdfs:Class",
         "rdfs:label": {
           "en": "CustomerAttended"
+        },
+        "rdfs:comment": {
+          "en": "Enumerated value of OrderItemStatus"
+        },
+        "rdfs:subClassOf": "oa:OrderItemStatus"
+      },
+      {
+        "@id": "oa:CustomerAbsent",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "CustomerAbsent"
         },
         "rdfs:comment": {
           "en": "Enumerated value of OrderItemStatus"
