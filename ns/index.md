@@ -31,6 +31,7 @@ For more information, see the [developer documentation](https://developer.openac
 - [DynamicPayment](/DynamicPayment)
 - [FacilityUse](/FacilityUse)
 - [FemaleOnly](/FemaleOnly)
+- [FileUploadFormFieldSpecification](/FileUploadFormFieldSpecification)
 - [GenderRestrictionType](/GenderRestrictionType)
 - [GoneError](/GoneError)
 - [HeadlineEvent](/HeadlineEvent)

@@ -101,6 +101,7 @@
     "DropdownFormFieldSpecification": "oa:DropdownFormFieldSpecification",
     "DynamicPayment": "oa:DynamicPayment",
     "FacilityUse": "oa:FacilityUse",
+    "FileUploadFormFieldSpecification": "oa:FileUploadFormFieldSpecification",
     "GoneError": "oa:GoneError",
     "HeadlineEvent": "oa:HeadlineEvent",
     "IncompleteAttendeeDetailsError": "oa:IncompleteAttendeeDetailsError",
@@ -467,7 +468,7 @@
     "dc:description": {
       "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
     },
-    "dc:date": "2021-06-24",
+    "dc:date": "2021-06-26",
     "owl:versionInfo": "#",
     "rdfs_classes": [
       {
@@ -967,6 +968,17 @@
           "en": ""
         },
         "rdfs:subClassOf": "schema:Product"
+      },
+      {
+        "@id": "oa:FileUploadFormFieldSpecification",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "FileUploadFormFieldSpecification"
+        },
+        "rdfs:comment": {
+          "en": ""
+        },
+        "rdfs:subClassOf": "schema:PropertyValueSpecification"
       },
       {
         "@id": "oa:GoneError",
