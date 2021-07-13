@@ -52,7 +52,7 @@ jobs:
         git add ns/oa.jsonld
         git add ns/index.md
         git status
-        git commit --message "Updating auto-generated namespace documentation [ci skip]"
+        git commit --message "Updating auto-generated namespace documentation [ci skip]" || echo "No changes to commit"
 
     - name: Push generated files
       run: git push
