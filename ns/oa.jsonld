@@ -354,6 +354,10 @@
     "paymentProviderId": {
       "@id": "oa:paymentProviderId"
     },
+    "emergencyContact": {
+      "@id": "oa:emergencyContact",
+      "@type": "@id"
+    },
     "idTemplate": {
       "@id": "oa:idTemplate"
     },
@@ -468,7 +472,7 @@
     "dc:description": {
       "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
     },
-    "dc:date": "2021-08-23",
+    "dc:date": "2021-08-25",
     "owl:versionInfo": "#",
     "rdfs_classes": [
       {
@@ -2700,6 +2704,22 @@
         ],
         "schema:rangeIncludes": [
           "schema:Text"
+        ]
+      },
+      {
+        "@id": "oa:emergencyContact",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "emergencyContact"
+        },
+        "rdfs:comment": {
+          "en": "Person to contact in case of emergencies related to this Person."
+        },
+        "schema:domainIncludes": [
+          "schema:Person"
+        ],
+        "schema:rangeIncludes": [
+          "schema:Person"
         ]
       },
       {

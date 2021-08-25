@@ -156,6 +156,7 @@ For more information, see the [developer documentation](https://developer.openac
 - [cancellationMessage](/cancellationMessage)
 - [concept](/concept)
 - [customerNotice](/customerNotice)
+- [emergencyContact](/emergencyContact)
 - [facilityUse](/facilityUse)
 - [genderRestriction](/genderRestriction)
 - [idTemplate](/idTemplate)
