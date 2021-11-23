@@ -98,8 +98,10 @@
     "CancellationNotPermittedError": "oa:CancellationNotPermittedError",
     "ChangingFacilities": "oa:ChangingFacilities",
     "Creche": "oa:Creche",
+    "CustomerAccount": "oa:CustomerAccount",
     "DropdownFormFieldSpecification": "oa:DropdownFormFieldSpecification",
     "DynamicPayment": "oa:DynamicPayment",
+    "Entitlement": "oa:Entitlement",
     "FacilityUse": "oa:FacilityUse",
     "FileUploadFormFieldSpecification": "oa:FileUploadFormFieldSpecification",
     "GoneError": "oa:GoneError",
@@ -207,6 +209,24 @@
       "@id": "oa:instanceOfCourse",
       "@type": "@id"
     },
+    "accountNumber": {
+      "@id": "oa:accountNumber"
+    },
+    "accessPass": {
+      "@id": "oa:accessPass",
+      "@type": "@id"
+    },
+    "hasHiddenEntitlements": {
+      "@id": "oa:hasHiddenEntitlements"
+    },
+    "outstandingAction": {
+      "@id": "oa:outstandingAction",
+      "@type": "@id"
+    },
+    "entitlement": {
+      "@id": "oa:entitlement",
+      "@type": "@id"
+    },
     "backgroundImage": {
       "@id": "oa:backgroundImage",
       "@type": "@id"
@@ -218,6 +238,14 @@
     "valueOption": {
       "@id": "oa:valueOption"
     },
+    "entitlementType": {
+      "@id": "oa:entitlementType",
+      "@type": "@id"
+    },
+    "evidenceRequestAction": {
+      "@id": "oa:evidenceRequestAction",
+      "@type": "@id"
+    },
     "attendeeInstructions": {
       "@id": "oa:attendeeInstructions"
     },
@@ -227,6 +255,12 @@
     },
     "additionalAdmissionRestriction": {
       "@id": "oa:additionalAdmissionRestriction"
+    },
+    "customerAccountBookingRestriction": {
+      "@id": "oa:customerAccountBookingRestriction"
+    },
+    "isOpenBookingWithCustomerAccountAllowed": {
+      "@id": "oa:isOpenBookingWithCustomerAccountAllowed"
     },
     "isCoached": {
       "@id": "oa:isCoached"
@@ -274,6 +308,10 @@
     "openBookingFlowRequirement": {
       "@id": "oa:openBookingFlowRequirement"
     },
+    "eligibleEntitlementType": {
+      "@id": "oa:eligibleEntitlementType",
+      "@type": "@id"
+    },
     "instance": {
       "@id": "oa:instance"
     },
@@ -302,10 +340,6 @@
     },
     "unitTaxSpecification": {
       "@id": "oa:unitTaxSpecification",
-      "@type": "@id"
-    },
-    "accessPass": {
-      "@id": "oa:accessPass",
       "@type": "@id"
     },
     "accessChannel": {
@@ -350,6 +384,10 @@
     },
     "isOpenBookingAllowed": {
       "@id": "oa:isOpenBookingAllowed"
+    },
+    "hasAccount": {
+      "@id": "oa:hasAccount",
+      "@type": "@id"
     },
     "paymentProviderId": {
       "@id": "oa:paymentProviderId"
@@ -472,7 +510,7 @@
     "dc:description": {
       "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
     },
-    "dc:date": "2021-08-25",
+    "dc:date": "2021-11-23",
     "owl:versionInfo": "#",
     "rdfs_classes": [
       {
@@ -941,6 +979,17 @@
         "rdfs:subClassOf": "schema:LocationFeatureSpecification"
       },
       {
+        "@id": "oa:CustomerAccount",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "CustomerAccount"
+        },
+        "rdfs:comment": {
+          "en": ""
+        },
+        "rdfs:subClassOf": "schema:Thing"
+      },
+      {
         "@id": "oa:DropdownFormFieldSpecification",
         "@type": "rdfs:Class",
         "rdfs:label": {
@@ -961,6 +1010,17 @@
           "en": ""
         },
         "rdfs:subClassOf": "oa:Payment"
+      },
+      {
+        "@id": "oa:Entitlement",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "Entitlement"
+        },
+        "rdfs:comment": {
+          "en": ""
+        },
+        "rdfs:subClassOf": "schema:Permit"
       },
       {
         "@id": "oa:FacilityUse",
@@ -1996,6 +2056,88 @@
         ]
       },
       {
+        "@id": "oa:accountNumber",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "accountNumber"
+        },
+        "rdfs:comment": {
+          "en": "The customer-facing identifier for the Customer Account."
+        },
+        "schema:domainIncludes": [
+          "oa:CustomerAccount"
+        ],
+        "schema:rangeIncludes": [
+          "schema:Text"
+        ]
+      },
+      {
+        "@id": "oa:accessPass",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "accessPass"
+        },
+        "rdfs:comment": {
+          "en": "The barcode, QR code, magnetic stripe, or swipe card associated with this Customer Account, within their own namespaces."
+        },
+        "schema:domainIncludes": [
+          "oa:CustomerAccount",
+          "schema:OrderItem"
+        ],
+        "schema:rangeIncludes": [
+          "schema:Barcode",
+          "schema:ImageObject"
+        ]
+      },
+      {
+        "@id": "oa:hasHiddenEntitlements",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "hasHiddenEntitlements"
+        },
+        "rdfs:comment": {
+          "en": "Whether there are any additional entitlements (other than those listed in entitlement) or other types of discounts are associated with the Customer Account that will influence pricing, and therefore whether the pricing for the entitlement in the feed should be treated as indicative."
+        },
+        "schema:domainIncludes": [
+          "oa:CustomerAccount"
+        ],
+        "schema:rangeIncludes": [
+          "schema:Boolean"
+        ]
+      },
+      {
+        "@id": "oa:outstandingAction",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "outstandingAction"
+        },
+        "rdfs:comment": {
+          "en": "Outstanding actions on this Customer Account, such as the resolution of outstanding debts or membership renewal. These may prevent the Customer from making bookings."
+        },
+        "schema:domainIncludes": [
+          "oa:CustomerAccount"
+        ],
+        "schema:rangeIncludes": [
+          "schema:Action"
+        ]
+      },
+      {
+        "@id": "oa:entitlement",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "entitlement"
+        },
+        "rdfs:comment": {
+          "en": "The current valid and active entitlements associated with this customer. Note that expired or inactive entitlements are not included in this list."
+        },
+        "schema:domainIncludes": [
+          "oa:CustomerAccount"
+        ],
+        "schema:rangeIncludes": [
+          "oa:Entitlement"
+        ]
+      },
+      {
         "@id": "oa:backgroundImage",
         "@type": "rdf:Property",
         "rdfs:label": {
@@ -2042,6 +2184,38 @@
         ],
         "schema:rangeIncludes": [
           "schema:Text"
+        ]
+      },
+      {
+        "@id": "oa:entitlementType",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "entitlementType"
+        },
+        "rdfs:comment": {
+          "en": "For the request, this is the value of the @id of the Concept being referenced. For the response, this the full Concept object including the @id and prefLabel."
+        },
+        "schema:domainIncludes": [
+          "oa:Entitlement"
+        ],
+        "schema:rangeIncludes": [
+          "skos:Concept"
+        ]
+      },
+      {
+        "@id": "oa:evidenceRequestAction",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "evidenceRequestAction"
+        },
+        "rdfs:comment": {
+          "en": "Any evidence request associated with the entitlement."
+        },
+        "schema:domainIncludes": [
+          "oa:Entitlement"
+        ],
+        "schema:rangeIncludes": [
+          "schema:Action"
         ]
       },
       {
@@ -2093,6 +2267,40 @@
         ],
         "schema:rangeIncludes": [
           "schema:Text"
+        ]
+      },
+      {
+        "@id": "oa:customerAccountBookingRestriction",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "customerAccountBookingRestriction"
+        },
+        "rdfs:comment": {
+          "en": "Free text restrictions to display to the Customer at the browse stage, that may apply when using a Customer Account to make the booking. Note that this property is in EARLY RELEASE AND IS SUBJECT TO CHANGE, as the [Customer Accounts proposal](https://github.com/openactive/customer-accounts) evolves."
+        },
+        "schema:domainIncludes": [
+          "schema:Event",
+          "oa:FacilityUse"
+        ],
+        "schema:rangeIncludes": [
+          "schema:Text"
+        ]
+      },
+      {
+        "@id": "oa:isOpenBookingWithCustomerAccountAllowed",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "isOpenBookingWithCustomerAccountAllowed"
+        },
+        "rdfs:comment": {
+          "en": "Indicates that a Customer Account may be used to book that opportunity. Note that this property is in EARLY RELEASE AND IS SUBJECT TO CHANGE, as the [Customer Accounts proposal](https://github.com/openactive/customer-accounts) evolves."
+        },
+        "schema:domainIncludes": [
+          "schema:Event",
+          "oa:FacilityUse"
+        ],
+        "schema:rangeIncludes": [
+          "schema:Boolean"
         ]
       },
       {
@@ -2321,6 +2529,22 @@
         ]
       },
       {
+        "@id": "oa:eligibleEntitlementType",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "eligibleEntitlementType"
+        },
+        "rdfs:comment": {
+          "en": "Offers in open data can be marked as requiring an entitlement type via `eligibleEntitlementType`. The same Offer may be applicable to multiple entitlement types, and the Customer must have at least one matching entitlement type to qualify for the Offer. Note that this property is in EARLY RELEASE AND IS SUBJECT TO CHANGE, as the [Customer Accounts proposal](https://github.com/openactive/customer-accounts) evolves."
+        },
+        "schema:domainIncludes": [
+          "schema:Offer"
+        ],
+        "schema:rangeIncludes": [
+          "skos:Concept"
+        ]
+      },
+      {
         "@id": "oa:instance",
         "@type": "rdf:Property",
         "rdfs:label": {
@@ -2462,22 +2686,6 @@
         ],
         "schema:rangeIncludes": [
           "oa:TaxChargeSpecification"
-        ]
-      },
-      {
-        "@id": "oa:accessPass",
-        "@type": "rdf:Property",
-        "rdfs:label": {
-          "en": "accessPass"
-        },
-        "rdfs:comment": {
-          "en": "ImageObject or Barcode that contains reference to an asset (e.g. Barcode, QR code image or PDF) usable for entrance. Not applicable for an OrderQuote."
-        },
-        "schema:domainIncludes": [
-          "schema:OrderItem"
-        ],
-        "schema:rangeIncludes": [
-          "schema:ImageObject"
         ]
       },
       {
@@ -2688,6 +2896,23 @@
         ],
         "schema:rangeIncludes": [
           "schema:Boolean"
+        ]
+      },
+      {
+        "@id": "oa:hasAccount",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "hasAccount"
+        },
+        "rdfs:comment": {
+          "en": "Reference to the CustomerAccount associated with this Customer, for use within the Open Booking API flow. Note that this property is in EARLY RELEASE AND IS SUBJECT TO CHANGE, as the [Customer Accounts proposal](https://github.com/openactive/customer-accounts) evolves."
+        },
+        "schema:domainIncludes": [
+          "schema:Organization",
+          "schema:Person"
+        ],
+        "schema:rangeIncludes": [
+          "oa:CustomerAccount"
         ]
       },
       {
