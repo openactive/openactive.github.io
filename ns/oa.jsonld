@@ -279,6 +279,10 @@
     "schedulingNote": {
       "@id": "oa:schedulingNote"
     },
+    "facilityType": {
+      "@id": "oa:facilityType",
+      "@type": "@id"
+    },
     "individualFacilityUse": {
       "@id": "oa:individualFacilityUse",
       "@type": "@id"
@@ -510,7 +514,7 @@
     "dc:description": {
       "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
     },
-    "dc:date": "2021-11-23",
+    "dc:date": "2021-12-07",
     "owl:versionInfo": "#",
     "rdfs_classes": [
       {
@@ -2381,6 +2385,22 @@
         ],
         "schema:rangeIncludes": [
           "schema:Text"
+        ]
+      },
+      {
+        "@id": "oa:facilityType",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "facilityType"
+        },
+        "rdfs:comment": {
+          "en": "Specifies the types of facility being described. NOTE: this property has been added to tooling and documentation ahead of inclusion in the next point release of the OpenActive Modelling Opportunity Data specification, as agreed on [the W3C call 2021-06-02](https://github.com/openactive/facility-types/issues/1#issuecomment-853759213)."
+        },
+        "schema:domainIncludes": [
+          "oa:FacilityUse"
+        ],
+        "schema:rangeIncludes": [
+          "skos:Concept"
         ]
       },
       {

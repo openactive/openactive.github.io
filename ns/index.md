@@ -165,6 +165,7 @@ For more information, see the [developer documentation](https://developer.openac
 - [entitlementType](/entitlementType)
 - [entitlement](/entitlement)
 - [evidenceRequestAction](/evidenceRequestAction)
+- [facilityType](/facilityType)
 - [facilityUse](/facilityUse)
 - [genderRestriction](/genderRestriction)
 - [hasAccount](/hasAccount)
