@@ -303,6 +303,9 @@
     "validFromBeforeStartDate": {
       "@id": "oa:validFromBeforeStartDate"
     },
+    "validThroughBeforeStartDate": {
+      "@id": "oa:validThroughBeforeStartDate"
+    },
     "latestCancellationBeforeStartDate": {
       "@id": "oa:latestCancellationBeforeStartDate"
     },
@@ -2491,7 +2494,23 @@
           "en": "validFromBeforeStartDate"
         },
         "rdfs:comment": {
-          "en": "The duration before the startDate for which this Offer is valid, given in ISO 8601 format. This is a relatively-defined equivalent of schema:validFrom, to allow for Offer inheritance."
+          "en": "The duration before the `startDate` for which this `Offer` is valid, given in ISO 8601 format. This is a relatively-defined equivalent of `schema:validFrom`, to allow for `Offer` inheritance."
+        },
+        "schema:domainIncludes": [
+          "schema:Offer"
+        ],
+        "schema:rangeIncludes": [
+          "schema:Duration"
+        ]
+      },
+      {
+        "@id": "oa:validThroughBeforeStartDate",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "validThroughBeforeStartDate"
+        },
+        "rdfs:comment": {
+          "en": "The duration before the `startDate` after which the `Offer` is no longer valid, given in ISO 8601 format. This is a relatively-defined equivalent of `schema:validThrough`, to allow for `Offer` inheritance."
         },
         "schema:domainIncludes": [
           "schema:Offer"

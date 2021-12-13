@@ -211,5 +211,6 @@ For more information, see the [developer documentation](https://developer.openac
 - [totalPaymentTax](/totalPaymentTax)
 - [unitTaxSpecification](/unitTaxSpecification)
 - [validFromBeforeStartDate](/validFromBeforeStartDate)
+- [validThroughBeforeStartDate](/validThroughBeforeStartDate)
 - [valueOption](/valueOption)
 
