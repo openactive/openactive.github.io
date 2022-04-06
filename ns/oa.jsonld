@@ -39,6 +39,7 @@
     "maximumVirtualAttendeeCapacity": "pending:maximumVirtualAttendeeCapacity",
     "eventAttendanceMode": "pending:eventAttendanceMode",
     "EventSeries": "pending:EventSeries",
+    "provider": "pending:provider",
     "gender": "pending:gender",
     "jobTitle": "pending:jobTitle",
     "Schedule": "pending:Schedule",
@@ -517,7 +518,7 @@
     "dc:description": {
       "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
     },
-    "dc:date": "2021-12-13",
+    "dc:date": "2022-04-06",
     "owl:versionInfo": "#",
     "rdfs_classes": [
       {
