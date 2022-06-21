@@ -19,6 +19,7 @@
     "pending": "https://pending.schema.org/",
     "gr": "http://purl.org/goodrelations/v1#",
     "termsOfService": "pending:termsOfService",
+    "hasCredential": "pending:hasCredential",
     "Concept": "skos:Concept",
     "altLabel": "skos:altLabel",
     "hiddenLabel": "skos:hiddenLabel",
@@ -518,7 +519,7 @@
     "dc:description": {
       "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
     },
-    "dc:date": "2022-06-17",
+    "dc:date": "2022-06-21",
     "owl:versionInfo": "#",
     "rdfs_classes": [
       {
