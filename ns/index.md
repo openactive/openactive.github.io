@@ -162,6 +162,7 @@ For more information, see the [developer documentation](https://developer.openac
 - [customerNotice](/customerNotice)
 - [eligibleEntitlementType](/eligibleEntitlementType)
 - [emergencyContact](/emergencyContact)
+- [endpointUrl](/endpointUrl)
 - [entitlementType](/entitlementType)
 - [entitlement](/entitlement)
 - [evidenceRequestAction](/evidenceRequestAction)
