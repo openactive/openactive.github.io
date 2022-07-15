@@ -5,7 +5,7 @@ permalink: /endpointUrl
 ---
 
 # endpointUrl
-The base URL of the Open Booking API
+The Base URI of this implementation of the Open Booking API
 
 This property can be used on: [`pending:WebAPI`](https://pending.schema.org/WebAPI)
 

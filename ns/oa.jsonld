@@ -3125,7 +3125,7 @@
           "en": "endpointUrl"
         },
         "rdfs:comment": {
-          "en": "The base URL of the Open Booking API"
+          "en": "The Base URI of this implementation of the Open Booking API"
         },
         "schema:domainIncludes": [
           "pending:WebAPI"
@@ -3141,7 +3141,7 @@
           "en": "authenticationAuthority"
         },
         "rdfs:comment": {
-          "en": "The location of the OpenID Provider or other relevant authentication authority that must be used to access the API."
+          "en": "The location of the OpenID Provider that must be used to access the API."
         },
         "schema:domainIncludes": [
           "pending:WebAPI"
