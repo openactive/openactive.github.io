@@ -521,7 +521,7 @@
     "dc:description": {
       "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
     },
-    "dc:date": "2022-07-15",
+    "dc:date": "2022-07-16",
     "owl:versionInfo": "#",
     "rdfs_classes": [
       {
