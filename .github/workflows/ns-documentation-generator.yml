@@ -12,10 +12,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Generate GitHub App Token
+      uses: actions/create-github-app-token@v1
+      id: generate-token
+      with:
+        app-id: ${{ secrets.GH_APP_ID }}
+        private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
     - name: Checkout master branch
       uses: actions/checkout@v2
       with:
-        token: ${{ secrets.PUBLIC_REPO_ACCESS_TOKEN }}
+        token: ${{ steps.generate-token.outputs.token }}
         
     - name: Identify
       run: |
