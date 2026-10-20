@@ -18,8 +18,6 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "pending": "https://pending.schema.org/",
     "gr": "http://purl.org/goodrelations/v1#",
-    "termsOfService": "pending:termsOfService",
-    "hasCredential": "pending:hasCredential",
     "Concept": "skos:Concept",
     "altLabel": "skos:altLabel",
     "hiddenLabel": "skos:hiddenLabel",
@@ -34,25 +32,7 @@
     "ConceptScheme": "skos:ConceptScheme",
     "license": "dc:license",
     "title": "dc:title",
-    "eventSchedule": "pending:eventSchedule",
-    "documentation": "pending:documentation",
     "accessService": "dcat:accessService",
-    "maximumVirtualAttendeeCapacity": "pending:maximumVirtualAttendeeCapacity",
-    "eventAttendanceMode": "pending:eventAttendanceMode",
-    "EventSeries": "pending:EventSeries",
-    "provider": "pending:provider",
-    "gender": "pending:gender",
-    "jobTitle": "pending:jobTitle",
-    "Schedule": "pending:Schedule",
-    "byDay": "pending:byDay",
-    "byMonth": "pending:byMonth",
-    "byMonthDay": "pending:byMonthDay",
-    "exceptDate": "pending:exceptDate",
-    "repeatCount": "pending:repeatCount",
-    "repeatFrequency": "pending:repeatFrequency",
-    "scheduleTimezone": "pending:scheduleTimezone",
-    "VirtualLocation": "pending:VirtualLocation",
-    "WebAPI": "pending:WebAPI",
     "conformsTo": "dc:conformsTo",
     "endpointDescription": "dcat:endpointDescription",
     "landingPage": "dcat:landingPage",
@@ -521,7 +501,7 @@
     "dc:description": {
       "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
     },
-    "dc:date": "2025-02-25",
+    "dc:date": "2026-10-20",
     "owl:versionInfo": "#",
     "rdfs_classes": [
       {
@@ -1515,7 +1495,7 @@
         "rdfs:comment": {
           "en": ""
         },
-        "rdfs:subClassOf": "pending:Schedule"
+        "rdfs:subClassOf": "schema:Schedule"
       },
       {
         "@id": "oa:PatchContainsExcessivePropertiesError",
@@ -2744,7 +2724,7 @@
           "schema:OrderItem"
         ],
         "schema:rangeIncludes": [
-          "pending:VirtualLocation"
+          "schema:VirtualLocation"
         ]
       },
       {
@@ -3000,7 +2980,7 @@
           "en": "An RFC6570 compliant URI template that can be used to generate a unique identifier (`@id`) for every event described by the schedule. This property is required if the data provider is supporting third-party booking via the Open Booking API, or providing complimentary individual `subEvent`s."
         },
         "schema:domainIncludes": [
-          "pending:Schedule"
+          "schema:Schedule"
         ],
         "schema:rangeIncludes": [
           "schema:Text"
@@ -3016,7 +2996,7 @@
           "en": "The type of event this schedule related to."
         },
         "schema:domainIncludes": [
-          "pending:Schedule"
+          "schema:Schedule"
         ],
         "schema:rangeIncludes": [
           "schema:Text"
@@ -3112,7 +3092,7 @@
           "en": "The identifier required to access the `VirtualLocation` from any device, without requiring the URL, e.g. the meeting ID."
         },
         "schema:domainIncludes": [
-          "pending:VirtualLocation"
+          "schema:VirtualLocation"
         ],
         "schema:rangeIncludes": [
           "schema:Text"
@@ -3128,7 +3108,7 @@
           "en": "The Base URI of this implementation of the Open Booking API"
         },
         "schema:domainIncludes": [
-          "pending:WebAPI"
+          "schema:WebAPI"
         ],
         "schema:rangeIncludes": [
           "schema:URL"
@@ -3144,7 +3124,7 @@
           "en": "The location of the OpenID Provider that must be used to access the API."
         },
         "schema:domainIncludes": [
-          "pending:WebAPI"
+          "schema:WebAPI"
         ],
         "schema:rangeIncludes": [
           "schema:URL"

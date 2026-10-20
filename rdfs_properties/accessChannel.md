@@ -9,6 +9,6 @@ Channel through which the user can participate in the Opportunity. Not applicabl
 
 This property can be used on: [`schema:OrderItem`](https://schema.org/OrderItem)
 
-This property may include the values: [`pending:VirtualLocation`](https://pending.schema.org/VirtualLocation)
+This property may include the values: [`schema:VirtualLocation`](https://schema.org/VirtualLocation)
 
 For more information, see the [developer documentation](https://developer.openactive.io/data-model/types/).
