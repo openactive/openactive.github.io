@@ -501,7 +501,7 @@
     "dc:description": {
       "en": "This document describes the vocabulary used in the Modelling Opportunity Data specification."
     },
-    "dc:date": "2026-10-22",
+    "dc:date": "2026-11-18",
     "owl:versionInfo": "#",
     "rdfs_classes": [
       {
@@ -1966,12 +1966,13 @@
           "en": "activity"
         },
         "rdfs:comment": {
-          "en": "Specifies the physical activity or activities that will take place during a Course."
+          "en": "Specifies the physical activity or activities associated with this resource."
         },
         "schema:domainIncludes": [
           "schema:Course",
           "schema:Event",
-          "oa:FacilityUse"
+          "oa:FacilityUse",
+          "schema:Organization"
         ],
         "schema:rangeIncludes": [
           "skos:Concept"
@@ -1984,12 +1985,13 @@
           "en": "ageRange"
         },
         "rdfs:comment": {
-          "en": "Indicates that an event is recommended as being suitable for or is targetted at a specific age range."
+          "en": "Indicates that this resource is recommended as being suitable for, or is targeted at, a specific age range."
         },
         "schema:domainIncludes": [
           "schema:Course",
           "schema:Event",
-          "schema:Offer"
+          "schema:Offer",
+          "schema:Organization"
         ],
         "schema:rangeIncludes": [
           "schema:QuantitativeValue"
@@ -2006,7 +2008,8 @@
         },
         "schema:domainIncludes": [
           "schema:Course",
-          "schema:Event"
+          "schema:Event",
+          "schema:Organization"
         ],
         "schema:rangeIncludes": [
           "oa:GenderRestrictionType"
